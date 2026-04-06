@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://ankitbairagi800-jpg.github.io/Digitads/sitemap.xml
