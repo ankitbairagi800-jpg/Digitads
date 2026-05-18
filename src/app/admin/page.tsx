@@ -14,6 +14,14 @@ import {
 } from "@/lib/db";
 import "./admin.css";
 
+// Helper to generate text excerpt by stripping HTML tags
+const generateExcerpt = (html: string): string => {
+  if (!html) return "";
+  const cleanText = html.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+  if (cleanText.length <= 150) return cleanText;
+  return cleanText.substring(0, 147) + "...";
+};
+
 export default function AdminDashboard() {
   // Auth State
   const [username, setUsername] = useState("");
@@ -162,7 +170,7 @@ export default function AdminDashboard() {
       title: blogTitle,
       slug: blogSlug,
       category: blogCategory,
-      excerpt: blogExcerpt,
+      excerpt: blogExcerpt || generateExcerpt(blogContent),
       content: blogContent,
       readTime: blogReadTime,
       icon: blogIcon,
@@ -189,10 +197,13 @@ export default function AdminDashboard() {
     if (!file) return;
 
     setIsUploading(true);
-    const formData = new FormData();
-    formData.append("file", file);
+    let imageUrl = "";
 
     try {
+      // First attempt: Serverless proxy upload via /api/upload
+      const formData = new FormData();
+      formData.append("file", file);
+
       const res = await fetch("/api/upload", {
         method: "POST",
         body: formData,
@@ -200,26 +211,49 @@ export default function AdminDashboard() {
 
       if (res.ok) {
         const data = await res.json();
-        const imageUrl = data.url;
-        
-        // Inject image HTML tag into the blog content (use class instead of className for raw HTML!)
-        const imageTag = `\n<img src="${imageUrl}" alt="Uploaded image" class="blog-custom-image" />\n`;
-        setBlogContent((prev) => prev + imageTag);
-        setUploadedImages((prev) => [...prev, imageUrl]);
-        showNotification("Image uploaded and inserted successfully!");
+        imageUrl = data.url;
       } else {
-        const err = await res.json();
-        alert("Upload failed: " + err.error);
+        throw new Error("Proxy upload returned status " + res.status);
       }
-    } catch (error) {
-      console.error(error);
-      alert("An error occurred during upload.");
-    } finally {
-      setIsUploading(false);
-      // Reset input
-      if (fileInputRef.current) {
-        fileInputRef.current.value = "";
+    } catch (proxyError) {
+      console.warn("Proxy upload failed or unavailable. Falling back to direct ImgBB client upload...", proxyError);
+      
+      try {
+        // Second attempt: Direct client-side upload to ImgBB
+        const apiKey = "597be61ad644051616f919ba786155fd";
+        const directFormData = new FormData();
+        directFormData.append("image", file);
+
+        const res = await fetch(`https://api.imgbb.com/1/upload?key=${apiKey}`, {
+          method: "POST",
+          body: directFormData,
+        });
+
+        if (res.ok) {
+          const data = await res.json();
+          imageUrl = data.data.url;
+        } else {
+          const err = await res.json();
+          throw new Error(err.error?.message || "ImgBB returned status " + res.status);
+        }
+      } catch (directError: any) {
+        console.error("Direct upload failed:", directError);
+        alert("Upload failed: " + (directError.message || "An error occurred during upload."));
       }
+    }
+
+    if (imageUrl) {
+      // Inject image HTML tag into the blog content (use class instead of className for raw HTML!)
+      const imageTag = `\n<img src="${imageUrl}" alt="Uploaded image" class="blog-custom-image" />\n`;
+      setBlogContent((prev) => prev + imageTag);
+      setUploadedImages((prev) => [...prev, imageUrl]);
+      showNotification("Image uploaded and inserted successfully!");
+    }
+
+    setIsUploading(false);
+    // Reset input
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
     }
   };
 
@@ -624,17 +658,7 @@ export default function AdminDashboard() {
                     <span className="form-helper">This forms the URL: /blog/{"{slug}"}</span>
                   </div>
                 </div>
-                <div className="admin-form-group">
-                  <label htmlFor="blogExcerpt">Short Summary Excerpt (Shows in Grid List) *</label>
-                  <textarea 
-                    id="blogExcerpt" 
-                    value={blogExcerpt} 
-                    onChange={(e) => setBlogExcerpt(e.target.value)} 
-                    placeholder="Short 2-sentence description of the blog..."
-                    rows={2}
-                    required
-                  />
-                </div>
+
 
                 <div className="admin-form-group">
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
