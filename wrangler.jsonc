@@ -20,11 +20,5 @@
       "database_name": "digitalads-db",
       "database_id": "280a8260-0c41-4a5c-b481-da4203da8526"
     }
-  ],
-  "r2_buckets": [
-    {
-      "binding": "STORAGE",
-      "bucket_name": "digitalads-storage"
-    }
   ]
 }

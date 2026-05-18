@@ -1,7 +1,6 @@
 export async function onRequestPost(context: any) {
   try {
     const request = context.request;
-    const url = new URL(request.url);
     const formData = await request.formData();
     const file = formData.get("file") as File;
 
@@ -12,39 +11,37 @@ export async function onRequestPost(context: any) {
       });
     }
 
-    // Generate a unique filename using timestamp
-    const fileName = `${Date.now()}-${file.name.replace(/[^a-zA-Z0-9.-]/g, "")}`;
-    const objectKey = `uploads/${fileName}`;
+    const apiKey = context.env.IMGBB_API_KEY;
+    if (!apiKey) {
+      return new Response(JSON.stringify({ error: "IMGBB_API_KEY is not configured in Cloudflare Pages." }), {
+        status: 500,
+        headers: { "Content-Type": "application/json" }
+      });
+    }
 
-    // Upload to R2 Bucket
-    await context.env.STORAGE.put(objectKey, file.stream(), {
-      httpMetadata: {
-        contentType: file.type
-      }
+    const imgbbFormData = new FormData();
+    // ImgBB requires the file in the "image" field
+    imgbbFormData.append("image", file);
+
+    const imgbbResponse = await fetch(`https://api.imgbb.com/1/upload?key=${apiKey}`, {
+      method: "POST",
+      body: imgbbFormData
     });
 
-    // The public URL assuming a custom domain or r2.dev domain is set up
-    // Note: To access the image publicly, the bucket needs public access enabled
-    // and ideally a custom domain attached in the Cloudflare dashboard.
-    // For now, we return the R2 bucket dev URL or custom domain URL.
-    // Since we don't know the exact dev URL, we will use the origin + a route that could serve it
-    // or typically we set a custom domain for R2 like cdn.domain.com
-    
-    // Cloudflare Pages gives us request.url, we'll assume a public bucket or similar.
-    // Actually, R2 public buckets usually have a predictable URL if mapped.
-    // Let's create an endpoint to fetch images if public access isn't directly on.
-    
-    // Let's just return a placeholder for the dev URL if it's not known, or ideally the user configures a public bucket URL.
-    const publicUrl = `https://digitalads-storage.r2.dev/${objectKey}`;
+    const imgbbData = await imgbbResponse.json() as any;
 
-    return new Response(JSON.stringify({ 
-      success: true, 
-      url: publicUrl,
-      fileName: fileName
-    }), {
-      status: 200,
-      headers: { "Content-Type": "application/json" }
-    });
+    if (imgbbData.success) {
+      return new Response(JSON.stringify({ 
+        success: true, 
+        url: imgbbData.data.url, // Direct public URL from ImgBB
+        fileName: file.name
+      }), {
+        status: 200,
+        headers: { "Content-Type": "application/json" }
+      });
+    } else {
+      throw new Error(imgbbData.error?.message || "Failed to upload to ImgBB");
+    }
 
   } catch (err: any) {
     return new Response(JSON.stringify({ error: err.message }), {
