@@ -8,6 +8,9 @@
   "assets": {
     "directory": "out"
   },
+  "build": {
+    "command": "npm run build"
+  },
   "compatibility_flags": [
     "nodejs_compat"
   ]
