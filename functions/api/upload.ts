@@ -11,13 +11,8 @@ export async function onRequestPost(context: any) {
       });
     }
 
-    const apiKey = context.env.IMGBB_API_KEY;
+    const apiKey = "597be61ad644051616f919ba786155fd"; // Hardcoded for frictionless deployment
     if (!apiKey) {
-      return new Response(JSON.stringify({ error: "IMGBB_API_KEY is not configured in Cloudflare Pages." }), {
-        status: 500,
-        headers: { "Content-Type": "application/json" }
-      });
-    }
 
     const imgbbFormData = new FormData();
     // ImgBB requires the file in the "image" field
