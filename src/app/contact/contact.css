@@ -1,10 +1,12 @@
 /* ===== CONTACT PAGE STYLES ===== */
-.contact-hero{background:var(--dark-bg);padding:140px 0 70px;position:relative;overflow:hidden}
+.whatsapp-float { display: none !important; } /* Hide floating WhatsApp icon on contact page to avoid overlap with inputs */
+
+.contact-hero{background:var(--dark-bg);padding:180px 0 80px;position:relative;overflow:hidden}
 .contact-hero::before{content:'';position:absolute;top:-80px;left:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(255,107,53,0.08) 0%,transparent 70%);pointer-events:none}
 .contact-hero::after{content:'';position:absolute;bottom:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(255,69,0,0.06) 0%,transparent 70%);pointer-events:none}
 .contact-hero-inner{position:relative;z-index:1;max-width:680px}
 .contact-hero h1{font-size:clamp(32px,5vw,58px);font-weight:900;color:#fff;letter-spacing:-2px;line-height:1.1;margin-bottom:18px}
-.contact-hero p{font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,0.65);line-height:1.8}
+.contact-hero p{font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,0.85);line-height:1.8}
 
 /* Breadcrumb */
 .breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:28px;flex-wrap:wrap}
@@ -15,7 +17,7 @@
 
 /* Trust badges */
 .contact-trust{display:flex;gap:24px;flex-wrap:wrap;margin-top:28px}
-.contact-trust-item{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.55);font-size:13px;font-weight:500}
+.contact-trust-item{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.85);font-size:13px;font-weight:500}
 .contact-trust-item i{color:var(--primary-color);font-size:15px}
 
 /* Quick contacts strip */
@@ -30,7 +32,7 @@
 .contact-quick-value a:hover{color:var(--primary-color)}
 
 /* Main contact section */
-.contact-page{padding:80px 0;background:#fff}
+.contact-page{padding:80px 0;background:#fff;border-top:1px solid var(--border-light)}
 .contact-page-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:60px;align-items:start}
 
 /* Info side */
@@ -73,10 +75,10 @@
 /* Form side */
 .contact-page-form{background:var(--dark-bg);border-radius:20px;padding:44px 40px}
 .contact-page-form h3{font-size:22px;font-weight:700;color:#fff;margin-bottom:8px}
-.contact-page-form>p{font-size:15px;color:rgba(255,255,255,0.45);margin-bottom:32px;line-height:1.7}
+.contact-page-form>p{font-size:15px;color:rgba(255,255,255,0.72) !important;margin-bottom:32px;line-height:1.7}
 .form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .form-group{margin-bottom:20px}
-.form-group label{display:block;font-size:13.5px;font-weight:600;margin-bottom:8px;color:rgba(255,255,255,0.85)}
+.form-group label{display:block;font-size:13.5px;font-weight:600;margin-bottom:10px;color:rgba(255,255,255,0.9)}
 .form-group input,.form-group select,.form-group textarea{width:100%;padding:13px 16px;border:1.5px solid rgba(255,255,255,0.1);border-radius:var(--radius-sm);font-size:15px;font-family:var(--font-primary);transition:var(--transition);background:rgba(255,255,255,0.05);color:#fff;outline:none}
 .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--primary-color);background:rgba(255,255,255,0.07);box-shadow:0 0 0 3px rgba(255,107,53,0.12)}
 .form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,0.28)}
@@ -136,14 +138,27 @@
   .why-contact-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:640px){
-  .contact-hero{padding:120px 0 50px}
-  .contact-info-cards{grid-template-columns:1fr}
-  .contact-page-form{padding:28px 22px}
-  .form-row-2{grid-template-columns:1fr}
-  .why-contact-grid{grid-template-columns:1fr}
-  .contact-quick-inner{gap:20px;flex-direction:column;align-items:flex-start;padding:0 24px}
-  .gmb-hours-inner{justify-content:center;text-align:center}
-  .gmb-hours-status{justify-content:center}
-  .gmb-hours-days{flex-wrap:wrap}
+  .contact-hero{padding:150px 0 60px}
+  .contact-info-cards{grid-template-columns:1fr 1fr;gap:12px}
+  .contact-info-card{padding:16px 12px;border-radius:10px}
+  .contact-info-card i{font-size:18px;margin-bottom:6px}
+  .contact-info-card h4{font-size:13px;margin-bottom:3px}
+  .contact-info-card a,.contact-info-card p{font-size:11px;line-height:1.4}
+  
+  .contact-social-links{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%}
+  .contact-social-link{justify-content:center;width:100%;padding:10px;font-size:12px;border-radius:8px}
+
+  .contact-page-form{padding:32px 24px}
+  .form-row-2{grid-template-columns:1fr;gap:16px}
+  .form-group{margin-bottom:22px}
+  .form-group label{margin-bottom:10px}
+
+  .why-contact-grid{grid-template-columns:1fr;gap:16px}
+  .contact-quick-inner{gap:24px;flex-direction:column;align-items:center;padding:0 16px;text-align:center}
+  .contact-quick-item{flex-direction:column;gap:8px;align-items:center;text-align:center}
+  
+  .gmb-hours-inner{justify-content:center;text-align:center;gap:16px}
+  .gmb-hours-status{justify-content:center;width:100%}
+  .gmb-hours-days{justify-content:center;width:100%;gap:16px}
   .gmb-verify-link{width:100%;justify-content:center}
 }
