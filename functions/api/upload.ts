@@ -12,7 +12,6 @@ export async function onRequestPost(context: any) {
     }
 
     const apiKey = "597be61ad644051616f919ba786155fd"; // Hardcoded for frictionless deployment
-    if (!apiKey) {
 
     const imgbbFormData = new FormData();
     // ImgBB requires the file in the "image" field
