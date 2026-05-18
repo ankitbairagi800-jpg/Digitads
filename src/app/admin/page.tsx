@@ -87,8 +87,8 @@ export default function AdminDashboard() {
 
   const handleLoginSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Custom Admin Credentials: Username: Digitalads, Password: Ankitkaliya@420
-    if (username === "Digitalads" && password === "Ankitkaliya@420") {
+    // Custom Admin Credentials: Username: Digitalads, Password: Ankit@2002
+    if (username === "Digitalads" && password === "Ankit@2002") {
       setIsAuthenticated(true);
       setAuthError(false);
       sessionStorage.setItem("admin_authenticated", "true");
