@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import ClientLayout from "@/components/ClientLayout";
 import Script from "next/script";
 
 const inter = Inter({
@@ -77,12 +76,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
       </head>
       <body className={inter.className}>
-        <Navbar />
-        {children}
-        <Footer />
-        <a href="https://wa.me/918103202086?text=Hi%20Digitalads,%20I%20want%20to%20know%20more" target="_blank" rel="noopener noreferrer" className="whatsapp-float" aria-label="Chat on WhatsApp">
-          <i className="fab fa-whatsapp" aria-hidden="true"></i>
-        </a>
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );
