@@ -620,56 +620,6 @@ export default function AdminDashboard() {
                     <span className="form-helper">This forms the URL: /blog/{"{slug}"}</span>
                   </div>
                 </div>
-
-                <div className="form-grid-2">
-                  <div className="admin-form-group">
-                    <label htmlFor="blogCategory">Category Group</label>
-                    <select 
-                      id="blogCategory" 
-                      value={blogCategory} 
-                      onChange={(e) => setBlogCategory(e.target.value)}
-                    >
-                      <option value="SEO">SEO</option>
-                      <option value="Ads">Ads</option>
-                      <option value="Automation">Automation</option>
-                      <option value="Design">Design</option>
-                    </select>
-                  </div>
-                  <div className="admin-form-group">
-                    <label htmlFor="blogReadTime">Reading Time Indicator</label>
-                    <input 
-                      type="text" 
-                      id="blogReadTime" 
-                      value={blogReadTime} 
-                      onChange={(e) => setBlogReadTime(e.target.value)} 
-                      placeholder="e.g. 5 min read"
-                    />
-                  </div>
-                </div>
-
-                <div className="form-grid-2">
-                  <div className="admin-form-group">
-                    <label htmlFor="blogIcon">FontAwesome Icon Class Name</label>
-                    <input 
-                      type="text" 
-                      id="blogIcon" 
-                      value={blogIcon} 
-                      onChange={(e) => setBlogIcon(e.target.value)} 
-                      placeholder="e.g. fa-solid fa-robot"
-                    />
-                  </div>
-                  <div className="admin-form-group">
-                    <label htmlFor="blogTags">Keywords / Tags (Comma separated)</label>
-                    <input 
-                      type="text" 
-                      id="blogTags" 
-                      value={blogTags} 
-                      onChange={(e) => setBlogTags(e.target.value)} 
-                      placeholder="e.g. AI, SEO, Leads"
-                    />
-                  </div>
-                </div>
-
                 <div className="admin-form-group">
                   <label htmlFor="blogExcerpt">Short Summary Excerpt (Shows in Grid List) *</label>
                   <textarea 
@@ -713,7 +663,7 @@ export default function AdminDashboard() {
                     required
                     style={{ fontFamily: "monospace" }}
                   />
-                  <span className="form-helper">Images are uploaded directly to R2 and injected as &lt;img&gt; tags automatically.</span>
+                  <span className="form-helper">Images are uploaded directly to ImgBB and injected as &lt;img&gt; tags automatically.</span>
                 </div>
 
                 <div className="form-actions">
