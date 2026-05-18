@@ -17,10 +17,7 @@ export async function generateStaticParams() {
 const renderMarkdownContent = (markdownText: string) => {
   if (!markdownText) return { __html: "" };
   
-  let html = markdownText
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+  let html = markdownText;
 
   // Headers
   html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
@@ -39,12 +36,18 @@ const renderMarkdownContent = (markdownText: string) => {
   // Lists (simplified list item wrapper)
   html = html.replace(/^\- (.*$)/gim, '<li>$1</li>');
 
-  // Paragraphs wrapper
+  // Paragraphs wrapper (don't wrap lines that start with HTML tags)
   const lines = html.split(/\n\n+/);
   html = lines.map(line => {
     const trimmed = line.trim();
     if (!trimmed) return '';
-    if (trimmed.startsWith('<h') || trimmed.startsWith('<blockquote') || trimmed.startsWith('<hr') || trimmed.startsWith('<li>')) {
+    if (
+      trimmed.startsWith('<h') || 
+      trimmed.startsWith('<blockquote') || 
+      trimmed.startsWith('<hr') || 
+      trimmed.startsWith('<li>') || 
+      trimmed.startsWith('<')
+    ) {
       return trimmed;
     }
     return `<p>${trimmed.replace(/\n/g, '<br />')}</p>`;

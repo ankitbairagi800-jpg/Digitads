@@ -45,6 +45,7 @@ export default function AdminDashboard() {
   const [blogIcon, setBlogIcon] = useState("fa-solid fa-chart-line");
   const [blogTags, setBlogTags] = useState("");
   const [blogDate, setBlogDate] = useState("");
+  const [uploadedImages, setUploadedImages] = useState<string[]>([]);
 
   // Form States (Service)
   const [serviceId, setServiceId] = useState("");
@@ -117,6 +118,7 @@ export default function AdminDashboard() {
     setBlogReadTime("5 min read");
     setBlogIcon("fa-solid fa-chart-line");
     setBlogTags("AI, Automation");
+    setUploadedImages([]);
     
     // Set current date in simple format: e.g. "May 18, 2026"
     const options: Intl.DateTimeFormatOptions = { month: 'short', day: '2-digit', year: 'numeric' };
@@ -136,6 +138,7 @@ export default function AdminDashboard() {
     setBlogIcon(blog.icon);
     setBlogTags(blog.tags.join(", "));
     setBlogDate(blog.date);
+    setUploadedImages([]);
     setIsBlogModalOpen(true);
   };
 
@@ -199,9 +202,10 @@ export default function AdminDashboard() {
         const data = await res.json();
         const imageUrl = data.url;
         
-        // Inject image HTML tag into the blog content
-        const imageTag = `\n<img src="${imageUrl}" alt="Uploaded image" className="blog-custom-image" />\n`;
+        // Inject image HTML tag into the blog content (use class instead of className for raw HTML!)
+        const imageTag = `\n<img src="${imageUrl}" alt="Uploaded image" class="blog-custom-image" />\n`;
         setBlogContent((prev) => prev + imageTag);
+        setUploadedImages((prev) => [...prev, imageUrl]);
         showNotification("Image uploaded and inserted successfully!");
       } else {
         const err = await res.json();
@@ -664,6 +668,52 @@ export default function AdminDashboard() {
                     style={{ fontFamily: "monospace" }}
                   />
                   <span className="form-helper">Images are uploaded directly to ImgBB and injected as &lt;img&gt; tags automatically.</span>
+                  
+                  {uploadedImages.length > 0 && (
+                    <div className="uploaded-gallery-section" style={{ marginTop: "16px", padding: "16px", background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: "8px" }}>
+                      <span style={{ fontSize: "13px", fontWeight: "600", color: "#fff", display: "block", marginBottom: "10px" }}>
+                        <i className="fa-solid fa-images" style={{ color: "var(--primary-color)", marginRight: "6px" }}></i> Uploaded Images in this Session (Click image to copy HTML tag):
+                      </span>
+                      <div className="uploaded-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(80px, 1fr))", gap: "10px" }}>
+                        {uploadedImages.map((url, idx) => (
+                          <div 
+                            key={idx} 
+                            className="uploaded-item" 
+                            style={{ 
+                              position: "relative", 
+                              borderRadius: "6px", 
+                              overflow: "hidden", 
+                              border: "1px solid rgba(255,255,255,0.1)", 
+                              aspectRatio: "1",
+                              cursor: "pointer"
+                            }}
+                            onClick={() => {
+                              navigator.clipboard.writeText(`<img src="${url}" alt="Blog Image" class="blog-custom-image" />`);
+                              showNotification("HTML tag copied to clipboard!");
+                            }}
+                            title="Click to copy HTML tag"
+                          >
+                            <img src={url} alt={`Uploaded ${idx}`} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                            <div className="uploaded-overlay" style={{ 
+                              position: "absolute", 
+                              inset: 0, 
+                              background: "rgba(0,0,0,0.6)", 
+                              display: "flex", 
+                              alignItems: "center", 
+                              justifyContent: "center", 
+                              opacity: 0, 
+                              transition: "opacity 0.2s" 
+                            }}
+                            onMouseEnter={(e) => e.currentTarget.style.opacity = "1"}
+                            onMouseLeave={(e) => e.currentTarget.style.opacity = "0"}
+                            >
+                              <i className="fa-solid fa-copy" style={{ color: "#fff", fontSize: "16px" }}></i>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 <div className="form-actions">
