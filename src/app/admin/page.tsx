@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { 
   getBlogs, 
@@ -58,6 +58,8 @@ export default function AdminDashboard() {
 
   // Alert/Notification State
   const [notification, setNotification] = useState<string | null>(null);
+  const [isUploading, setIsUploading] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Load auth session state
   useEffect(() => {
@@ -176,6 +178,44 @@ export default function AdminDashboard() {
       await deleteBlog(id);
       showNotification("Blog post deleted.");
       loadAllData();
+    }
+  };
+
+  const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setIsUploading(true);
+    const formData = new FormData();
+    formData.append("file", file);
+
+    try {
+      const res = await fetch("/api/upload", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        const imageUrl = data.url;
+        
+        // Inject image HTML tag into the blog content
+        const imageTag = `\n<img src="${imageUrl}" alt="Uploaded image" className="blog-custom-image" />\n`;
+        setBlogContent((prev) => prev + imageTag);
+        showNotification("Image uploaded and inserted successfully!");
+      } else {
+        const err = await res.json();
+        alert("Upload failed: " + err.error);
+      }
+    } catch (error) {
+      console.error(error);
+      alert("An error occurred during upload.");
+    } finally {
+      setIsUploading(false);
+      // Reset input
+      if (fileInputRef.current) {
+        fileInputRef.current.value = "";
+      }
     }
   };
 
@@ -643,15 +683,37 @@ export default function AdminDashboard() {
                 </div>
 
                 <div className="admin-form-group">
-                  <label htmlFor="blogContent">Full Article Body Content (Markdown Supported) *</label>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
+                    <label htmlFor="blogContent" style={{ margin: 0 }}>Full Article Body Content (HTML & Custom CSS Supported) *</label>
+                    
+                    <button 
+                      type="button" 
+                      onClick={() => fileInputRef.current?.click()}
+                      className="btn btn-outline-orange"
+                      style={{ padding: "6px 12px", fontSize: "12px" }}
+                      disabled={isUploading}
+                    >
+                      <i className={`fa-solid ${isUploading ? "fa-spinner fa-spin" : "fa-image"}`} style={{ marginRight: "6px" }}></i> 
+                      {isUploading ? "Uploading..." : "Insert Image"}
+                    </button>
+                    <input 
+                      type="file" 
+                      ref={fileInputRef} 
+                      onChange={handleImageUpload} 
+                      accept="image/*" 
+                      style={{ display: "none" }} 
+                    />
+                  </div>
                   <textarea 
                     id="blogContent" 
                     value={blogContent} 
                     onChange={(e) => setBlogContent(e.target.value)} 
-                    placeholder="Write your beautiful full article text here using standard Markdown headings, lists, links, etc..."
-                    rows={12}
+                    placeholder="Write your beautiful full article text here using HTML tags like <h2>, <p>, <strong>, and custom classes..."
+                    rows={16}
                     required
+                    style={{ fontFamily: "monospace" }}
                   />
+                  <span className="form-helper">Images are uploaded directly to R2 and injected as &lt;img&gt; tags automatically.</span>
                 </div>
 
                 <div className="form-actions">

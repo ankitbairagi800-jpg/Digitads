@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getBlogs } from "@/lib/db";
+import type { Metadata } from "next";
 import "./blog-detail.css";
 
 export async function generateStaticParams() {
@@ -51,6 +52,26 @@ const renderMarkdownContent = (markdownText: string) => {
 
   return { __html: html };
 };
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const allBlogs = await getBlogs();
+  const blog = allBlogs.find((b) => b.slug === resolvedParams.slug);
+
+  if (!blog) {
+    return {
+      title: 'Article Not Found | DigitalAds',
+    };
+  }
+
+  return {
+    title: `${blog.title} | DigitalAds Blog`,
+    description: blog.excerpt,
+    alternates: {
+      canonical: `https://thedigitalads.in/blog/${blog.slug}`
+    }
+  };
+}
 
 export default async function BlogDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
