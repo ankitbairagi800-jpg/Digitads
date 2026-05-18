@@ -426,6 +426,20 @@ const saveLocalData = (key: string, data: any) => {
 
 // Database APIs
 export const getBlogs = async (): Promise<BlogPost[]> => {
+  if (typeof window === "undefined") {
+    return defaultBlogs;
+  }
+
+  try {
+    const res = await fetch("/api/blogs");
+    if (res.ok) {
+      const data = await res.json();
+      return data;
+    }
+  } catch (e) {
+    console.warn("Cloudflare API unavailable, falling back to local storage.", e);
+  }
+
   if (useFirebase && db) {
     try {
       const q = query(collection(db, "blogs"));
@@ -435,7 +449,6 @@ export const getBlogs = async (): Promise<BlogPost[]> => {
         blogsList.push(docSnap.data() as BlogPost);
       });
       if (blogsList.length === 0) {
-        // Pre-seed Firestore
         for (const blog of defaultBlogs) {
           await setDoc(doc(db, "blogs", blog.id), blog);
           blogsList.push(blog);
@@ -443,19 +456,30 @@ export const getBlogs = async (): Promise<BlogPost[]> => {
       }
       return blogsList.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
     } catch (e) {
-      console.error("Firebase getBlogs error, falling back to local:", e);
+      console.error("Firebase getBlogs error:", e);
     }
   }
   return getLocalData("blogs", defaultBlogs);
 };
 
 export const saveBlog = async (blog: BlogPost): Promise<void> => {
+  try {
+    const res = await fetch("/api/blogs", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(blog)
+    });
+    if (res.ok) return;
+  } catch (e) {
+    console.warn("Cloudflare API save failed, saving locally:", e);
+  }
+
   if (useFirebase && db) {
     try {
       await setDoc(doc(db, "blogs", blog.id), blog);
       return;
     } catch (e) {
-      console.error("Firebase saveBlog error, saving locally:", e);
+      console.error("Firebase saveBlog error:", e);
     }
   }
   const blogs = await getBlogs();
@@ -469,12 +493,19 @@ export const saveBlog = async (blog: BlogPost): Promise<void> => {
 };
 
 export const deleteBlog = async (id: string): Promise<void> => {
+  try {
+    const res = await fetch(`/api/blogs?id=${id}`, { method: "DELETE" });
+    if (res.ok) return;
+  } catch (e) {
+    console.warn("Cloudflare API delete failed, deleting locally:", e);
+  }
+
   if (useFirebase && db) {
     try {
       await deleteDoc(doc(db, "blogs", id));
       return;
     } catch (e) {
-      console.error("Firebase deleteBlog error, deleting locally:", e);
+      console.error("Firebase deleteBlog error:", e);
     }
   }
   const blogs = await getBlogs();
@@ -483,6 +514,20 @@ export const deleteBlog = async (id: string): Promise<void> => {
 };
 
 export const getServices = async (): Promise<ServiceItem[]> => {
+  if (typeof window === "undefined") {
+    return defaultServices;
+  }
+
+  try {
+    const res = await fetch("/api/services");
+    if (res.ok) {
+      const data = await res.json();
+      return data;
+    }
+  } catch (e) {
+    console.warn("Cloudflare API unavailable, falling back to local storage.", e);
+  }
+
   if (useFirebase && db) {
     try {
       const q = query(collection(db, "services"));
@@ -492,7 +537,6 @@ export const getServices = async (): Promise<ServiceItem[]> => {
         servicesList.push(docSnap.data() as ServiceItem);
       });
       if (servicesList.length === 0) {
-        // Pre-seed Firestore
         for (const svc of defaultServices) {
           await setDoc(doc(db, "services", svc.id), svc);
           servicesList.push(svc);
@@ -500,19 +544,30 @@ export const getServices = async (): Promise<ServiceItem[]> => {
       }
       return servicesList.sort((a, b) => a.order - b.order);
     } catch (e) {
-      console.error("Firebase getServices error, falling back to local:", e);
+      console.error("Firebase getServices error:", e);
     }
   }
   return getLocalData("services", defaultServices).sort((a: any, b: any) => a.order - b.order);
 };
 
 export const saveService = async (service: ServiceItem): Promise<void> => {
+  try {
+    const res = await fetch("/api/services", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(service)
+    });
+    if (res.ok) return;
+  } catch (e) {
+    console.warn("Cloudflare API save failed, saving locally:", e);
+  }
+
   if (useFirebase && db) {
     try {
       await setDoc(doc(db, "services", service.id), service);
       return;
     } catch (e) {
-      console.error("Firebase saveService error, saving locally:", e);
+      console.error("Firebase saveService error:", e);
     }
   }
   const services = await getServices();
@@ -526,12 +581,19 @@ export const saveService = async (service: ServiceItem): Promise<void> => {
 };
 
 export const deleteService = async (id: string): Promise<void> => {
+  try {
+    const res = await fetch(`/api/services?id=${id}`, { method: "DELETE" });
+    if (res.ok) return;
+  } catch (e) {
+    console.warn("Cloudflare API delete failed, deleting locally:", e);
+  }
+
   if (useFirebase && db) {
     try {
       await deleteDoc(doc(db, "services", id));
       return;
     } catch (e) {
-      console.error("Firebase deleteService error, deleting locally:", e);
+      console.error("Firebase deleteService error:", e);
     }
   }
   const services = await getServices();

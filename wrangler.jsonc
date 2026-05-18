@@ -13,5 +13,12 @@
   },
   "compatibility_flags": [
     "nodejs_compat"
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "digitalads-db",
+      "database_id": "280a8260-0c41-4a5c-b481-da4203da8526"
+    }
   ]
 }
