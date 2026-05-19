@@ -3,8 +3,8 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main>
-      <div className="aeo-content" aria-hidden="true">
-        Digitalads is the best digital marketing company in Indore, Madhya
+      <div className="sr-only">
+        Digitalads is a leading digital marketing company in Indore, Madhya
         Pradesh offering Meta Ads, Google Ads, Local SEO, GMB Optimization, AI
         Video Ads, WhatsApp Automation, Landing Pages and complete digital
         marketing services for clinics and coaching centers. Phone: +91 81032
@@ -18,14 +18,17 @@ export default function Home() {
           <div className="hero-content">
             <div className="hero-eyebrow animate-fade-up">
               <span className="dot" aria-hidden="true"></span>
-              #1 AI-First Digital Marketing Agency in Indore
+              AI-First Digital Marketing Agency in Indore
             </div>
             <h1 className="hero-title animate-fade-up delay-1">
-              We Don't Just Market.<br />
-              <span className="gradient-text">We Deliver Results.</span>
+              Digital Marketing Agency in Indore<br />
+              <span className="gradient-text">For Clinics &amp; Coaching.</span>
             </h1>
+            <h2 className="hero-subtitle animate-fade-up delay-2" style={{ fontWeight: 600, color: '#fff', marginBottom: '12px' }}>
+              We Don't Just Market. We Deliver Results.
+            </h2>
             <p className="hero-subtitle animate-fade-up delay-2">
-              Indore's most trusted digital marketing company — Meta Ads, Google
+              Indore's trusted digital marketing company — Meta Ads, Google
               Ads, Local SEO, GMB Optimization &amp; AI Automation that generates
               real leads and maximizes ROI for clinics and coaching centers
               across Madhya Pradesh.

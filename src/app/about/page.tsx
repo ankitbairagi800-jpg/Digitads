@@ -4,6 +4,9 @@ import Image from "next/image";
 export const metadata = {
   title: "About Digitalads — AI-First Digital Marketing Agency in Indore | Ankit Bairagi",
   description: "Learn about Digitalads — Indore's AI-first digital marketing agency. Meet Growth Partner Ankit Bairagi and discover our mission for Madhya Pradesh businesses.",
+  alternates: {
+    canonical: "https://thedigitalads.in/about",
+  }
 };
 
 export default function About() {

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { getBlogs, BlogPost } from "@/lib/db";
 import "./blog.css";
 
@@ -131,7 +132,7 @@ export default function BlogPage() {
                     <div className="blog-card-img">
                       <span className="blog-cat-tag">{post.category}</span>
                       {post.image ? (
-                        <img src={post.image} alt={post.imageAlt || post.title} className="blog-card-real-img" loading="lazy" />
+                        <Image src={post.image} alt={post.imageAlt || post.title} width={400} height={220} className="blog-card-real-img" loading="lazy" />
                       ) : (
                         <i className={`${post.icon || "fa-solid fa-newspaper"} blog-card-img-icon`}></i>
                       )}
