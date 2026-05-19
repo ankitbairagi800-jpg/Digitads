@@ -306,7 +306,7 @@ export default function ServicesPage() {
                 <li><i className="fas fa-check" aria-hidden="true"></i> CRM lead tracking and pipeline setup</li>
                 <li><i className="fas fa-check" aria-hidden="true"></i> n8n / Make.com workflow automation</li>
                 <li><i className="fas fa-check" aria-hidden="true"></i> Integration with Facebook Lead Ads &amp; Google Forms</li>
-                <li><i className="fas fa-check" aria-hidden="true"></i> No lead left behind — 100% follow-up guarantee</li>
+                <li><i className="fas fa-check" aria-hidden="true"></i> No lead left behind — Consistent follow-up setup</li>
               </ul>
               
               <Link href="/contact" className="btn btn-primary">
@@ -353,8 +353,8 @@ export default function ServicesPage() {
                 <text x="200" y="252" textAnchor="middle" fontSize="7" fill="rgba(255,255,255,0.4)" fontFamily="Arial">More Conversions</text>
                 <rect x="282" y="205" width="88" height="52" rx="10" fill="rgba(255,255,255,0.06)" stroke="#25D366" strokeWidth="1" />
                 <text x="326" y="222" textAnchor="middle" fontSize="8" fill="#25D366" fontFamily="Arial">FOLLOW-UP</text>
-                <text x="326" y="240" textAnchor="middle" fontSize="15" fontWeight="800" fill="#fff" fontFamily="Arial">100%</text>
-                <text x="326" y="252" textAnchor="middle" fontSize="7" fill="rgba(255,255,255,0.4)" fontFamily="Arial">Guaranteed</text>
+                <text x="326" y="240" textAnchor="middle" fontSize="15" fontWeight="800" fill="#fff" fontFamily="Arial">Automated</text>
+                <text x="326" y="252" textAnchor="middle" fontSize="7" fill="rgba(255,255,255,0.4)" fontFamily="Arial">Process</text>
               </svg>
             </div>
           </div>

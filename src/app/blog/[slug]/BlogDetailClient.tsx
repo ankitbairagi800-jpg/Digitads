@@ -201,12 +201,8 @@ export default function BlogDetailClient({ slug, initialBlog, initialAllBlogs }:
                   <span>Ankit Bairagi</span>
                 </div>
                 <div className="blog-meta-item">
-                  <i className="fa-regular fa-calendar" aria-hidden="true"></i>
-                  <time dateTime={blog.date}>{blog.date}</time>
-                </div>
-                <div className="blog-meta-item">
-                  <i className="fa-regular fa-clock" aria-hidden="true"></i>
-                  <span>{blog.readTime}</span>
+                  <i className="fa-solid fa-book-open" aria-hidden="true"></i>
+                  <span>Insightful Read</span>
                 </div>
               </div>
               <div className="blog-hero-tags">
@@ -302,8 +298,7 @@ export default function BlogDetailClient({ slug, initialBlog, initialAllBlogs }:
                       <span className="related-post-cat">{post.category}</span>
                       <h3>{post.title}</h3>
                       <div className="related-post-meta">
-                        <span><i className="fa-regular fa-clock"></i> {post.readTime}</span>
-                        <span><i className="fa-regular fa-calendar"></i> {post.date}</span>
+                        <span>Strategic Guide</span>
                       </div>
                     </div>
                   </Link>

@@ -76,6 +76,37 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
       </head>
       <body className={inter.className}>
+        <Script
+          id="schema-org"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Digitalads",
+                "url": "https://thedigitalads.in/",
+                "logo": "https://thedigitalads.in/logo.jpg",
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "telephone": "+918103202086",
+                  "contactType": "customer service"
+                }
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "Digitalads",
+                "url": "https://thedigitalads.in/",
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "https://thedigitalads.in/blog?q={search_term_string}",
+                  "query-input": "required name=search_term_string"
+                }
+              }
+            ])
+          }}
+        />
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>

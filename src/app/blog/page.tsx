@@ -89,8 +89,7 @@ export default function BlogPage() {
                 <p className="featured-excerpt">{featuredPost.excerpt}</p>
                 
                 <div className="featured-meta">
-                  <span><i className="fa-regular fa-clock"></i> {featuredPost.readTime}</span>
-                  <span><i className="fa-regular fa-calendar"></i> {featuredPost.date}</span>
+                  <span>Insightful Read</span>
                 </div>
                 
                 <Link href={`/blog/${featuredPost.slug}`} className="btn btn-primary" style={{ width: "fit-content" }}>
@@ -139,8 +138,7 @@ export default function BlogPage() {
                     </div>
                     <div className="blog-card-body">
                       <div className="blog-card-meta">
-                        <span className="blog-card-date"><i className="fa-regular fa-calendar"></i> {post.date}</span>
-                        <span className="blog-card-read"><i className="fa-regular fa-clock"></i> {post.readTime}</span>
+                        <span className="blog-card-read">Strategic Guide</span>
                       </div>
                       <Link href={`/blog/${post.slug}`} className="blog-card-title">
                         {post.title}
@@ -182,7 +180,6 @@ export default function BlogPage() {
                 {blogs.slice(0, 4).map(post => (
                   <li key={`recent-${post.id}`}>
                     <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-                    <span>{post.date}</span>
                   </li>
                 ))}
               </ul>

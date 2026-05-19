@@ -28,9 +28,9 @@ const caseStudiesData: CaseStudy[] = [
     strategy: "We rebuilt the Meta Ads campaign from scratch — new audiences, new creatives, and video testimonial ads. We simultaneously implemented WhatsApp automation using n8n that responded to every lead within 60 seconds, automatically booking consultation slots.",
     execution: "Launched 3 campaigns: awareness (video), consideration (offers), and conversion (booking). Retargeting for warm audiences. WhatsApp bot sent appointment reminders 24 hours and 2 hours before each consultation.",
     results: [
-      { value: "340%", label: "More Leads" },
-      { value: "₹890", label: "Cost Per Lead" },
-      { value: "68%", label: "Show-up Rate" }
+      { value: "Potential", label: "Lead Growth" },
+      { value: "Optimized", label: "Cost Per Lead" },
+      { value: "Improved", label: "Show-up Rate" }
     ]
   },
   {
@@ -43,9 +43,9 @@ const caseStudiesData: CaseStudy[] = [
     strategy: "Two-track approach: immediate results via Google Search Ads targeting \"IIT coaching Indore\" keywords, and long-term through GMB optimization and local SEO to build organic visibility in the Indore map pack.",
     execution: "Built a high-converting landing page, launched 4 keyword groups in Google Ads, optimized GMB with 50+ photos, 20+ reviews, and regular posts. Local SEO citations across 40+ directories.",
     results: [
-      { value: "80", label: "New Admissions/Month" },
-      { value: "Top 3", label: "Google Maps Rank" },
-      { value: "420%", label: "ROI in 90 Days" }
+      { value: "Growth", label: "New Admissions" },
+      { value: "Better", label: "Google Maps Rank" },
+      { value: "Strong", label: "ROI Potential" }
     ]
   },
   {
@@ -56,11 +56,11 @@ const caseStudiesData: CaseStudy[] = [
     tags: ["GMB Optimization", "AI Video Ads", "Fitness"],
     challenge: "A gym in Vijay Nagar had 47 Google reviews and ranked on page 2 of Maps. Walk-ins were declining. No social media presence. Competitors with fewer members were outranking them on Google.",
     strategy: "GMB deep optimization combined with a consistent AI video content strategy for Instagram Reels — member transformation stories, facility tours, trainer expertise videos — to build trust and social proof at scale.",
-    execution: "Revamped GMB with 80+ professional photos, keyword-rich description, weekly posts, and a review generation system that added 60+ new reviews in 90 days. Produced 12 AI-assisted Reels over 3 months.",
+    execution: "Revamped GMB with 80+ professional photos, keyword-rich description, weekly posts, and a review generation system that aimed for new reviews. Produced AI-assisted Reels.",
     results: [
-      { value: "200%", label: "More Walk-ins" },
-      { value: "#1", label: "Google Maps Rank" },
-      { value: "60+", label: "New Reviews in 90d" }
+      { value: "Increased", label: "Walk-ins Expected" },
+      { value: "Higher", label: "Google Maps Rank" },
+      { value: "More", label: "Consistent Reviews" }
     ]
   },
   {
@@ -71,11 +71,11 @@ const caseStudiesData: CaseStudy[] = [
     tags: ["Meta Ads", "Google Ads", "GMB SEO", "Automation"],
     challenge: "A dental clinic with 3 doctors had tried 3 agencies in 18 months with no consistent results. Inconsistent lead flow, no follow-up system, and an outdated website that wasn't converting mobile visitors.",
     strategy: "Full-funnel rebuild: new landing page → Meta Ads for awareness and lead gen → Google Ads for high-intent searches → GMB optimization for organic local discovery → WhatsApp automation for instant follow-up.",
-    execution: "Built a mobile-first landing page, launched campaigns across Meta and Google simultaneously, optimized GMB profile, and deployed an n8n workflow that followed up with every lead within 90 seconds via WhatsApp.",
+    execution: "Built a mobile-first landing page, launched campaigns across Meta and Google simultaneously, optimized GMB profile, and deployed an n8n workflow for faster follow-up via WhatsApp.",
     results: [
-      { value: "35+", label: "Leads Per Day" },
-      { value: "₹620", label: "Cost Per Lead" },
-      { value: "480%", label: "ROI Achieved" }
+      { value: "Consistent", label: "Lead Flow Expected" },
+      { value: "Optimized", label: "Cost Per Lead" },
+      { value: "High", label: "ROI Potential" }
     ]
   }
 ];
@@ -92,8 +92,8 @@ export default function CaseStudiesPage() {
               <span className="breadcrumb-sep">›</span>
               <span className="breadcrumb-current">Case Studies</span>
             </nav>
-            <h1>Real Clients.<br/><span className="gradient-text">Real Results.</span></h1>
-            <p>No made-up screenshots. No inflated numbers. These are actual results delivered for businesses in Indore — with the strategy, execution, and metrics that made it happen.</p>
+            <h1>Real Potential.<br/><span className="gradient-text">Proven Strategies.</span></h1>
+            <p>Our methodologies have helped various businesses in Indore optimize their digital presence. These case studies illustrate the strategies we deploy and the potential outcomes you can achieve — with no unrealistic guarantees, just data-driven approaches.</p>
           </div>
         </div>
       </section>
@@ -102,10 +102,10 @@ export default function CaseStudiesPage() {
       <section className="stats-bar" aria-label="Overall results">
         <div className="container">
           <div className="stats-grid">
-            <div className="stat-item"><div className="stat-number">500+</div><div className="stat-label">Clients Served</div></div>
-            <div className="stat-item"><div className="stat-number">2500+</div><div className="stat-label">Campaigns Executed</div></div>
-            <div className="stat-item"><div className="stat-number">350%</div><div className="stat-label">Average ROI Delivered</div></div>
-            <div className="stat-item"><div className="stat-number">10M+</div><div className="stat-label">Total Leads Generated</div></div>
+            <div className="stat-item"><div className="stat-number">Custom</div><div className="stat-label">Tailored Strategies</div></div>
+            <div className="stat-item"><div className="stat-number">Data-Driven</div><div className="stat-label">Campaign Adjustments</div></div>
+            <div className="stat-item"><div className="stat-number">High</div><div className="stat-label">ROI Potential Focus</div></div>
+            <div className="stat-item"><div className="stat-number">Quality</div><div className="stat-label">Lead Generation Goals</div></div>
           </div>
         </div>
       </section>
