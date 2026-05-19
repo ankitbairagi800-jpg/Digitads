@@ -72,7 +72,11 @@ export default function BlogPage() {
             <div className="featured-article">
               <div className="featured-img">
                 <div className="featured-label">Featured</div>
-                <i className={`${featuredPost.icon || "fa-solid fa-chart-line"} featured-img-icon`}></i>
+                {featuredPost.image ? (
+                  <img src={featuredPost.image} alt={featuredPost.imageAlt || featuredPost.title} className="featured-real-img" loading="eager" />
+                ) : (
+                  <i className={`${featuredPost.icon || "fa-solid fa-chart-line"} featured-img-icon`}></i>
+                )}
                 <div className="featured-img-overlay"></div>
               </div>
               <div className="featured-body">
@@ -127,7 +131,11 @@ export default function BlogPage() {
                   <article key={post.id} className="blog-card">
                     <div className="blog-card-img">
                       <span className="blog-cat-tag">{post.category}</span>
-                      <i className={`${post.icon || "fa-solid fa-newspaper"} blog-card-img-icon`}></i>
+                      {post.image ? (
+                        <img src={post.image} alt={post.imageAlt || post.title} className="blog-card-real-img" loading="lazy" />
+                      ) : (
+                        <i className={`${post.icon || "fa-solid fa-newspaper"} blog-card-img-icon`}></i>
+                      )}
                     </div>
                     <div className="blog-card-body">
                       <div className="blog-card-meta">

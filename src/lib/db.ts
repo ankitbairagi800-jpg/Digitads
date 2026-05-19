@@ -22,6 +22,8 @@ export interface BlogPost {
   tags: string[];
   slug: string;
   icon: string;
+  image?: string;
+  imageAlt?: string;
   isFeatured?: boolean;
 }
 
@@ -79,6 +81,8 @@ If you aren't integrating AI into your marketing pipeline, your competitors in I
     tags: ["AI", "Marketing", "Future"],
     slug: "ai-future-marketing",
     icon: "fa-solid fa-chart-line",
+    image: "/blog-ai-marketing.png",
+    imageAlt: "AI-powered digital marketing automation concept showing artificial intelligence brain connected to social media and analytics — Digitalads Indore",
     isFeatured: true
   },
   {
@@ -113,7 +117,9 @@ To rank for local queries, your website needs content mentioning Indore neighbor
     date: "Aug 15, 2024",
     tags: ["AI", "Local SEO", "Clinics"],
     slug: "ai-local-seo",
-    icon: "fa-solid fa-robot"
+    icon: "fa-solid fa-robot",
+    image: "/blog-local-seo.png",
+    imageAlt: "Local SEO and Google Maps optimization for clinics in Indore — GMB ranking strategy by Digitalads"
   },
   {
     id: "meta-vs-google",
@@ -159,7 +165,9 @@ For optimal growth, use a **Hybrid Strategy**:
     date: "Aug 02, 2024",
     tags: ["Meta Ads", "Google Ads", "Education"],
     slug: "meta-vs-google",
-    icon: "fa-solid fa-bullseye"
+    icon: "fa-solid fa-bullseye",
+    image: "/blog-meta-vs-google.png",
+    imageAlt: "Meta Ads vs Google Ads comparison for coaching centers in Indore — which platform delivers more student enrollments"
   },
   {
     id: "whatsapp-automation",
@@ -194,7 +202,9 @@ Missed appointments cost money. Setting up reminders 24 hours and 2 hours before
     date: "Jul 28, 2024",
     tags: ["WhatsApp", "Chatbot", "Lead Nurturing"],
     slug: "whatsapp-automation",
-    icon: "fa-brands fa-whatsapp"
+    icon: "fa-brands fa-whatsapp",
+    image: "/blog-whatsapp-automation.png",
+    imageAlt: "WhatsApp Business API automation for lead nurturing and appointment booking — Digitalads Indore"
   },
   {
     id: "clinic-landing-pages",
@@ -228,7 +238,9 @@ Google rewards landing pages that match the ad's keyword exactly. A higher match
     date: "Jul 10, 2024",
     tags: ["Web Design", "CRO", "Clinics"],
     slug: "clinic-landing-pages",
-    icon: "fa-solid fa-laptop-medical"
+    icon: "fa-solid fa-laptop-medical",
+    image: "/blog-landing-pages.png",
+    imageAlt: "High-converting landing page design for medical clinics in Indore — mobile responsive with booking form"
   }
 ];
 
