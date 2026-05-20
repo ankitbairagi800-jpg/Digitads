@@ -18,7 +18,7 @@
   --text-dark: #0a0a0a;
   --text-light: #ffffff;
   --text-gray: #666666;
-  --text-muted: #999999;
+  --text-muted: #737373;
   --border-color: #333333;
   --border-light: #ebebeb;
   --shadow: 0 10px 40px rgba(0,0,0,0.12);
@@ -131,7 +131,7 @@ input,select,textarea{font-family:var(--font-primary)}
 .service-features{margin-bottom:24px}
 .service-features li{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:14px;color:var(--text-gray)}
 .service-features li i{color:var(--primary-color);font-size:13px;flex-shrink:0}
-.service-link{display:inline-flex;align-items:center;gap:8px;color:var(--primary-color);font-weight:600;font-size:14px;transition:var(--transition)}
+.service-link{display:inline-flex;align-items:center;gap:8px;color:var(--primary-color);font-weight:600;font-size:14px;transition:var(--transition);text-decoration:underline;text-underline-offset:3px}
 .service-link:hover{gap:12px}
 
 /* ===== WHY US ===== */
@@ -209,9 +209,9 @@ input,select,textarea{font-family:var(--font-primary)}
 .form-group input,.form-group select,.form-group textarea{width:100%;padding:14px 18px;background:var(--dark-bg);border:2px solid rgba(255,255,255,0.08);border-radius:var(--radius-sm);color:#fff;font-size:15px;font-family:var(--font-primary);transition:var(--transition);outline:none}
 .form-group select option{background:var(--dark-bg);color:#fff}
 .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--primary-color);box-shadow:0 0 0 3px rgba(255,107,53,0.12)}
-.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,0.3)}
+.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,0.55)}
 .form-group textarea{resize:vertical;min-height:130px}
-.form-note{font-size:12px;color:rgba(255,255,255,0.35);margin-top:12px;text-align:center}
+.form-note{font-size:12px;color:rgba(255,255,255,0.6);margin-top:12px;text-align:center}
 .form-success{display:none;text-align:center;padding:50px 24px}
 .form-success.active{display:block}
 .form-success i{font-size:64px;color:#00d084;margin-bottom:20px;display:block}
@@ -245,7 +245,7 @@ input,select,textarea{font-family:var(--font-primary)}
 .footer-contact a{color:rgba(255,255,255,0.55);transition:var(--transition)}
 .footer-contact a:hover{color:var(--primary-color)}
 .footer-bottom{padding:24px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.footer-bottom p{font-size:13px;color:rgba(255,255,255,0.35)}
+.footer-bottom p{font-size:13px;color:rgba(255,255,255,0.6)}
 .footer-bottom a{color:var(--primary-color)}
 
 /* ===== SCROLL TOP & WHATSAPP ===== */
@@ -376,7 +376,7 @@ input,select,textarea{font-family:var(--font-primary)}
 .blog-card-title{font-size:18px;font-weight:700;color:var(--text-dark);margin-bottom:12px;line-height:1.4;transition:var(--transition);display:block}
 .blog-card-title:hover{color:var(--primary-color)}
 .blog-card-excerpt{font-size:14px;color:var(--text-gray);line-height:1.75;margin-bottom:18px}
-.blog-card-link{display:inline-flex;align-items:center;gap:7px;color:var(--primary-color);font-size:14px;font-weight:600;transition:var(--transition)}
+.blog-card-link{display:inline-flex;align-items:center;gap:7px;color:var(--primary-color);font-size:14px;font-weight:600;transition:var(--transition);text-decoration:underline;text-underline-offset:3px}
 .blog-card-link:hover{gap:11px}
 .no-posts-msg{text-align:center;padding:60px 24px;grid-column:1/-1}
 .no-posts-msg i{font-size:52px;color:var(--border-light);margin-bottom:16px;display:block}
@@ -449,7 +449,7 @@ input,select,textarea{font-family:var(--font-primary)}
 .contact-page-form>p{font-size:15px;color:rgba(255,255,255,0.5);margin-bottom:32px}
 .contact-page-form .form-group label{color:rgba(255,255,255,0.85)}
 .contact-page-form .form-group input,.contact-page-form .form-group select,.contact-page-form .form-group textarea{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.1);color:#fff}
-.contact-page-form .form-group input::placeholder,.contact-page-form .form-group textarea::placeholder{color:rgba(255,255,255,0.3)}
+.contact-page-form .form-group input::placeholder,.contact-page-form .form-group textarea::placeholder{color:rgba(255,255,255,0.55)}
 .contact-page-form .form-group select option{background:var(--dark-bg)}
 
 /* ===== ADMIN PANEL ===== */

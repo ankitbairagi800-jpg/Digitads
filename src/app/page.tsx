@@ -130,7 +130,7 @@ export default function Home() {
                   Performance Reports
                 </li>
               </ul>
-              <Link href="/services#meta-ads" className="service-link">
+              <Link href="/services#meta-ads" className="service-link" aria-label="Learn more about Meta Ads">
                 Learn More <i className="fas fa-arrow-right" aria-hidden="true"></i>
               </Link>
             </article>
@@ -161,7 +161,7 @@ export default function Home() {
                   Tracking Setup
                 </li>
               </ul>
-              <Link href="/services#google-ads" className="service-link">
+              <Link href="/services#google-ads" className="service-link" aria-label="Learn more about Google Ads">
                 Learn More <i className="fas fa-arrow-right" aria-hidden="true"></i>
               </Link>
             </article>
@@ -194,7 +194,7 @@ export default function Home() {
                   Domination
                 </li>
               </ul>
-              <Link href="/services#gmb-seo" className="service-link">
+              <Link href="/services#gmb-seo" className="service-link" aria-label="Learn more about GMB and Local SEO">
                 Learn More <i className="fas fa-arrow-right" aria-hidden="true"></i>
               </Link>
             </article>
@@ -225,7 +225,7 @@ export default function Home() {
                   Format
                 </li>
               </ul>
-              <Link href="/services#ai-video" className="service-link">
+              <Link href="/services#ai-video" className="service-link" aria-label="Learn more about AI Video Ads">
                 Learn More <i className="fas fa-arrow-right" aria-hidden="true"></i>
               </Link>
             </article>
@@ -255,7 +255,7 @@ export default function Home() {
                   <i className="fas fa-check" aria-hidden="true"></i> CRM Lead Tracking
                 </li>
               </ul>
-              <Link href="/services#automation" className="service-link">
+              <Link href="/services#automation" className="service-link" aria-label="Learn more about WhatsApp and CRM Automation">
                 Learn More <i className="fas fa-arrow-right" aria-hidden="true"></i>
               </Link>
             </article>
@@ -287,7 +287,7 @@ export default function Home() {
                   Vitals
                 </li>
               </ul>
-              <Link href="/services#landing-pages" className="service-link">
+              <Link href="/services#landing-pages" className="service-link" aria-label="Learn more about Landing Pages and Website Design">
                 Learn More <i className="fas fa-arrow-right" aria-hidden="true"></i>
               </Link>
             </article>
@@ -565,7 +565,7 @@ export default function Home() {
           </div>
           <div className="testimonials-grid">
             <article className="testimonial-card">
-              <div className="testimonial-rating" aria-label="5 stars">
+              <div className="testimonial-rating" role="img" aria-label="5 stars">
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
@@ -582,13 +582,13 @@ export default function Home() {
                   <i className="fas fa-user-md" aria-hidden="true"></i>
                 </div>
                 <div className="author-info">
-                  <h4>Dr. Rajesh Sharma</h4>
+                  <h3>Dr. Rajesh Sharma</h3>
                   <p>Skin &amp; Hair Clinic, Indore</p>
                 </div>
               </div>
             </article>
             <article className="testimonial-card">
-              <div className="testimonial-rating" aria-label="5 stars">
+              <div className="testimonial-rating" role="img" aria-label="5 stars">
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
@@ -605,13 +605,13 @@ export default function Home() {
                   <i className="fas fa-chalkboard-teacher" aria-hidden="true"></i>
                 </div>
                 <div className="author-info">
-                  <h4>Priya Verma</h4>
+                  <h3>Priya Verma</h3>
                   <p>Director, Vision IIT Coaching, Indore</p>
                 </div>
               </div>
             </article>
             <article className="testimonial-card">
-              <div className="testimonial-rating" aria-label="5 stars">
+              <div className="testimonial-rating" role="img" aria-label="5 stars">
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
@@ -628,7 +628,7 @@ export default function Home() {
                   <i className="fas fa-user" aria-hidden="true"></i>
                 </div>
                 <div className="author-info">
-                  <h4>Suresh Malhotra</h4>
+                  <h3>Suresh Malhotra</h3>
                   <p>Owner, FitLife Gym, Vijay Nagar, Indore</p>
                 </div>
               </div>
@@ -794,7 +794,7 @@ export default function Home() {
                     <i className="fas fa-phone" aria-hidden="true"></i>
                   </div>
                   <div className="contact-text">
-                    <h4>Phone</h4>
+                    <h3>Phone</h3>
                     <a href="tel:+918103202086">+91 81032 02086</a>
                   </div>
                 </div>
@@ -803,7 +803,7 @@ export default function Home() {
                     <i className="fab fa-whatsapp" aria-hidden="true"></i>
                   </div>
                   <div className="contact-text">
-                    <h4>WhatsApp</h4>
+                    <h3>WhatsApp</h3>
                     <a
                       href="https://wa.me/918103202086"
                       target="_blank"
@@ -818,7 +818,7 @@ export default function Home() {
                     <i className="fas fa-envelope" aria-hidden="true"></i>
                   </div>
                   <div className="contact-text">
-                    <h4>Email</h4>
+                    <h3>Email</h3>
                     <a href="mailto:digitalads959@gmail.com">
                       digitalads959@gmail.com
                     </a>
@@ -829,7 +829,7 @@ export default function Home() {
                     <i className="fas fa-map-marker-alt" aria-hidden="true"></i>
                   </div>
                   <div className="contact-text">
-                    <h4>Location</h4>
+                    <h3>Location</h3>
                     <p>Indore, Madhya Pradesh, India</p>
                   </div>
                 </div>
