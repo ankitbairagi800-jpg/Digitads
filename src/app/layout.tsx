@@ -15,9 +15,6 @@ export const metadata: Metadata = {
   description: "Digitalads — Indore's leading AI-first digital marketing agency. Meta Ads, Google Ads, Local SEO, GMB Optimization & AI Automation for clinics & coaching centers in Madhya Pradesh.",
   keywords: "digital marketing agency Indore, digital marketing company Indore, best digital marketing Indore",
   metadataBase: new URL("https://thedigitalads.in/"),
-  alternates: {
-    canonical: "/",
-  },
   authors: [{ name: "Digitalads — Ankit Bairagi" }],
   robots: {
     index: true,
