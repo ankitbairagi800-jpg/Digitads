@@ -17,13 +17,11 @@ export default function BelowTheFold() {
           </div>
           <div className="services-grid">
             <article className="service-card">
-              <div className="service-icon">
-                <i className="fab fa-meta" aria-hidden="true"></i>
-              </div>
+              <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=600&auto=format&fit=crop" alt="Meta Ads" className="service-img" />
               <h3 className="service-title">Meta Ads (Facebook &amp; Instagram)</h3>
               <p className="service-description">
                 Hyper-targeted ad campaigns on Facebook and Instagram designed to
-                bring high-quality patients and students â€” not just clicks.
+                bring high-quality patients and students — not just clicks.
               </p>
               <ul className="service-features">
                 <li>
@@ -48,9 +46,7 @@ export default function BelowTheFold() {
               </Link>
             </article>
             <article className="service-card">
-              <div className="service-icon">
-                <i className="fab fa-google" aria-hidden="true"></i>
-              </div>
+              <img src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?q=80&w=600&auto=format&fit=crop" alt="Google Ads" className="service-img" />
               <h3 className="service-title">Google Ads (Search &amp; YouTube)</h3>
               <p className="service-description">
                 Capture people actively searching for your services with
@@ -80,13 +76,11 @@ export default function BelowTheFold() {
             </article>
             <article className="service-card featured">
               <span className="featured-badge">Most Popular</span>
-              <div className="service-icon">
-                <i className="fas fa-map-marked-alt" aria-hidden="true"></i>
-              </div>
+              <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=600&auto=format&fit=crop" alt="Local SEO & GMB" className="service-img" />
               <h3 className="service-title">GMB Optimization &amp; Local SEO</h3>
               <p className="service-description">
                 Rank your clinic or coaching center at the top of Google Maps and
-                local search â€” more walk-ins, more calls, more patients every
+                local search — more walk-ins, more calls, more patients every
                 single day.
               </p>
               <ul className="service-features">
@@ -112,9 +106,7 @@ export default function BelowTheFold() {
               </Link>
             </article>
             <article className="service-card">
-              <div className="service-icon">
-                <i className="fas fa-film" aria-hidden="true"></i>
-              </div>
+              <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=600&auto=format&fit=crop" alt="AI Video Ads" className="service-img" />
               <h3 className="service-title">AI Video Ads (Reels &amp; Shorts)</h3>
               <p className="service-description">
                 Scroll-stopping AI-generated video ads for Instagram Reels and
@@ -143,9 +135,7 @@ export default function BelowTheFold() {
               </Link>
             </article>
             <article className="service-card">
-              <div className="service-icon">
-                <i className="fab fa-whatsapp" aria-hidden="true"></i>
-              </div>
+              <img src="https://images.unsplash.com/photo-1614680376593-902f74cf0d41?q=80&w=600&auto=format&fit=crop" alt="WhatsApp Automation" className="service-img" />
               <h3 className="service-title">WhatsApp &amp; CRM Automation</h3>
               <p className="service-description">
                 Never lose a lead again. 24/7 automated follow-ups via WhatsApp,
@@ -173,9 +163,7 @@ export default function BelowTheFold() {
               </Link>
             </article>
             <article className="service-card">
-              <div className="service-icon">
-                <i className="fas fa-laptop-code" aria-hidden="true"></i>
-              </div>
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop" alt="Landing Pages" className="service-img" />
               <h3 className="service-title">Landing Pages &amp; Website Design</h3>
               <p className="service-description">
                 High-converting, lightning-fast websites and landing pages that
@@ -228,9 +216,7 @@ export default function BelowTheFold() {
           </div>
           <div className="why-grid">
             <div className="why-card">
-              <div className="why-icon">
-                <i className="fas fa-robot" aria-hidden="true"></i>
-              </div>
+              <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=600&auto=format&fit=crop" alt="AI First" className="why-img" />
               <h3>AI-First Approach</h3>
               <p>
                 We leverage ChatGPT, ElevenLabs, CapCut AI, and n8n automations
@@ -239,9 +225,7 @@ export default function BelowTheFold() {
               </p>
             </div>
             <div className="why-card">
-              <div className="why-icon">
-                <i className="fas fa-map-marker-alt" aria-hidden="true"></i>
-              </div>
+              <img src="https://images.unsplash.com/photo-1519999482648-25049ddd37b1?q=80&w=600&auto=format&fit=crop" alt="Local Knowledge" className="why-img" />
               <h3>Deep Local Market Knowledge</h3>
               <p>
                 We understand Indore's neighborhoods, search behavior, and local
@@ -250,20 +234,16 @@ export default function BelowTheFold() {
               </p>
             </div>
             <div className="why-card">
-              <div className="why-icon">
-                <i className="fas fa-chart-line" aria-hidden="true"></i>
-              </div>
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop" alt="Results Focus" className="why-img" />
               <h3>Results-Only Focus</h3>
               <p>
-                We track every rupee spent. No vanity metrics â€” only real leads,
+                We track every rupee spent. No vanity metrics — only real leads,
                 real appointments, and real revenue growth you can measure
                 monthly.
               </p>
             </div>
             <div className="why-card">
-              <div className="why-icon">
-                <i className="fas fa-stethoscope" aria-hidden="true"></i>
-              </div>
+              <img src="https://images.unsplash.com/photo-1576091160550-2173ff9e9e9c?q=80&w=600&auto=format&fit=crop" alt="Clinic Specialists" className="why-img" />
               <h3>Clinic &amp; Coaching Specialists</h3>
               <p>
                 We don't serve everyone. Our deep specialization in healthcare
@@ -272,20 +252,16 @@ export default function BelowTheFold() {
               </p>
             </div>
             <div className="why-card">
-              <div className="why-icon">
-                <i className="fas fa-bolt" aria-hidden="true"></i>
-              </div>
+              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop" alt="Fast Execution" className="why-img" />
               <h3>Fast Onboarding &amp; Execution</h3>
               <p>
                 Campaigns go live within 48 hours of onboarding. No long waiting
-                periods, no bureaucracy â€” just fast, decisive action from day
+                periods, no bureaucracy — just fast, decisive action from day
                 one.
               </p>
             </div>
             <div className="why-card">
-              <div className="why-icon">
-                <i className="fas fa-file-alt" aria-hidden="true"></i>
-              </div>
+              <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=600&auto=format&fit=crop" alt="Transparent Reporting" className="why-img" />
               <h3>Transparent Monthly Reporting</h3>
               <p>
                 Detailed reports every month. You always know exactly how your
@@ -316,7 +292,7 @@ export default function BelowTheFold() {
                 <h3>Free Audit &amp; Discovery</h3>
                 <p>
                   We start with a comprehensive audit of your current digital
-                  presence â€” website, GMB profile, ads history, and competitor
+                  presence — website, GMB profile, ads history, and competitor
                   landscape. This reveals exactly where you're losing leads and
                   money.
                 </p>
@@ -343,7 +319,7 @@ export default function BelowTheFold() {
                 <h3>Launch &amp; AI-Powered Execution</h3>
                 <p>
                   Campaigns go live within 48 hours. We use AI tools to create
-                  content, automate follow-ups, and optimize ads in real-time â€”
+                  content, automate follow-ups, and optimize ads in real-time —
                   giving you an unfair advantage over competitors.
                 </p>
               </div>
@@ -371,7 +347,7 @@ export default function BelowTheFold() {
             <span className="section-tag">Industries We Serve</span>
             <h2 className="section-title">Specialists in High-Impact Industries</h2>
             <p className="section-subtitle">
-              Deep domain expertise means strategies built for your industry â€”
+              Deep domain expertise means strategies built for your industry —
               not generic templates
             </p>
           </div>
@@ -383,7 +359,7 @@ export default function BelowTheFold() {
               <h3>Healthcare &amp; Clinics</h3>
               <p>
                 Doctors, dentists, skin clinics, hair clinics, physiotherapy
-                centers â€” we help healthcare providers attract more patients
+                centers — we help healthcare providers attract more patients
                 digitally.
               </p>
             </div>
@@ -394,28 +370,18 @@ export default function BelowTheFold() {
               <h3>Coaching &amp; Education</h3>
               <p>
                 IIT/NEET coaching, skill development centers, spoken English,
-                competitive exam institutes â€” we fill your batches with qualified
+                competitive exam institutes — we fill your batches with qualified
                 students.
               </p>
             </div>
-            <div className="industry-card">
-              <div className="industry-icon">
-                <i className="fas fa-dumbbell" aria-hidden="true"></i>
-              </div>
-              <h3>Fitness &amp; Wellness</h3>
-              <p>
-                Gyms, yoga studios, nutrition consultants, and wellness centers
-                â€” we help you build a loyal community that keeps growing month
-                after month.
-              </p>
-            </div>
+            
             <div className="industry-card">
               <div className="industry-icon">
                 <i className="fas fa-home" aria-hidden="true"></i>
               </div>
               <h3>Real Estate</h3>
               <p>
-                Builders, brokers, and property developers in Indore â€” targeted
+                Builders, brokers, and property developers in Indore — targeted
                 ads that generate serious buyer inquiries, not time-wasters.
               </p>
             </div>
@@ -425,22 +391,12 @@ export default function BelowTheFold() {
               </div>
               <h3>Local Retail &amp; Services</h3>
               <p>
-                Restaurants, salons, boutiques, and service businesses â€”
+                Restaurants, salons, boutiques, and service businesses —
                 hyper-local campaigns that drive foot traffic and walk-ins from
                 your target area.
               </p>
             </div>
-            <div className="industry-card">
-              <div className="industry-icon">
-                <i className="fas fa-landmark" aria-hidden="true"></i>
-              </div>
-              <h3>Political &amp; PR Campaigns</h3>
-              <p>
-                Election campaigns, political PR, voter outreach &amp; social media
-                presence building for candidates and parties across Madhya
-                Pradesh.
-              </p>
-            </div>
+            
           </div>
         </div>
       </section>
@@ -458,7 +414,7 @@ export default function BelowTheFold() {
               <span className="gmb-btn-text">
                 <span className="gmb-btn-main">Rate Us on Google</span>
                 <span className="gmb-btn-sub">
-                  Google Maps par review do â€” sirf 30 seconds
+                  Google Maps par review do — sirf 30 seconds
                 </span>
               </span>
               <i className="fas fa-external-link-alt gmb-btn-arrow"></i>
@@ -473,7 +429,7 @@ export default function BelowTheFold() {
             <span className="section-tag">Client Results</span>
             <h2 className="section-title">What Our Clients Say About Us</h2>
             <p className="section-subtitle">
-              Real results from real businesses in Indore â€” not made-up numbers
+              Real results from real businesses in Indore — not made-up numbers
             </p>
           </div>
           <div className="testimonials-grid">
@@ -583,7 +539,7 @@ export default function BelowTheFold() {
                 Digitalads is one of the top-rated digital marketing agencies in
                 Indore, MP. With 500+ clients, 2500+ campaigns run, and an
                 average ROI of 350%, we specialize in Meta Ads, Google Ads, Local
-                SEO, GMB Optimization, AI Video Ads, and WhatsApp Automation â€”
+                SEO, GMB Optimization, AI Video Ads, and WhatsApp Automation —
                 especially for healthcare clinics and coaching centers.
               </div>
             </div>
@@ -601,7 +557,7 @@ export default function BelowTheFold() {
                 With paid ads (Google Ads, Meta Ads), you'll see measurable
                 results within the first 30 days. For Local SEO and GMB
                 optimization, clients typically see significant ranking
-                improvements within 3â€“6 months. We set realistic timelines from
+                improvements within 3–6 months. We set realistic timelines from
                 day one.
               </div>
             </div>
@@ -616,7 +572,7 @@ export default function BelowTheFold() {
                 <i className="fas fa-chevron-down" aria-hidden="true"></i>
               </div>
               <div className="faq-answer">
-                Our services start from â‚¹8,000/month and scale based on your
+                Our services start from ₹8,000/month and scale based on your
                 goals and channels. We provide a free marketing audit first, then
                 recommend only what makes financial sense for your business. No
                 hidden fees, no long lock-in contracts initially.
@@ -633,7 +589,7 @@ export default function BelowTheFold() {
                 <i className="fas fa-chevron-down" aria-hidden="true"></i>
               </div>
               <div className="faq-answer">
-                Yes â€” healthcare is our primary specialty. We create compliant,
+                Yes — healthcare is our primary specialty. We create compliant,
                 high-converting campaigns for skin clinics, hair clinics, dental
                 practices, physiotherapy centers, and multi-specialty hospitals.
                 We understand the trust-building required in medical marketing.
@@ -653,7 +609,7 @@ export default function BelowTheFold() {
                 GMB (Google My Business) optimization improves your Google Maps
                 listing so your business appears at the top when local customers
                 in Indore search for your service. Over 60% of local searches
-                result in a visit or call within 24 hours â€” it's one of the
+                result in a visit or call within 24 hours — it's one of the
                 highest-ROI investments for any local business.
               </div>
             </div>

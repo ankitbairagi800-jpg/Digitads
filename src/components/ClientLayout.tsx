@@ -29,7 +29,7 @@ export default function ClientLayout({
         className="whatsapp-float"
         aria-label="Chat on WhatsApp"
       >
-        <i className="fab fa-whatsapp" aria-hidden="true"></i>
+        <i className="fa-brands fa-whatsapp" style={{ fontSize: "35px", marginTop: "2px" }} aria-hidden="true"></i>
       </a>
     </>
   );

@@ -36,7 +36,7 @@ export default function Home() {
               We Don't Just Market. We Deliver Results.
             </h2>
             <p className="hero-subtitle animate-fade-up delay-2">
-              Indore's trusted digital marketing company â€” Meta Ads, Google
+              Indore's trusted digital marketing company — Meta Ads, Google
               Ads, Local SEO, GMB Optimization &amp; AI Automation that generates
               real leads and maximizes ROI for clinics and coaching centers
               across Madhya Pradesh.
@@ -75,28 +75,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="stats-bar" aria-label="Key statistics">
-        <div className="container">
-          <div className="stats-grid">
-            <div className="stat-item">
-              <div className="stat-number">500+</div>
-              <div className="stat-label">Clients Served</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">2500+</div>
-              <div className="stat-label">Campaigns Executed</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">350%</div>
-              <div className="stat-label">Average ROI Delivered</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">10M+</div>
-              <div className="stat-label">Leads Generated</div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <BelowTheFold />
     </main>
