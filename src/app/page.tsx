@@ -1,5 +1,11 @@
-﻿import Link from "next/link";
+import Link from "next/link";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/',
+  },
+};
 import BelowTheFold from "@/components/home/BelowTheFold";
 
 export default function Home() {
