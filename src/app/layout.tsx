@@ -86,6 +86,8 @@ export default function RootLayout({
             `
           }}
         />
+        {/* Ahrefs Analytics */}
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="cxtMpm0j1w+fSQOBMfMnaQ" async></script>
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
