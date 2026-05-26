@@ -84,7 +84,7 @@ export default function About() {
                 className="linkedin-btn"
                 aria-label="View Ankit Bairagi on LinkedIn"
               >
-                <i className="fab fa-linkedin-in" aria-hidden="true"></i>
+                <i className="fa-brands fa-linkedin-in" aria-hidden="true"></i>
                 View LinkedIn Profile
               </a>
             </div>

@@ -260,7 +260,7 @@ const defaultServices: ServiceItem[] = [
       "Daily monitoring & weekly optimization",
       "Monthly performance reports with insights"
     ],
-    icon: "fab fa-meta",
+    icon: "fa-brands fa-meta",
     visualTitle: "Meta Ads Indore",
     visualDescription: "Facebook & Instagram campaigns that generate 5–15 qualified leads daily for clinics and coaching centers",
     reverseLayout: false,
@@ -280,7 +280,7 @@ const defaultServices: ServiceItem[] = [
       "Smart bidding and Quality Score optimization",
       "Monthly detailed performance dashboard"
     ],
-    icon: "fab fa-google",
+    icon: "fa-brands fa-google",
     visualTitle: "Google Ads Indore",
     visualDescription: "Capture high-intent searches and turn them into booked appointments within 30 days",
     reverseLayout: true,
@@ -340,7 +340,7 @@ const defaultServices: ServiceItem[] = [
       "Integration with Facebook Lead Ads & Google Forms",
       "No lead left behind — 100% follow-up guarantee"
     ],
-    icon: "fab fa-whatsapp",
+    icon: "fa-brands fa-whatsapp",
     visualTitle: "WhatsApp Automation Indore",
     visualDescription: "Never lose a lead again — 24/7 automated follow-up that converts inquiries to appointments",
     reverseLayout: false,

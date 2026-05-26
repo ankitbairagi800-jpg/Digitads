@@ -359,7 +359,7 @@ export default function ServicesPage() {
                 <i className="fas fa-calendar-check" aria-hidden="true"></i> Book Free Strategy Call
               </Link>
               <a href="https://wa.me/918103202086?text=Hi%20Digitalads,%20I%20want%20to%20know%20which%20service%20is%20right%20for%20me" target="_blank" rel="noopener noreferrer" className="btn btn-outline-white btn-large">
-                <i className="fab fa-whatsapp" aria-hidden="true"></i> Ask on WhatsApp
+                <i className="fa-brands fa-whatsapp" aria-hidden="true"></i> Ask on WhatsApp
               </a>
             </div>
           </div>

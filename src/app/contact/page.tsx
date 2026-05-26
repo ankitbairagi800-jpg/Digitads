@@ -114,7 +114,7 @@ export default function Contact() {
             </div>
             <div className="contact-quick-item">
               <div className="contact-quick-icon" aria-hidden="true">
-                <i className="fab fa-whatsapp"></i>
+                <i className="fa-brands fa-whatsapp"></i>
               </div>
               <div>
                 <div className="contact-quick-text">WhatsApp (Instant)</div>
@@ -176,7 +176,7 @@ export default function Contact() {
               </div>
             </div>
             <a href="https://share.google/jgNamBqP1zC3wH5Ob" target="_blank" rel="noopener noreferrer" className="gmb-verify-link" aria-label="Verify on Google My Business">
-              <i className="fab fa-google" aria-hidden="true"></i> Verify on GMB
+              <i className="fa-brands fa-google" aria-hidden="true"></i> Verify on GMB
             </a>
           </div>
         </div>
@@ -200,7 +200,7 @@ export default function Contact() {
                   <p>Mon–Sat, 10:30 AM–7 PM IST</p>
                 </div>
                 <div className="contact-info-card" role="listitem">
-                  <i className="fab fa-whatsapp" aria-hidden="true"></i>
+                  <i className="fa-brands fa-whatsapp" aria-hidden="true"></i>
                   <h4>WhatsApp</h4>
                   <a href="https://wa.me/918103202086" target="_blank" rel="noopener noreferrer">+91 81032 02086</a>
                   <p>Fastest response channel</p>
@@ -235,16 +235,16 @@ export default function Contact() {
                 <h4>Connect on Social Media</h4>
                 <div className="contact-social-links">
                   <a href="https://wa.me/918103202086" target="_blank" rel="noopener noreferrer" className="contact-social-link wa" aria-label="WhatsApp Digitalads">
-                    <i className="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+                    <i className="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp
                   </a>
                   <a href="https://www.instagram.com/thedigitalads_marketing/" target="_blank" rel="noopener noreferrer" className="contact-social-link ig" aria-label="Instagram Digitalads">
-                    <i className="fab fa-instagram" aria-hidden="true"></i> Instagram
+                    <i className="fa-brands fa-instagram" aria-hidden="true"></i> Instagram
                   </a>
                   <a href="https://youtube.com/@digitalads.marketing" target="_blank" rel="noopener noreferrer" className="contact-social-link yt" aria-label="YouTube Digitalads">
-                    <i className="fab fa-youtube" aria-hidden="true"></i> YouTube
+                    <i className="fa-brands fa-youtube" aria-hidden="true"></i> YouTube
                   </a>
                   <a href="https://www.linkedin.com/company/digitaladsailead/" target="_blank" rel="noopener noreferrer" className="contact-social-link li" aria-label="LinkedIn Digitalads">
-                    <i className="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn
+                    <i className="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn
                   </a>
                 </div>
               </div>
@@ -268,7 +268,7 @@ export default function Contact() {
                   className="gmb-link"
                   aria-label="View Digitalads on Google My Business"
                 >
-                  <i className="fab fa-google" aria-hidden="true"></i>
+                  <i className="fa-brands fa-google" aria-hidden="true"></i>
                   <span>
                     <strong>Digitalads — Google My Business</strong>
                     <small>View verified profile · Indore, MP · ⭐ 5.0 (47 reviews)</small>
@@ -462,7 +462,7 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="btn btn-white btn-large"
             >
-              <i className="fab fa-whatsapp" aria-hidden="true"></i> Chat on
+              <i className="fa-brands fa-whatsapp" aria-hidden="true"></i> Chat on
               WhatsApp
             </a>
             <a href="tel:+918103202086" className="btn btn-outline-white btn-large">

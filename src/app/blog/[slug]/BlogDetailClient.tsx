@@ -266,10 +266,10 @@ export default function BlogDetailClient({ slug, initialBlog, initialAllBlogs }:
               <div className="sidebar-widget">
                 <h3 className="sidebar-widget-title">Explore Services</h3>
                 <ul className="sidebar-services-list">
-                  <li><Link href="/services#meta-ads"><i className="fab fa-meta"></i> Meta Ads</Link></li>
-                  <li><Link href="/services#google-ads"><i className="fab fa-google"></i> Google Ads</Link></li>
+                  <li><Link href="/services#meta-ads"><i className="fa-brands fa-meta"></i> Meta Ads</Link></li>
+                  <li><Link href="/services#google-ads"><i className="fa-brands fa-google"></i> Google Ads</Link></li>
                   <li><Link href="/services#gmb-seo"><i className="fas fa-map-marked-alt"></i> Local SEO</Link></li>
-                  <li><Link href="/services#automation"><i className="fab fa-whatsapp"></i> WhatsApp Automation</Link></li>
+                  <li><Link href="/services#automation"><i className="fa-brands fa-whatsapp"></i> WhatsApp Automation</Link></li>
                   <li><Link href="/services#landing-pages"><i className="fas fa-laptop-code"></i> Landing Pages</Link></li>
                 </ul>
               </div>
@@ -316,7 +316,7 @@ export default function BlogDetailClient({ slug, initialBlog, initialAllBlogs }:
                 <i className="fas fa-calendar-check" aria-hidden="true"></i> Book Free Consultation
               </Link>
               <a href="https://wa.me/918103202086?text=Hi%20Digitalads,%20I%20read%20your%20blog%20and%20want%20to%20know%20more" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-large">
-                <i className="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp Us
+                <i className="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp Us
               </a>
             </div>
           </section>

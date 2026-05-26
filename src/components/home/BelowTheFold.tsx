@@ -17,7 +17,7 @@ export default function BelowTheFold() {
           </div>
           <div className="services-grid">
             <article className="service-card">
-              <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=600&auto=format&fit=crop" alt="Best Meta Ads Services for Clinics in Indore by Digitalads" className="service-img" />
+              <img src="https://images.unsplash.com/photo-1611262588024-d12430b98920?q=80&w=600&auto=format&fit=crop" alt="Best Meta Ads Services for Clinics in Indore by Digitalads" className="service-img" />
               <h3 className="service-title">Meta Ads (Facebook &amp; Instagram)</h3>
               <p className="service-description">
                 Hyper-targeted ad campaigns on Facebook and Instagram designed to
@@ -106,7 +106,7 @@ export default function BelowTheFold() {
               </Link>
             </article>
             <article className="service-card">
-              <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=600&auto=format&fit=crop" alt="AI Video Ads Creation for Instagram Reels & YouTube Shorts Indore" className="service-img" />
+              <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=600&auto=format&fit=crop" alt="AI Video Ads Creation for Instagram Reels & YouTube Shorts Indore" className="service-img" />
               <h3 className="service-title">AI Video Ads (Reels &amp; Shorts)</h3>
               <p className="service-description">
                 Scroll-stopping AI-generated video ads for Instagram Reels and
@@ -135,7 +135,7 @@ export default function BelowTheFold() {
               </Link>
             </article>
             <article className="service-card">
-              <img src="https://images.unsplash.com/photo-1614680376593-902f74cf0d41?q=80&w=600&auto=format&fit=crop" alt="WhatsApp CRM Automation for Lead Generation Indore" className="service-img" />
+              <img src="https://images.unsplash.com/photo-1614680376573-3e4e1ef4142a?q=80&w=600&auto=format&fit=crop" alt="WhatsApp CRM Automation for Lead Generation Indore" className="service-img" />
               <h3 className="service-title">WhatsApp &amp; CRM Automation</h3>
               <p className="service-description">
                 Never lose a lead again. 24/7 automated follow-ups via WhatsApp,
@@ -641,7 +641,7 @@ export default function BelowTheFold() {
                 rel="noopener noreferrer"
                 className="btn btn-outline-white btn-large"
               >
-                <i className="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp Now
+                <i className="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp Now
               </a>
             </div>
           </div>
@@ -669,7 +669,7 @@ export default function BelowTheFold() {
                 </div>
                 <div className="contact-item">
                   <div className="contact-icon">
-                    <i className="fab fa-whatsapp" aria-hidden="true"></i>
+                    <i className="fa-brands fa-whatsapp" aria-hidden="true"></i>
                   </div>
                   <div className="contact-text">
                     <h3>WhatsApp</h3>
@@ -711,7 +711,7 @@ export default function BelowTheFold() {
                   className="social-link"
                   aria-label="Instagram"
                 >
-                  <i className="fab fa-instagram" aria-hidden="true"></i>
+                  <i className="fa-brands fa-instagram" aria-hidden="true"></i>
                 </a>
                 <a
                   href="https://www.linkedin.com/company/digitaladsailead/"
@@ -720,7 +720,7 @@ export default function BelowTheFold() {
                   className="social-link"
                   aria-label="LinkedIn"
                 >
-                  <i className="fab fa-linkedin-in" aria-hidden="true"></i>
+                  <i className="fa-brands fa-linkedin-in" aria-hidden="true"></i>
                 </a>
                 <a
                   href="https://youtube.com/@digitalads.marketing"
@@ -729,7 +729,7 @@ export default function BelowTheFold() {
                   className="social-link"
                   aria-label="YouTube"
                 >
-                  <i className="fab fa-youtube" aria-hidden="true"></i>
+                  <i className="fa-brands fa-youtube" aria-hidden="true"></i>
                 </a>
                 <a
                   href="https://wa.me/918103202086"
@@ -738,7 +738,7 @@ export default function BelowTheFold() {
                   className="social-link"
                   aria-label="WhatsApp"
                 >
-                  <i className="fab fa-whatsapp" aria-hidden="true"></i>
+                  <i className="fa-brands fa-whatsapp" aria-hidden="true"></i>
                 </a>
               </div>
             </div>

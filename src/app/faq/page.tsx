@@ -424,7 +424,7 @@ export default function FAQPage() {
           </div>
           <div className="faq-contact-grid">
             <div className="faq-contact-card">
-              <i className="fab fa-whatsapp" aria-hidden="true"></i>
+              <i className="fa-brands fa-whatsapp" aria-hidden="true"></i>
               <h4>WhatsApp Us</h4>
               <p>Get instant answers on WhatsApp — we typically reply within minutes.</p>
               <a href="https://wa.me/918103202086?text=Hi%20Digitalads,%20I%20have%20a%20question" target="_blank" rel="noopener noreferrer" style={{ color: "var(--primary-color)", fontWeight: 600, display: "block", marginTop: "10px" }}>

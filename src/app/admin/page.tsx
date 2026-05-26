@@ -813,7 +813,7 @@ export default function AdminDashboard() {
                       id="serviceIcon" 
                       value={serviceIcon} 
                       onChange={(e) => setServiceIcon(e.target.value)} 
-                      placeholder="e.g. fab fa-meta" 
+                      placeholder="e.g. fa-brands fa-meta" 
                       required
                     />
                   </div>

@@ -28,7 +28,7 @@ export default function Footer() {
                 className="social-link"
                 aria-label="Instagram"
               >
-                <i className="fab fa-instagram" aria-hidden="true"></i>
+                <i className="fa-brands fa-instagram" aria-hidden="true"></i>
               </a>
               <a
                 href="https://www.linkedin.com/company/digitaladsailead/"
@@ -37,7 +37,7 @@ export default function Footer() {
                 className="social-link"
                 aria-label="LinkedIn"
               >
-                <i className="fab fa-linkedin-in" aria-hidden="true"></i>
+                <i className="fa-brands fa-linkedin-in" aria-hidden="true"></i>
               </a>
               <a
                 href="https://youtube.com/@digitalads.marketing"
@@ -46,7 +46,7 @@ export default function Footer() {
                 className="social-link"
                 aria-label="YouTube"
               >
-                <i className="fab fa-youtube" aria-hidden="true"></i>
+                <i className="fa-brands fa-youtube" aria-hidden="true"></i>
               </a>
               <a
                 href="https://wa.me/918103202086"
@@ -55,7 +55,7 @@ export default function Footer() {
                 className="social-link"
                 aria-label="WhatsApp"
               >
-                <i className="fab fa-whatsapp" aria-hidden="true"></i>
+                <i className="fa-brands fa-whatsapp" aria-hidden="true"></i>
               </a>
             </div>
           </div>
@@ -119,7 +119,7 @@ export default function Footer() {
                 <a href="tel:+918103202086">+91 81032 02086</a>
               </li>
               <li>
-                <i className="fab fa-whatsapp" aria-hidden="true"></i>{" "}
+                <i className="fa-brands fa-whatsapp" aria-hidden="true"></i>{" "}
                 <a
                   href="https://wa.me/918103202086"
                   target="_blank"
@@ -151,7 +151,7 @@ export default function Footer() {
                 ></iframe>
               </li>
               <li>
-                <i className="fab fa-instagram" aria-hidden="true"></i>{" "}
+                <i className="fa-brands fa-instagram" aria-hidden="true"></i>{" "}
                 <a
                   href="https://www.instagram.com/thedigitalads_marketing/"
                   target="_blank"
