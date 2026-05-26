@@ -58,7 +58,7 @@ export default function ServicesPage() {
             </div>
             
             <div className="service-img-wrap" aria-hidden="true">
-              <Image src="/images/services/services-meta-ads.png" alt="Meta Ads Performance Dashboard" width={600} height={400} className="service-real-img" loading="lazy" />
+              <Image src="/images/services/services-meta-ads.png" alt="Meta Ads Performance Dashboard - Digitalads Indore" width={600} height={400} className="service-real-img" loading="lazy" />
             </div>
           </div>
         </div>
@@ -92,7 +92,7 @@ export default function ServicesPage() {
             </div>
             
             <div className="service-img-wrap" aria-hidden="true">
-              <Image src="/images/services/services-google-ads.png" alt="Google Search Ads Dashboard" width={600} height={400} className="service-real-img" loading="lazy" />
+              <Image src="/images/services/services-google-ads.png" alt="Google Search Ads Dashboard - Digital Marketing Indore" width={600} height={400} className="service-real-img" loading="lazy" />
             </div>
           </div>
         </div>
@@ -126,7 +126,7 @@ export default function ServicesPage() {
             </div>
             
             <div className="service-img-wrap" aria-hidden="true">
-              <Image src="/images/services/services-local-seo.png" alt="Google Maps and Local SEO for Indore businesses" width={600} height={400} className="service-real-img" loading="lazy" />
+              <Image src="/images/services/services-local-seo.png" alt="Google Maps and Local SEO for Indore businesses - Digitalads" width={600} height={400} className="service-real-img" loading="lazy" />
             </div>
           </div>
         </div>
@@ -160,7 +160,7 @@ export default function ServicesPage() {
             </div>
             
             <div className="service-img-wrap" aria-hidden="true">
-              <Image src="/images/services/services-ai-video.png" alt="AI Video Editing Setup" width={600} height={400} className="service-real-img" loading="lazy" />
+              <Image src="/images/services/services-ai-video.png" alt="AI Video Editing Setup for Reels & Shorts Indore" width={600} height={400} className="service-real-img" loading="lazy" />
             </div>
           </div>
         </div>
@@ -194,7 +194,7 @@ export default function ServicesPage() {
             </div>
             
             <div className="service-img-wrap" aria-hidden="true">
-              <Image src="/images/services/services-whatsapp-auto.png" alt="WhatsApp CRM Automation Dashboard" width={600} height={400} className="service-real-img" loading="lazy" />
+              <Image src="/images/services/services-whatsapp-auto.png" alt="WhatsApp CRM Automation Dashboard for Clinics Indore" width={600} height={400} className="service-real-img" loading="lazy" />
             </div>
           </div>
         </div>
@@ -228,7 +228,7 @@ export default function ServicesPage() {
             </div>
             
             <div className="service-img-wrap" aria-hidden="true">
-              <Image src="/images/services/services-landing-pages.png" alt="High Converting Landing Page Design" width={600} height={400} className="service-real-img" loading="lazy" />
+              <Image src="/images/services/services-landing-pages.png" alt="High Converting Landing Page Design - Digitalads" width={600} height={400} className="service-real-img" loading="lazy" />
             </div>
           </div>
         </div>
@@ -261,7 +261,7 @@ export default function ServicesPage() {
             </div>
             
             <div className="service-img-wrap" aria-hidden="true">
-              <Image src="/images/services/services-branding.png" alt="Logo Design and Brand Identity" width={600} height={400} className="service-real-img" loading="lazy" />
+              <Image src="/images/services/services-branding.png" alt="Logo Design and Brand Identity Agency Indore" width={600} height={400} className="service-real-img" loading="lazy" />
             </div>
           </div>
         </div>

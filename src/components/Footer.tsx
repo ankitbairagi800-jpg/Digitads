@@ -134,9 +134,21 @@ export default function Footer() {
                   digitalads959@gmail.com
                 </a>
               </li>
-              <li>
+                            <li>
                 <i className="fas fa-map-marker-alt" aria-hidden="true"></i>{" "}
                 Indore, Madhya Pradesh, India
+              </li>
+              <li style={{ marginTop: '15px', marginBottom: '15px' }}>
+                <iframe
+                  src="https://maps.google.com/maps?q=Digitalads+Digital+Marketing+Agency+Indore+Madhya+Pradesh&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="140"
+                  style={{ border: 0, borderRadius: '8px' }}
+                  allowFullScreen={false}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Digitalads Location"
+                ></iframe>
               </li>
               <li>
                 <i className="fab fa-instagram" aria-hidden="true"></i>{" "}
