@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
 export default function BelowTheFold() {
   return (
@@ -406,7 +406,7 @@ export default function BelowTheFold() {
           <div className="gmb-simple-wrap">
             <a
               className="gmb-simple-btn"
-              href="https://share.google/JCvC3Khf2SzbADyLu"
+              href="https://share.google/prOag6T97G8U5cKCE"
               target="_blank"
               rel="noopener noreferrer"
             >
