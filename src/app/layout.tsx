@@ -90,7 +90,7 @@ export default function RootLayout({
         <script src="https://analytics.ahrefs.com/analytics.js" data-key="cxtMpm0j1w+fSQOBMfMnaQ" async></script>
         <link
           rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
           media="print"
           // @ts-ignore
           onLoad="this.media='all'"
@@ -98,7 +98,7 @@ export default function RootLayout({
         <noscript>
           <link
             rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
           />
         </noscript>
       </head>

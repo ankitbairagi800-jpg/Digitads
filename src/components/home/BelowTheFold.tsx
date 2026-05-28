@@ -406,7 +406,7 @@ export default function BelowTheFold() {
           <div className="gmb-simple-wrap">
             <a
               className="gmb-simple-btn"
-              href="https://share.google/prOag6T97G8U5cKCE"
+              href="https://share.google/4mgJdYDzlAdOkyjuS"
               target="_blank"
               rel="noopener noreferrer"
             >

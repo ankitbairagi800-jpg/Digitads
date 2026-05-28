@@ -175,7 +175,7 @@ export default function Contact() {
                 <span className="day-time closed">Closed</span>
               </div>
             </div>
-            <a href="https://share.google/jgNamBqP1zC3wH5Ob" target="_blank" rel="noopener noreferrer" className="gmb-verify-link" aria-label="Verify on Google My Business">
+            <a href="https://share.google/4mgJdYDzlAdOkyjuS" target="_blank" rel="noopener noreferrer" className="gmb-verify-link" aria-label="Verify on Google My Business">
               <i className="fa-brands fa-google" aria-hidden="true"></i> Verify on GMB
             </a>
           </div>
@@ -262,7 +262,7 @@ export default function Contact() {
                   aria-label="Google Maps showing Digitalads office location in Indore, Madhya Pradesh"
                 ></iframe>
                 <a
-                  href="https://share.google/jgNamBqP1zC3wH5Ob"
+                  href="https://share.google/4mgJdYDzlAdOkyjuS"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="gmb-link"
