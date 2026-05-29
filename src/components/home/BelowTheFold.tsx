@@ -243,7 +243,7 @@ export default function BelowTheFold() {
               </p>
             </div>
             <div className="why-card">
-              <img src="https://images.unsplash.com/photo-1576091160550-2173ff9e9e9c?q=80&w=600&auto=format&fit=crop" alt="Specialist Digital Marketing for Healthcare & Clinics Indore" className="why-img" />
+              <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=600&auto=format&fit=crop" alt="Specialist Digital Marketing for Healthcare & Clinics Indore" className="why-img" />
               <h3>Clinic &amp; Coaching Specialists</h3>
               <p>
                 We don't serve everyone. Our deep specialization in healthcare
