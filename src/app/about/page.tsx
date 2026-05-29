@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
 
 export const metadata = {
   title: "About Digitalads — AI-First Digital Marketing Agency in Indore | Ankit Bairagi",
@@ -12,6 +13,29 @@ export const metadata = {
 export default function About() {
   return (
     <main>
+      <Script
+        id="about-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "name": "About Digitalads",
+            "description": "Learn about Digitalads — Indore's AI-first digital marketing agency. Meet Growth Partner Ankit Bairagi.",
+            "url": "https://thedigitalads.in/about",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "Digitalads",
+              "founder": {
+                "@type": "Person",
+                "name": "Ankit Bairagi",
+                "jobTitle": "Growth Partner",
+                "url": "https://www.linkedin.com/in/ankitbairagi"
+              }
+            }
+          })
+        }}
+      />
       <section className="page-hero" aria-label="About page hero">
         <div className="container">
           <div className="page-hero-inner">

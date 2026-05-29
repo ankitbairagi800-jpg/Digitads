@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Client Case Studies & Results | Digitalads Indore",
@@ -9,5 +10,22 @@ export const metadata: Metadata = {
 };
 
 export default function CaseStudiesLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <Script
+        id="casestudies-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Client Case Studies & Results",
+            "description": "Read real case studies of businesses we've grown in Indore.",
+            "url": "https://thedigitalads.in/case-studies"
+          })
+        }}
+      />
+      {children}
+    </>
+  );
 }

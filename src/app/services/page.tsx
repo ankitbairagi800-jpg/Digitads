@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
 import "./services.css";
 
 export const metadata: Metadata = {
@@ -14,6 +15,58 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <main style={{ background: "#ffffff", color: "#1e293b", paddingTop: "80px" }}>
+      <Script
+        id="services-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Digital Marketing",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Digitalads",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Indore",
+                "addressRegion": "Madhya Pradesh",
+                "addressCountry": "IN"
+              }
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Indore"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Digital Marketing Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Meta Ads & Google Ads"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Local SEO & GMB Optimization"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "AI Video Ads"
+                  }
+                }
+              ]
+            }
+          })
+        }}
+      />
       
       {/* Hero section */}
       <section className="page-hero" aria-label="Services page hero">
