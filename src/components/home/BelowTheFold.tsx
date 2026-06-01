@@ -1,4 +1,7 @@
 import Link from "next/link";
+import Script from "next/script";
+import Image from "next/image";
+import HomeContactForm from "./HomeContactForm";
 
 export default function BelowTheFold() {
   return (
@@ -743,96 +746,7 @@ export default function BelowTheFold() {
               </div>
             </div>
             <div className="contact-form-wrapper">
-              <form className="contact-form" id="contactForm" noValidate>
-                <div className="form-group">
-                  <label htmlFor="name">Full Name *</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    placeholder="Your full name"
-                    autoComplete="name"
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="phone">Phone Number *</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    required
-                    placeholder="+91 XXXXX XXXXX"
-                    autoComplete="tel"
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="email">Email Address</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="your@email.com"
-                    autoComplete="email"
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="service">Service Interested In *</label>
-                  <select id="service" name="service" required>
-                    <option value="">Select a service</option>
-                    <option value="meta-ads">
-                      Meta Ads (Facebook &amp; Instagram)
-                    </option>
-                    <option value="google-ads">
-                      Google Ads (Search &amp; YouTube)
-                    </option>
-                    <option value="gmb-seo">
-                      GMB Optimization &amp; Local SEO
-                    </option>
-                    <option value="ai-video">
-                      AI Video Ads (Reels &amp; Shorts)
-                    </option>
-                    <option value="automation">
-                      WhatsApp &amp; CRM Automation
-                    </option>
-                    <option value="landing-page">Landing Page Design</option>
-                    <option value="social-media">
-                      Social Media Management
-                    </option>
-                    <option value="branding">Logo Design &amp; Branding</option>
-                    <option value="consultation">
-                      Free Consultation / Audit
-                    </option>
-                  </select>
-                </div>
-                <div className="form-group">
-                  <label htmlFor="message">Tell Us About Your Goals</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    placeholder="Describe your business, current challenges, and what you want to achieve..."
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="btn btn-primary btn-large btn-block"
-                >
-                  <i className="fas fa-paper-plane" aria-hidden="true"></i> Send
-                  Message
-                </button>
-                <p className="form-note">
-                  ðŸ”’ Your information is safe. We reply within 24 hours.
-                </p>
-              </form>
-              <div className="form-success" id="formSuccess" role="alert">
-                <i className="fas fa-check-circle" aria-hidden="true"></i>
-                <h3>Message Received!</h3>
-                <p>
-                  We'll get back to you within 24 hours. Or WhatsApp us for an
-                  instant response.
-                </p>
-              </div>
+              <HomeContactForm />
             </div>
           </div>
         </div>

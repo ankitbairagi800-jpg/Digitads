@@ -10,7 +10,10 @@ import {
   saveService, 
   deleteService, 
   BlogPost, 
-  ServiceItem 
+  ServiceItem,
+  Lead,
+  getLeads,
+  deleteLead
 } from "@/lib/db";
 import "./admin.css";
 
@@ -30,11 +33,12 @@ export default function AdminDashboard() {
   const [authError, setAuthError] = useState(false);
 
   // Tab State
-  const [activeTab, setActiveTab] = useState<"overview" | "blogs" | "services">("overview");
+  const [activeTab, setActiveTab] = useState<"overview" | "blogs" | "services" | "leads">("overview");
 
   // Data Lists
   const [blogsList, setBlogsList] = useState<BlogPost[]>([]);
   const [servicesList, setServicesList] = useState<ServiceItem[]>([]);
+  const [leadsList, setLeadsList] = useState<Lead[]>([]);
 
   // Modals & Editors
   const [isBlogModalOpen, setIsBlogModalOpen] = useState(false);
@@ -89,8 +93,10 @@ export default function AdminDashboard() {
     try {
       const blogs = await getBlogs();
       const svcs = await getServices();
+      const leads = await getLeads();
       setBlogsList(blogs);
       setServicesList(svcs);
+      setLeadsList(leads);
     } catch (err) {
       console.error("Failed to load dashboard data", err);
     }
@@ -340,6 +346,15 @@ export default function AdminDashboard() {
     }
   };
 
+  const handleLeadDelete = async (id?: string) => {
+    if (!id) return;
+    if (confirm("Are you sure you want to delete this lead?")) {
+      await deleteLead(id);
+      showNotification("Lead deleted successfully.");
+      loadAllData();
+    }
+  };
+
   const showNotification = (msg: string) => {
     setNotification(msg);
     setTimeout(() => {
@@ -446,6 +461,12 @@ export default function AdminDashboard() {
                 onClick={() => setActiveTab("services")}
               >
                 <i className="fa-solid fa-screwdriver-wrench"></i> Services ({servicesList.length})
+              </button>
+              <button 
+                className={`tab-btn ${activeTab === "leads" ? "active" : ""}`}
+                onClick={() => setActiveTab("leads")}
+              >
+                <i className="fa-solid fa-users"></i> Leads ({leadsList.length})
               </button>
             </div>
           </div>
@@ -605,6 +626,55 @@ export default function AdminDashboard() {
                           onClick={() => handleServiceDelete(svc.id)} 
                           className="btn-icon btn-delete" 
                           title="Delete Service"
+                        >
+                          <i className="fa-solid fa-trash"></i>
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+          {/* Tab 4: Leads Management */}
+          {activeTab === "leads" && (
+            <div className="tab-content" id="tab-leads">
+              <div className="section-title-bar">
+                <h3><i className="fa-solid fa-users"></i> Contact Form Leads</h3>
+              </div>
+
+              {leadsList.length === 0 ? (
+                <p style={{ color: "rgba(255,255,255,0.4)", textAlign: "center", padding: "40px 0" }}>
+                  No leads received yet.
+                </p>
+              ) : (
+                <div className="admin-data-list">
+                  {leadsList.map((lead) => (
+                    <div key={lead.id} className="admin-data-card" style={{ flexWrap: "wrap" }}>
+                      <div className="card-left" style={{ width: "100%" }}>
+                        <div className="card-ico"><i className="fa-solid fa-user-circle"></i></div>
+                        <div className="card-details" style={{ width: "100%" }}>
+                          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", width: "100%" }}>
+                            <h4>{lead.name}</h4>
+                            <span style={{ fontSize: "12px", color: "rgba(255,255,255,0.5)" }}>{lead.date}</span>
+                          </div>
+                          <div className="card-meta" style={{ marginTop: "8px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px" }}>
+                            <span><i className="fa-solid fa-phone"></i> {lead.phone}</span>
+                            <span><i className="fa-solid fa-envelope"></i> {lead.email}</span>
+                            <span><i className="fa-solid fa-briefcase"></i> {lead.business}</span>
+                            <span className="cat-badge" style={{ display: "inline-block", background: "rgba(255,107,53,0.15)", color: "var(--primary-color)", width: "fit-content" }}>{lead.service}</span>
+                          </div>
+                          <div style={{ marginTop: "12px", background: "rgba(0,0,0,0.2)", padding: "12px", borderRadius: "8px", fontSize: "14px", color: "rgba(255,255,255,0.8)" }}>
+                            <strong>Budget:</strong> {lead.budget} <br/>
+                            <strong>Message:</strong> {lead.message}
+                          </div>
+                        </div>
+                      </div>
+                      <div className="card-actions" style={{ position: "absolute", top: "16px", right: "16px" }}>
+                        <button 
+                          onClick={() => handleLeadDelete(lead.id)} 
+                          className="btn-icon btn-delete" 
+                          title="Delete Lead"
                         >
                           <i className="fa-solid fa-trash"></i>
                         </button>

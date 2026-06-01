@@ -2,10 +2,12 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { saveLead } from "@/lib/db";
 import "./contact.css";
 
 export default function Contact() {
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<{ [key: string]: boolean }>({});
 
   const validateField = (name: string, value: string) => {
@@ -30,8 +32,10 @@ export default function Contact() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (isSubmitting) return;
+
     const formData = new FormData(e.currentTarget);
     const newErrors: { [key: string]: boolean } = {};
     let allValid = true;
@@ -48,7 +52,30 @@ export default function Contact() {
     setErrors(newErrors);
 
     if (allValid) {
-      setFormSubmitted(true);
+      setIsSubmitting(true);
+      try {
+        const options: Intl.DateTimeFormatOptions = { 
+          month: 'short', day: '2-digit', year: 'numeric', 
+          hour: 'numeric', minute: '2-digit', hour12: true 
+        };
+        
+        await saveLead({
+          name: formData.get("name") as string,
+          phone: formData.get("phone") as string,
+          email: (formData.get("email") as string) || "Not provided",
+          business: (formData.get("business") as string) || "Not provided",
+          service: formData.get("service") as string,
+          budget: (formData.get("budget") as string) || "Not specified",
+          message: (formData.get("message") as string) || "No message",
+          date: new Date().toLocaleString('en-US', options)
+        });
+        setFormSubmitted(true);
+      } catch (err) {
+        console.error("Failed to submit form", err);
+        alert("Something went wrong. Please try again or reach us on WhatsApp.");
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
 
