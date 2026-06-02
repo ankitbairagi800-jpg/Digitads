@@ -917,12 +917,10 @@ export const getBlogs = async (): Promise<BlogPost[]> => {
         blogsList.push(docSnap.data() as BlogPost);
       });
       
-      let addedAny = false;
       for (const defaultBlog of defaultBlogs) {
         if (!blogsList.find(b => b.id === defaultBlog.id)) {
           await setDoc(doc(db, "blogs", defaultBlog.id), defaultBlog);
           blogsList.push(defaultBlog);
-          addedAny = true;
         }
       }
       
