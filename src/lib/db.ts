@@ -497,7 +497,7 @@ The secret? **Quality Score.**
 ## What is Google Ads Quality Score?
 Google assigns a score from 1 to 10 for every keyword you bid on. It determines how much you pay per click (CPC) and where your ad ranks. 
 
-The formula for Ad Rank is: `Ad Rank = Max CPC Bid × Quality Score`
+The formula for Ad Rank is: 'Ad Rank = Max CPC Bid × Quality Score'
 
 If your competitor has a Quality Score of 3, and you have a Quality Score of 9, you can bid significantly less money and still appear above them!
 
@@ -558,7 +558,7 @@ At Digitads, we are the first agency in Central India to offer dedicated AEO ser
 ## FAQ: Answer Engine Optimization
 
 **Q: Do AI models crawl my website live?**
-A: Yes, models with web-browsing capabilities (like ChatGPT with Search or Perplexity AI) crawl live sites. Ensure your `robots.txt` allows AI bots to read your content!
+A: Yes, models with web-browsing capabilities (like ChatGPT with Search or Perplexity AI) crawl live sites. Ensure your 'robots.txt' allows AI bots to read your content!
 
 **Q: How do I format content for AEO?**
 A: Use clear H2 and H3 headings. Ask a question, and provide a direct, bolded answer in the very next sentence. Avoid fluff.
