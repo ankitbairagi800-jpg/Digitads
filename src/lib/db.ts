@@ -916,12 +916,16 @@ export const getBlogs = async (): Promise<BlogPost[]> => {
       querySnapshot.forEach((docSnap) => {
         blogsList.push(docSnap.data() as BlogPost);
       });
-      if (blogsList.length === 0) {
-        for (const blog of defaultBlogs) {
-          await setDoc(doc(db, "blogs", blog.id), blog);
-          blogsList.push(blog);
+      
+      let addedAny = false;
+      for (const defaultBlog of defaultBlogs) {
+        if (!blogsList.find(b => b.id === defaultBlog.id)) {
+          await setDoc(doc(db, "blogs", defaultBlog.id), defaultBlog);
+          blogsList.push(defaultBlog);
+          addedAny = true;
         }
       }
+      
       return blogsList.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
     } catch (e) {
       console.error("Firebase getBlogs error:", e);
@@ -929,8 +933,20 @@ export const getBlogs = async (): Promise<BlogPost[]> => {
   }
   
   const localBlogs = getLocalData("blogs", defaultBlogs);
-  // Ensure we never return an empty list if localStorage was wiped
-  return localBlogs.length > 0 ? localBlogs : defaultBlogs;
+  let updatedLocal = false;
+  
+  for (const defaultBlog of defaultBlogs) {
+    if (!localBlogs.find((b: any) => b.id === defaultBlog.id)) {
+      localBlogs.push(defaultBlog);
+      updatedLocal = true;
+    }
+  }
+  
+  if (updatedLocal) {
+    saveLocalData("blogs", localBlogs);
+  }
+  
+  return (localBlogs.length > 0 ? localBlogs : defaultBlogs).sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
 };
 
 export const saveBlog = async (blog: BlogPost): Promise<void> => {
