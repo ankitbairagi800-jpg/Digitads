@@ -4,13 +4,10 @@ import BlogDetailClient from "./BlogDetailClient";
 import Script from "next/script";
 
 export async function generateStaticParams() {
-  return [
-    { slug: "ai-future-marketing" },
-    { slug: "ai-local-seo" },
-    { slug: "meta-vs-google" },
-    { slug: "whatsapp-automation" },
-    { slug: "clinic-landing-pages" }
-  ];
+  const allBlogs = await getBlogs();
+  return allBlogs.map((blog) => ({
+    slug: blog.slug
+  }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
