@@ -57,34 +57,60 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
   const blog = allBlogs.find((b) => b.slug === resolvedParams.slug) || null;
 
   // JSON-LD Structured Data for BlogPosting
-  const jsonLd = blog ? {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": blog.title,
-    "description": blog.excerpt,
-    "image": blog.image ? `https://thedigitalads.in${blog.image}` : "https://thedigitalads.in/logo.jpg",
-    "author": {
-      "@type": "Person",
-      "name": "Ankit Bairagi",
-      "url": "https://www.linkedin.com/in/ankitbairagi"
+  const jsonLd = blog ? [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": blog.title,
+      "description": blog.excerpt,
+      "image": blog.image ? `https://thedigitalads.in${blog.image}` : "https://thedigitalads.in/logo.jpg",
+      "author": {
+        "@type": "Person",
+        "name": "Ankit Bairagi",
+        "url": "https://www.linkedin.com/in/ankitbairagi"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Digitalads",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://thedigitalads.in/logo.jpg"
+        }
+      },
+      "datePublished": blog.date,
+      "dateModified": blog.date,
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `https://thedigitalads.in/blog/${blog.slug}`
+      },
+      "keywords": blog.tags.join(", "),
+      "articleSection": blog.category
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Digitalads",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://thedigitalads.in/logo.jpg"
-      }
-    },
-    "datePublished": blog.date,
-    "dateModified": blog.date,
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://thedigitalads.in/blog/${blog.slug}`
-    },
-    "keywords": blog.tags.join(", "),
-    "articleSection": blog.category
-  } : null;
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thedigitalads.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://thedigitalads.in/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": blog.title,
+          "item": `https://thedigitalads.in/blog/${blog.slug}`
+        }
+      ]
+    }
+  ] : null;
 
   return (
     <>

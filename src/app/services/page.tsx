@@ -19,52 +19,102 @@ export default function ServicesPage() {
         id="services-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "Digital Marketing",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Digitalads",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Indore",
-                "addressRegion": "Madhya Pradesh",
-                "addressCountry": "IN"
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "serviceType": "Digital Marketing",
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "Digitalads",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Indore",
+                  "addressRegion": "Madhya Pradesh",
+                  "addressCountry": "IN"
+                }
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Indore"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Digital Marketing Services",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Meta Ads & Google Ads"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Local SEO & GMB Optimization"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "AI Video Ads"
+                    }
+                  }
+                ]
               }
             },
-            "areaServed": {
-              "@type": "City",
-              "name": "Indore"
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Digital Marketing Services",
-              "itemListElement": [
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
                 {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Meta Ads & Google Ads"
+                  "@type": "Question",
+                  "name": "What are your starting prices for Digital Marketing services in Indore?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our basic SEO and GMB Optimization packages start at ₹8,000 per month, while comprehensive Meta Ads and Google Ads management starts at ₹12,000 per month."
                   }
                 },
                 {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Local SEO & GMB Optimization"
+                  "@type": "Question",
+                  "name": "Do you offer WhatsApp Automation and CRM setup?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, we specialize in building automated WhatsApp workflows using n8n and Make.com. The one-time setup fee for these systems ranges from ₹15,000 to ₹40,000 based on complexity."
                   }
                 },
                 {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "AI Video Ads"
+                  "@type": "Question",
+                  "name": "What does your Growth Pricing Plan include?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our popular Growth Plan at ₹20,000/month includes Meta Ads, Google Ads, GMB Optimization, 2 AI Video Ads per month, WhatsApp Automation setup, and bi-weekly optimization reports."
                   }
                 }
               ]
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://thedigitalads.in/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Services",
+                  "item": "https://thedigitalads.in/services"
+                }
+              ]
             }
-          })
+          ])
         }}
       />
       

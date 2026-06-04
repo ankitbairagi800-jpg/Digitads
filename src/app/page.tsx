@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   alternates: {
@@ -9,8 +10,52 @@ export const metadata: Metadata = {
 import BelowTheFold from "@/components/home/BelowTheFold";
 
 export default function Home() {
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Digitalads",
+    "image": "https://thedigitalads.in/logo.jpg",
+    "description": "Digitalads is an AI-first digital marketing agency in Indore. We specialize in Meta Ads, Google Ads, Local SEO, and AI automation for clinics and coaching centers.",
+    "@id": "https://thedigitalads.in",
+    "url": "https://thedigitalads.in",
+    "telephone": "+91-81032-02086",
+    "email": "digitalads959@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Indore",
+      "addressRegion": "Madhya Pradesh",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 22.7196,
+      "longitude": 75.8577
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "19:00"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/ankitbairagi"
+    ]
+  };
+
   return (
     <main>
+      <Script
+        id="home-local-business-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
       <div className="sr-only">
         Digitalads is a leading digital marketing company in Indore, Madhya
         Pradesh offering Meta Ads, Google Ads, Local SEO, GMB Optimization, AI

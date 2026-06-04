@@ -61,31 +61,57 @@ export default async function CaseStudyDetailPage({ params }: { params: Promise<
   }
 
   // JSON-LD Structured Data for Article / Case Study
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": `${study.title} - Digital Marketing Case Study`,
-    "description": study.problem,
-    "image": study.image ? `https://thedigitalads.in${study.image}` : "https://thedigitalads.in/logo.jpg",
-    "author": {
-      "@type": "Organization",
-      "name": "Digitalads",
-      "url": "https://thedigitalads.in"
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": `${study.title} - Digital Marketing Case Study`,
+      "description": study.problem,
+      "image": study.image ? `https://thedigitalads.in${study.image}` : "https://thedigitalads.in/logo.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "Digitalads",
+        "url": "https://thedigitalads.in"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Digitalads",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://thedigitalads.in/logo.jpg"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `https://thedigitalads.in/case-studies/${study.id}`
+      },
+      "keywords": study.tags.join(", ")
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Digitalads",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://thedigitalads.in/logo.jpg"
-      }
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://thedigitalads.in/case-studies/${study.id}`
-    },
-    "keywords": study.tags.join(", ")
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thedigitalads.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Case Studies",
+          "item": "https://thedigitalads.in/case-studies"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": study.title,
+          "item": `https://thedigitalads.in/case-studies/${study.id}`
+        }
+      ]
+    }
+  ];
 
   return (
     <main style={{ background: '#f8fafc' }}>

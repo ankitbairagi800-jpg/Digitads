@@ -16,13 +16,33 @@ export default function CaseStudiesLayout({ children }: { children: React.ReactN
         id="casestudies-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            "name": "Client Case Studies & Results",
-            "description": "Read real case studies of businesses we've grown in Indore.",
-            "url": "https://thedigitalads.in/case-studies"
-          })
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "CollectionPage",
+              "name": "Client Case Studies & Results",
+              "description": "Read real case studies of businesses we've grown in Indore.",
+              "url": "https://thedigitalads.in/case-studies"
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://thedigitalads.in/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Case Studies",
+                  "item": "https://thedigitalads.in/case-studies"
+                }
+              ]
+            }
+          ])
         }}
       />
       {children}

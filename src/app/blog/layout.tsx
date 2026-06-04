@@ -18,6 +18,36 @@ export const metadata: Metadata = {
   },
 };
 
+import Script from "next/script";
+
 export default function BlogLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <Script
+        id="blog-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://thedigitalads.in/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://thedigitalads.in/blog"
+              }
+            ]
+          })
+        }}
+      />
+      {children}
+    </>
+  );
 }

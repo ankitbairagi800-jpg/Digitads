@@ -17,23 +17,43 @@ export default function About() {
         id="about-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "AboutPage",
-            "name": "About Digitalads",
-            "description": "Learn about Digitalads — Indore's AI-first digital marketing agency. Meet Growth Partner Ankit Bairagi.",
-            "url": "https://thedigitalads.in/about",
-            "mainEntity": {
-              "@type": "Organization",
-              "name": "Digitalads",
-              "founder": {
-                "@type": "Person",
-                "name": "Ankit Bairagi",
-                "jobTitle": "Growth Partner",
-                "url": "https://www.linkedin.com/in/ankitbairagi"
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "AboutPage",
+              "name": "About Digitalads",
+              "description": "Learn about Digitalads — Indore's AI-first digital marketing agency. Meet Growth Partner Ankit Bairagi.",
+              "url": "https://thedigitalads.in/about",
+              "mainEntity": {
+                "@type": "Organization",
+                "name": "Digitalads",
+                "founder": {
+                  "@type": "Person",
+                  "name": "Ankit Bairagi",
+                  "jobTitle": "Growth Partner",
+                  "url": "https://www.linkedin.com/in/ankitbairagi"
+                }
               }
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://thedigitalads.in/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "About Us",
+                  "item": "https://thedigitalads.in/about"
+                }
+              ]
             }
-          })
+          ])
         }}
       />
       <section className="page-hero" aria-label="About page hero">
