@@ -15,5 +15,5 @@
   ],
   "theme_color": "#0d0e12",
   "background_color": "#0d0e12",
-  "display": "standalone"
+  "display": "browser"
 }

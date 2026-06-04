@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { getBlogs } from '@/lib/db';
+import { caseStudiesData } from '@/data/case-studies';
 
 export const dynamic = 'force-static';
 
@@ -36,5 +37,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     console.error("Failed to fetch blogs for sitemap:", err);
   }
 
-  return [...staticRoutes, ...dynamicBlogRoutes];
+  // Dynamic Case Study Routes
+  const dynamicCaseStudyRoutes = caseStudiesData.map((study) => ({
+    url: `${baseUrl}/case-studies/${study.id}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as any,
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...dynamicBlogRoutes, ...dynamicCaseStudyRoutes];
 }

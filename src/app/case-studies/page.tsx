@@ -2,83 +2,7 @@
 
 import Link from "next/link";
 import "./case-studies.css";
-
-// Case Study Data Interface
-interface CaseStudy {
-  id: number;
-  title: string;
-  subtitle: string;
-  icon: string;
-  tags: string[];
-  challenge: string;
-  strategy: string;
-  execution: string;
-  results: { value: string; label: string }[];
-}
-
-// Dummy Case Studies Data extracted from legacy HTML
-const caseStudiesData: CaseStudy[] = [
-  {
-    id: 1,
-    title: "Skin & Hair Clinic — Indore",
-    subtitle: "Meta Ads + WhatsApp Automation",
-    icon: "fas fa-stethoscope",
-    tags: ["Meta Ads", "WhatsApp Automation", "Healthcare"],
-    challenge: "A skin and hair clinic in Vijay Nagar, Indore was spending ₹15,000/month on Facebook Ads but getting only 8–10 leads with poor follow-up. Most inquiries went cold because the front desk couldn't respond fast enough.",
-    strategy: "We rebuilt the Meta Ads campaign from scratch — new audiences, new creatives, and video testimonial ads. We simultaneously implemented WhatsApp automation using n8n that responded to every lead within 60 seconds, automatically booking consultation slots.",
-    execution: "Launched 3 campaigns: awareness (video), consideration (offers), and conversion (booking). Retargeting for warm audiences. WhatsApp bot sent appointment reminders 24 hours and 2 hours before each consultation.",
-    results: [
-      { value: "Potential", label: "Lead Growth" },
-      { value: "Optimized", label: "Cost Per Lead" },
-      { value: "Improved", label: "Show-up Rate" }
-    ]
-  },
-  {
-    id: 2,
-    title: "IIT-JEE Coaching Center — Indore",
-    subtitle: "Google Ads + Local SEO",
-    icon: "fas fa-graduation-cap",
-    tags: ["Google Ads", "Local SEO", "Education"],
-    challenge: "An IIT-JEE coaching center in Indore had zero Google presence. Despite 8 years in business, they were invisible on Google Maps and had no digital lead generation. Admissions were purely word-of-mouth.",
-    strategy: "Two-track approach: immediate results via Google Search Ads targeting \"IIT coaching Indore\" keywords, and long-term through GMB optimization and local SEO to build organic visibility in the Indore map pack.",
-    execution: "Built a high-converting landing page, launched 4 keyword groups in Google Ads, optimized GMB with 50+ photos, 20+ reviews, and regular posts. Local SEO citations across 40+ directories.",
-    results: [
-      { value: "Growth", label: "New Admissions" },
-      { value: "Better", label: "Google Maps Rank" },
-      { value: "Strong", label: "ROI Potential" }
-    ]
-  },
-  {
-    id: 3,
-    title: "Fitness Center — Vijay Nagar, Indore",
-    subtitle: "GMB Optimization + AI Video Ads",
-    icon: "fas fa-dumbbell",
-    tags: ["GMB Optimization", "AI Video Ads", "Fitness"],
-    challenge: "A gym in Vijay Nagar had 47 Google reviews and ranked on page 2 of Maps. Walk-ins were declining. No social media presence. Competitors with fewer members were outranking them on Google.",
-    strategy: "GMB deep optimization combined with a consistent AI video content strategy for Instagram Reels — member transformation stories, facility tours, trainer expertise videos — to build trust and social proof at scale.",
-    execution: "Revamped GMB with 80+ professional photos, keyword-rich description, weekly posts, and a review generation system that aimed for new reviews. Produced AI-assisted Reels.",
-    results: [
-      { value: "Increased", label: "Walk-ins Expected" },
-      { value: "Higher", label: "Google Maps Rank" },
-      { value: "More", label: "Consistent Reviews" }
-    ]
-  },
-  {
-    id: 4,
-    title: "Multi-Specialty Dental Clinic — Indore",
-    subtitle: "Full-Funnel Digital Marketing",
-    icon: "fas fa-tooth",
-    tags: ["Meta Ads", "Google Ads", "GMB SEO", "Automation"],
-    challenge: "A dental clinic with 3 doctors had tried 3 agencies in 18 months with no consistent results. Inconsistent lead flow, no follow-up system, and an outdated website that wasn't converting mobile visitors.",
-    strategy: "Full-funnel rebuild: new landing page → Meta Ads for awareness and lead gen → Google Ads for high-intent searches → GMB optimization for organic local discovery → WhatsApp automation for instant follow-up.",
-    execution: "Built a mobile-first landing page, launched campaigns across Meta and Google simultaneously, optimized GMB profile, and deployed an n8n workflow for faster follow-up via WhatsApp.",
-    results: [
-      { value: "Consistent", label: "Lead Flow Expected" },
-      { value: "Optimized", label: "Cost Per Lead" },
-      { value: "High", label: "ROI Potential" }
-    ]
-  }
-];
+import { caseStudiesData } from "@/data/case-studies";
 
 export default function CaseStudiesPage() {
   return (
@@ -98,18 +22,6 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* Stats Overview */}
-      <section className="stats-bar" aria-label="Overall results">
-        <div className="container">
-          <div className="stats-grid">
-            <div className="stat-item"><div className="stat-number">Custom</div><div className="stat-label">Tailored Strategies</div></div>
-            <div className="stat-item"><div className="stat-number">Data-Driven</div><div className="stat-label">Campaign Adjustments</div></div>
-            <div className="stat-item"><div className="stat-number">High</div><div className="stat-label">ROI Potential Focus</div></div>
-            <div className="stat-item"><div className="stat-number">Quality</div><div className="stat-label">Lead Generation Goals</div></div>
-          </div>
-        </div>
-      </section>
-
       {/* Case Studies */}
       <section className="case-studies-section" aria-label="Case studies">
         <div className="container">
@@ -125,7 +37,7 @@ export default function CaseStudiesPage() {
                 <div className="case-card-header">
                   <i className={study.icon} aria-hidden="true"></i>
                   <div className="case-header-text">
-                    <h3>{study.title}</h3>
+                    <h3><Link href={`/case-studies/${study.id}`} style={{ color: 'inherit', textDecoration: 'none' }}>{study.title}</Link></h3>
                     <p>{study.subtitle}</p>
                   </div>
                 </div>
@@ -135,26 +47,14 @@ export default function CaseStudiesPage() {
                       <span key={tag} className="case-tag">{tag}</span>
                     ))}
                   </div>
-                  <div className="case-section">
-                    <h4>The Challenge</h4>
-                    <p>{study.challenge}</p>
+                  <div className="case-section" style={{ marginBottom: '16px' }}>
+                    <p style={{ display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                      {study.problem}
+                    </p>
                   </div>
-                  <div className="case-section">
-                    <h4>Our Strategy</h4>
-                    <p>{study.strategy}</p>
-                  </div>
-                  <div className="case-section">
-                    <h4>Execution</h4>
-                    <p>{study.execution}</p>
-                  </div>
-                  <div className="case-results">
-                    {study.results.map((result, index) => (
-                      <div key={index} className="case-result-item">
-                        <div className="case-result-num">{result.value}</div>
-                        <div className="case-result-label">{result.label}</div>
-                      </div>
-                    ))}
-                  </div>
+                  <Link href={`/case-studies/${study.id}`} className="btn btn-outline" style={{ width: '100%', textAlign: 'center', display: 'block', marginTop: 'auto' }}>
+                    Read Full Case Study <i className="fas fa-arrow-right" style={{ marginLeft: "6px" }}></i>
+                  </Link>
                 </div>
               </article>
             ))}
