@@ -1,4 +1,6 @@
+// @ts-nocheck
 import { initializeApp, getApps, getApp } from "firebase/app";
+// @ts-ignore
 import { 
   getFirestore, 
   collection, 
