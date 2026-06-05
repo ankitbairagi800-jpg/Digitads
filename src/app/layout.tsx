@@ -104,6 +104,7 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         />
         <link rel="alternate" type="text/plain" title="LLMs Text Version" href="/llms.txt" />
+        <link rel="alternate" type="application/rss+xml" title="Digitalads Blog RSS Feed" href="/feed.xml" />
       </head>
       <body className={inter.className}>
         <Script
