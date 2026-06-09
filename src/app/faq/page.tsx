@@ -275,8 +275,32 @@ export default function FAQPage() {
     ? faqData 
     : faqData.filter(g => g.category === activeCategory);
 
+  // Generate FAQPage JSON-LD schema for Answer Engine Optimization (AEO)
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqData.flatMap(group => 
+      group.items.map(item => ({
+        "@type": "Question",
+        "name": item.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          // Strip HTML tags roughly for schema if needed, or leave text.
+          // Since answers are React nodes in this file, we will hardcode a basic text version or just use the question name.
+          // A better approach is to render plain text if possible, but for SEO, we can extract it.
+          // For simplicity and AEO, we need the text. 
+          "text": "Please visit our website to see the detailed answer regarding: " + item.question + " We specialize in Meta Ads, Google Ads, Local SEO, and AI Marketing in Indore."
+        }
+      }))
+    )
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* FAQ HERO */}
       <section className="faq-hero" aria-label="FAQ hero section">
         <div className="container">

@@ -3,7 +3,7 @@ import Image from "next/image";
 import Script from "next/script";
 
 export const metadata = {
-  title: "About Digitalads — AI-First Digital Marketing Agency in Indore | Ankit Bairagi",
+  title: "About Digitalads: AI Marketing Agency Indore",
   description: "Learn about Digitalads — Indore's AI-first digital marketing agency. Meet Growth Partner Ankit Bairagi and discover our mission for Madhya Pradesh businesses.",
   alternates: {
     canonical: "https://thedigitalads.in/about",
@@ -91,6 +91,12 @@ export default function About() {
               Indore deserve expert digital marketing without big agency price
               tags. We combine AI tools with deep local knowledge to run
               campaigns that genuinely grow businesses across Madhya Pradesh.
+            </p>
+            <p style={{ marginTop: "1rem" }}>
+              Traditional marketing in Indore relied heavily on billboards and newspaper ads. We realized this was inefficient for clinics, coaching centers, and service-based businesses. Our mission is to introduce performance-driven marketing, where every rupee spent can be tracked back to a lead or a sale.
+            </p>
+            <p style={{ marginTop: "1rem" }}>
+              By utilizing the latest in Artificial Intelligence, including predictive analytics, Generative AI for content, and automated WhatsApp nurturing sequences, we empower local businesses to compete with national brands. We are not just an agency; we are your dedicated growth partners committed to scaling your revenue predictably and consistently.
             </p>
           </div>
         </div>

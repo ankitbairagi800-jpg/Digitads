@@ -17,12 +17,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (!blog) {
     return {
-      title: 'Article | DigitalAds',
+      title: 'Article',
     };
   }
 
   return {
-    title: `${blog.title} | DigitalAds Blog`,
+    title: blog.title,
     description: blog.excerpt,
     keywords: blog.tags.join(", ") + ", digital marketing Indore, Digitalads",
     alternates: {

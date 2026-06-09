@@ -260,7 +260,7 @@ Google rewards landing pages that match the ad's keyword exactly. A higher match
   ,
   {
     id: "traditional-marketing-dead-indore",
-    title: "The Ultimate Guide to Scaling Clinics in Indore: Why Traditional Marketing is Dead in 2026",
+    title: "Scale Clinics in Indore: Why Traditional Marketing is Dead",
     excerpt: "Discover why billboards and flyers are wasting your clinic's budget and how performance marketing guarantees patient acquisition.",
     content: `# The Ultimate Guide to Scaling Clinics in Indore: Why Traditional Marketing is Dead in 2026
 
@@ -306,7 +306,7 @@ A: Because Digitads focuses on ROI. We provide transparent dashboards showing ex
   },
   {
     id: "generative-ai-seo-indore",
-    title: "How Generative AI is Changing Local SEO (GEO): A Playbook for Indore Businesses",
+    title: "Generative AI & Local SEO (GEO): Guide for Indore",
     excerpt: "Generative Engine Optimization (GEO) is the new SEO. Learn how to rank your business when AI answers user queries.",
     content: `# How Generative AI is Changing Local SEO (GEO): A Playbook for Indore Businesses
 
@@ -348,7 +348,7 @@ A: Not if you are the cited source. Being the cited source in an AI Overview act
   },
   {
     id: "customer-acquisition-cost-meta-vs-google",
-    title: "Cost of Customer Acquisition (CAC) in Indore: Meta Ads vs Google Ads",
+    title: "CAC in Indore: Meta Ads vs Google Ads Comparison",
     excerpt: "A data-driven breakdown of Customer Acquisition Costs (CAC) across Meta and Google platforms for local businesses.",
     content: `# Cost of Customer Acquisition (CAC) in Indore: Meta Ads vs Google Ads
 
@@ -398,7 +398,7 @@ A: By implementing A/B testing on creatives and utilizing strict negative keywor
   },
   {
     id: "coaching-center-lead-generation-indore",
-    title: "Why 90% of Lead Generation Campaigns Fail for Coaching Centers (And How to Fix It)",
+    title: "Why Lead Gen Fails for Coaching Centers & How to Fix It",
     excerpt: "Indore is a massive education hub. Discover the exact blueprint Digitads uses to fill coaching batches consistently.",
     content: `# Why 90% of Lead Generation Campaigns Fail for Coaching Centers (And How to Fix It)
 
@@ -441,7 +441,7 @@ A: Depending on the ad budget, our automated funnels can generate 50-200 qualifi
   },
   {
     id: "whatsapp-automation-masterclass",
-    title: "The WhatsApp Automation Masterclass: Turning 10% Conversions into 40%",
+    title: "WhatsApp Automation Masterclass: Boost Conversions",
     excerpt: "Unlock the power of WhatsApp Business APIs to build 24/7 automated sales funnels that never sleep.",
     content: `# The WhatsApp Automation Masterclass: Turning 10% Conversions into 40%
 
@@ -485,7 +485,7 @@ A: Absolutely. We can route WhatsApp replies through ChatGPT to create intellige
   },
   {
     id: "google-ads-quality-score-secrets",
-    title: "Indore Digital Marketing Agency Blueprint: What Competitors Won't Tell You About Google Ads",
+    title: "Google Ads Quality Score Secrets for High ROI",
     excerpt: "Stop overpaying for clicks. Learn the technical secrets of Google Ads Quality Scores that average agencies hide.",
     content: `# Indore Digital Marketing Agency Blueprint: What Competitors Won't Tell You About Google Ads
 
@@ -533,7 +533,7 @@ A: Usually, within 14 to 30 days of restructuring campaigns, implementing exact-
   },
   {
     id: "answer-engine-optimization-aeo-guide",
-    title: "AEO (Answer Engine Optimization): How to Make ChatGPT and Gemini Recommend Your Business",
+    title: "AEO Guide: Make ChatGPT & Gemini Recommend You",
     excerpt: "Optimize your brand so AI language models recommend you as the best choice in your industry.",
     content: `# AEO (Answer Engine Optimization): How to Make ChatGPT and Gemini Recommend Your Business
 
@@ -578,7 +578,7 @@ A: No, it is an evolution. You still need immediate lead generation via [Meta an
   },
   {
     id: "high-converting-landing-page-architecture",
-    title: "The Architecture of a High-Converting Landing Page for Service Businesses",
+    title: "High-Converting Landing Page Architecture Guide",
     excerpt: "Why sending ad traffic to your website homepage is a costly mistake. Learn the anatomy of a landing page that converts at 20%+.",
     content: `# The Architecture of a High-Converting Landing Page for Service Businesses
 
@@ -623,7 +623,7 @@ A: We use Microsoft Clarity for heatmaps to see exactly where users click and dr
   },
   {
     id: "google-maps-ranking-secrets-2026",
-    title: "Google Maps Top 3 Ranking Secrets (2026 Update): Beyond Fake Reviews",
+    title: "Google Maps Top 3 Ranking Secrets (2026 Update)",
     excerpt: "Unlock the advanced local SEO strategies required to dominate the Google Maps Local 3-Pack in your city.",
     content: `# Google Maps Top 3 Ranking Secrets (2026 Update): Beyond Fake Reviews
 
@@ -666,7 +666,7 @@ A: Digitads actively monitors your GMB profile. We report policy-violating revie
   },
   {
     id: "future-performance-marketing-digitads",
-    title: "The Future of Performance Marketing in Central India: The Digitads Advantage",
+    title: "Future of Performance Marketing: Digitads Advantage",
     excerpt: "Why Digitads is the fastest-growing and most technologically advanced performance marketing agency in Indore.",
     content: `# The Future of Performance Marketing in Central India: The Digitads Advantage
 

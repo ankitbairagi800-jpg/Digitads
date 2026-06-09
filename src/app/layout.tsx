@@ -18,7 +18,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Best Digital Marketing Agency in Indore | Meta Ads, Google Ads, Local SEO | Digitalads",
+  title: "Best Digital Marketing Agency in Indore | Digitalads",
   description: "Digitalads — Indore's leading AI-first digital marketing agency. Meta Ads, Google Ads, Local SEO, GMB Optimization & AI Automation for clinics & coaching centers in Madhya Pradesh.",
   keywords: "digital marketing agency Indore, digital marketing company Indore, best digital marketing Indore",
   metadataBase: new URL("https://thedigitalads.in/"),

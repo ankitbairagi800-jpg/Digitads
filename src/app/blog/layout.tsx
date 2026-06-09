@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Blog | SEO, Ads, AI & Automation Tips | Digitalads Indore",
+  title: "Digital Marketing Blog | Digitalads Indore",
   description: "Read expert digital marketing insights from Digitalads — Indore's leading agency. Tips on Meta Ads, Google Ads, Local SEO, GMB Optimization, WhatsApp Automation & AI Marketing for clinics and coaching centers.",
   keywords: "digital marketing blog, SEO tips Indore, Google Ads guide, Meta Ads tips, WhatsApp automation, marketing blog India",
   alternates: {

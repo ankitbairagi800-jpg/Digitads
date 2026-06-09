@@ -53,6 +53,8 @@ export default function BlogPage() {
           </div>
           <h1>Insights &amp; <span className="highlight">Strategies</span></h1>
           <p>Expert tips, case studies, and actionable marketing strategies to help clinics and coaching centers dominate their local market.</p>
+          <p style={{ marginTop: "1rem" }}>Welcome to the Digitalads insights hub. Whether you're looking to understand the intricacies of Meta Ads for student acquisition or want to learn how local SEO and GMB optimization can drive more walk-ins to your medical clinic in Indore, you'll find data-backed guides here. We believe in transparency and sharing the exact strategies we use to scale businesses across Madhya Pradesh.</p>
+          <p style={{ marginTop: "1rem" }}>Stay updated with the latest trends in digital marketing, artificial intelligence, and automation. Our comprehensive tutorials are designed to be actionable, so you can immediately implement these techniques and see measurable growth in your patient or student inquiries.</p>
           
           <div className="blog-search-bar">
             <input 
