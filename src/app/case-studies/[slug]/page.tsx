@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 import { notFound } from "next/navigation";
+import SocialShare from "@/components/SocialShare";
 
 export async function generateStaticParams() {
   return caseStudiesData.map((study) => ({
@@ -165,6 +166,11 @@ export default async function CaseStudyDetailPage({ params }: { params: Promise<
             <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#475569' }}>
               {study.solution}
             </p>
+          </div>
+
+          <div style={{ marginTop: '20px', padding: '20px', backgroundColor: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0', '--text-color': '#0f172a' } as React.CSSProperties}>
+            <h3 style={{ marginBottom: '10px', fontSize: '20px', color: '#0f172a' }}>Share this case study</h3>
+            <SocialShare title={`${study.title} Case Study`} />
           </div>
 
           <div style={{ padding: '40px', background: 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)', borderRadius: '16px', textAlign: 'center', marginTop: '60px' }}>

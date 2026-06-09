@@ -63,5 +63,14 @@ export const caseStudiesData: CaseStudy[] = [
     tags: ["Web Design", "Medical SEO", "Healthcare"],
     problem: "A prominent 100-bed hospital in Ujjain had an ancient, non-responsive website that took over 8 seconds to load. Patients could not easily find doctor schedules or book appointments online, resulting in an overloaded phone reception and lost digital visibility. The hospital was losing organic traffic to newer clinics with better online presence, and their lack of a modern digital infrastructure made it difficult to attract outstation patients who rely heavily on online research before traveling for medical care.",
     solution: "We engineered a completely new, HIPAA-compliant website optimized for Core Web Vitals (loading in under 1.5 seconds). We structured the site architecture around Medical SEO, creating dedicated silo pages for each department (Cardiology, Orthopedics, etc.) with rich, informative content answering common patient queries. We integrated a seamless online appointment booking system and an automated WhatsApp chat widget, which drastically reduced reception call volume. Furthermore, our targeted local SEO efforts helped rank their specific departmental pages for high-intent keywords across Madhya Pradesh, significantly increasing outstation patient bookings and overall organic search visibility."
+  },
+  {
+    id: "national-coaching-expansion-performance-marketing",
+    title: "Performance Marketing Agencies in India: Scaling an Indore Brand Nationally",
+    subtitle: "Advanced Google Ads + Pan-India Expansion",
+    icon: "fas fa-globe-asia",
+    tags: ["Performance Marketing", "Pan-India Ads", "Lead Gen"],
+    problem: "A well-established coaching institute in Indore wanted to expand its student base nationally by offering online courses. The core problem was that they were competing against heavily funded ed-tech giants. They tried working with generic performance marketing agencies in India, but their campaigns yielded high Cost Per Click (CPC) and junk leads from irrelevant regions, quickly draining their ad budget with zero ROI.",
+    solution: "Digitads deployed a highly specific, intent-based Google Search Ads strategy. Instead of targeting broad keywords like 'online coaching', we targeted long-tail problem-specific queries that students in Tier-2 and Tier-3 cities were actively searching for. We implemented strict geo-fencing to exclude low-converting zones and paired the ads with highly localized landing pages. Additionally, we set up an automated WhatsApp nurturing sequence to engage leads instantly. The result was a 400% increase in pan-India admissions at a 50% lower Customer Acquisition Cost (CAC) compared to their previous agency efforts."
   }
 ];

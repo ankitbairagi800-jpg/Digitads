@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { getBlogs, BlogPost } from "@/lib/db";
+import SocialShare from "@/components/SocialShare";
 import "./blog-detail.css";
 
 // Markdown to HTML renderer with internal linking support
@@ -218,7 +219,13 @@ export default function BlogDetailClient({ slug, initialBlog, initialAllBlogs }:
           <div className="blog-detail-layout">
 
             {/* Main Content */}
-            <article className="blog-rich-content" dangerouslySetInnerHTML={renderMarkdownContent(blog.content)} />
+            <div>
+              <article className="blog-rich-content" dangerouslySetInnerHTML={renderMarkdownContent(blog.content)} />
+              <div style={{ marginTop: '40px', padding: '20px', backgroundColor: 'rgba(255,255,255,0.05)', borderRadius: '12px' }}>
+                <h3 style={{ marginBottom: '10px', fontSize: '20px' }}>Enjoyed this article? Share it with your network.</h3>
+                <SocialShare title={blog.title} />
+              </div>
+            </div>
 
             {/* Sidebar */}
             <aside className="blog-detail-sidebar">
