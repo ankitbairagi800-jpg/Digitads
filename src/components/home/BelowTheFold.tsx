@@ -138,7 +138,7 @@ export default function BelowTheFold() {
               </Link>
             </article>
             <article className="service-card">
-              <img src="https://images.unsplash.com/photo-1614680376573-3e4e1ef4142a?q=80&w=600&auto=format&fit=crop" alt="WhatsApp CRM Automation for Lead Generation Indore" className="service-img" loading="lazy" width="600" height="400" decoding="async" />
+              <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?q=80&w=600&auto=format&fit=crop" alt="WhatsApp CRM Automation for Lead Generation Indore" className="service-img" loading="lazy" width="600" height="400" decoding="async" />
               <h3 className="service-title">WhatsApp &amp; CRM Automation</h3>
               <p className="service-description">
                 Never lose a lead again. 24/7 automated follow-ups via WhatsApp,
@@ -404,23 +404,27 @@ export default function BelowTheFold() {
         </div>
       </section>
 
-      <section className="gmb-review-section" aria-label="Google Reviews">
+      <section className="gmb-review-section" aria-label="Google Reviews" style={{ padding: '60px 0', textAlign: 'center', backgroundColor: '#f8fafc' }}>
         <div className="container">
-          <div className="gmb-simple-wrap">
+          <div style={{ display: 'inline-block', background: '#fff', padding: '30px 40px', borderRadius: '16px', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)', border: '1px solid #e2e8f0', maxWidth: '600px', width: '100%' }}>
+            <h3 style={{ fontSize: '24px', marginBottom: '8px', color: '#0f172a', fontWeight: '700' }}>Happy with our services?</h3>
+            <p style={{ color: '#475569', marginBottom: '24px', fontSize: '16px' }}>Your feedback helps us grow and improve. Please take a moment to rate us on Google Maps.</p>
             <a
-              className="gmb-simple-btn"
-              href="https://share.google/4mgJdYDzlAdOkyjuS"
+              href="https://share.google/rY09dbhtN9EBHpXgy"
               target="_blank"
               rel="noopener noreferrer"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '16px', background: '#fff', color: '#3c4043', textDecoration: 'none', padding: '12px 24px', borderRadius: '30px', border: '1px solid #dadce0', transition: 'all 0.2s', boxShadow: '0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15)' }}
+              onMouseOver={(e) => e.currentTarget.style.boxShadow = '0 1px 3px 0 rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15)'}
+              onMouseOut={(e) => e.currentTarget.style.boxShadow = '0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15)'}
             >
-              <span className="gmb-btn-icon">â­</span>
-              <span className="gmb-btn-text">
-                <span className="gmb-btn-main">Rate Us on Google</span>
-                <span className="gmb-btn-sub">
-                  Google Maps par review do — sirf 30 seconds
-                </span>
-              </span>
-              <i className="fas fa-external-link-alt gmb-btn-arrow"></i>
+              <img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google logo" style={{ width: '28px', height: '28px' }} />
+              <div style={{ textAlign: 'left' }}>
+                <div style={{ fontSize: '16px', fontWeight: '600', color: '#202124' }}>Rate Us on Google</div>
+                <div style={{ fontSize: '13px', color: '#70757a' }}>It only takes 30 seconds!</div>
+              </div>
+              <div style={{ display: 'flex', color: '#fbbc04', fontSize: '16px', marginLeft: '8px', gap: '2px' }}>
+                <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
+              </div>
             </a>
           </div>
         </div>
