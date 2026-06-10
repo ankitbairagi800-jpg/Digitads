@@ -7,6 +7,7 @@ export interface CaseStudy {
   problem: string; // The Challenge
   solution: string; // Strategy & Execution
   image?: string; // Optional image for SEO/OpenGraph
+  imageAlt?: string; // Alt text for the image
 }
 
 export const caseStudiesData: CaseStudy[] = [
@@ -17,7 +18,9 @@ export const caseStudiesData: CaseStudy[] = [
     icon: "fas fa-stethoscope",
     tags: ["Meta Ads", "WhatsApp Automation", "Healthcare"],
     problem: "A prominent skin and hair clinic in Vijay Nagar, Indore was spending ₹15,000/month on Facebook Ads but acquiring only 8–10 leads with exceptionally poor follow-up. Most inquiries went cold because the front desk couldn't respond fast enough during busy hours.",
-    solution: "We rebuilt the Meta Ads campaign from scratch, deploying new localized audiences, video testimonial creatives, and clear offer-based hooks. Simultaneously, we implemented a custom WhatsApp automation flow using n8n. The system responded to every lead within 60 seconds, answering basic queries and automatically booking consultation slots into the doctor's calendar. This resulted in a massive surge in show-up rates and drastically reduced the Cost Per Lead (CPL)."
+    solution: "We rebuilt the Meta Ads campaign from scratch, deploying new localized audiences, video testimonial creatives, and clear offer-based hooks. Simultaneously, we implemented a custom WhatsApp automation flow using n8n. The system responded to every lead within 60 seconds, answering basic queries and automatically booking consultation slots into the doctor's calendar. This resulted in a massive surge in show-up rates and drastically reduced the Cost Per Lead (CPL).",
+    image: "/blog-whatsapp-automation.png",
+    imageAlt: "Digitalads Indore Meta Ads and WhatsApp Automation Case Study for Skin and Hair Clinic"
   },
   {
     id: "iit-jee-coaching-google-seo",
@@ -71,6 +74,6 @@ export const caseStudiesData: CaseStudy[] = [
     icon: "fas fa-globe-asia",
     tags: ["Performance Marketing", "Pan-India Ads", "Lead Gen"],
     problem: "A well-established coaching institute in Indore wanted to expand its student base nationally by offering online courses. The core problem was that they were competing against heavily funded ed-tech giants. They tried working with generic performance marketing agencies in India, but their campaigns yielded high Cost Per Click (CPC) and junk leads from irrelevant regions, quickly draining their ad budget with zero ROI.",
-    solution: "Digitads deployed a highly specific, intent-based Google Search Ads strategy. Instead of targeting broad keywords like 'online coaching', we targeted long-tail problem-specific queries that students in Tier-2 and Tier-3 cities were actively searching for. We implemented strict geo-fencing to exclude low-converting zones and paired the ads with highly localized landing pages. Additionally, we set up an automated WhatsApp nurturing sequence to engage leads instantly. The result was a 400% increase in pan-India admissions at a 50% lower Customer Acquisition Cost (CAC) compared to their previous agency efforts."
+    solution: "Digitalads deployed a highly specific, intent-based Google Search Ads strategy. Instead of targeting broad keywords like 'online coaching', we targeted long-tail problem-specific queries that students in Tier-2 and Tier-3 cities were actively searching for. We implemented strict geo-fencing to exclude low-converting zones and paired the ads with highly localized landing pages. Additionally, we set up an automated WhatsApp nurturing sequence to engage leads instantly. The result was a 400% increase in pan-India admissions at a 50% lower Customer Acquisition Cost (CAC) compared to their previous agency efforts."
   }
 ];

@@ -1,6 +1,7 @@
 import { caseStudiesData } from "@/data/case-studies";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Script from "next/script";
 import { notFound } from "next/navigation";
 import SocialShare from "@/components/SocialShare";
@@ -125,7 +126,7 @@ export default async function CaseStudyDetailPage({ params }: { params: Promise<
       {/* Hero Section */}
       <section className="page-hero" aria-label="Case study hero" style={{ paddingBottom: '60px' }}>
         <div className="container">
-          <div className="page-hero-inner" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+          <div className="page-hero-inner" style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto' }}>
             <nav aria-label="Breadcrumb" className="breadcrumb" style={{ justifyContent: 'center' }}>
               <Link href="/">Home</Link>
               <span className="breadcrumb-sep">›</span>
@@ -135,11 +136,24 @@ export default async function CaseStudyDetailPage({ params }: { params: Promise<
             </nav>
             <div className="section-tag" style={{ margin: '20px auto' }}>{study.subtitle}</div>
             <h1>{study.title}</h1>
-            <div className="case-tags" style={{ justifyContent: 'center', marginTop: '20px' }}>
+            <div className="case-tags" style={{ justifyContent: 'center', margin: '20px 0 40px 0' }}>
               {study.tags.map(tag => (
                 <span key={tag} className="case-tag">#{tag}</span>
               ))}
             </div>
+            {study.image && (
+              <div style={{ width: '100%', position: 'relative', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.4)', marginTop: '20px' }}>
+                <Image 
+                  src={study.image} 
+                  // @ts-ignore
+                  alt={study.imageAlt || `${study.title} Case Study`}
+                  width={1200}
+                  height={630}
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                  priority
+                />
+              </div>
+            )}
           </div>
         </div>
       </section>
