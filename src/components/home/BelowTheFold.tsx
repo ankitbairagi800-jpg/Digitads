@@ -413,9 +413,7 @@ export default function BelowTheFold() {
               href="https://share.google/rY09dbhtN9EBHpXgy"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: '16px', background: '#fff', color: '#3c4043', textDecoration: 'none', padding: '12px 24px', borderRadius: '30px', border: '1px solid #dadce0', transition: 'all 0.2s', boxShadow: '0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15)' }}
-              onMouseOver={(e) => e.currentTarget.style.boxShadow = '0 1px 3px 0 rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15)'}
-              onMouseOut={(e) => e.currentTarget.style.boxShadow = '0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15)'}
+              className="google-review-btn"
             >
               <img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google logo" style={{ width: '28px', height: '28px' }} />
               <div style={{ textAlign: 'left' }}>

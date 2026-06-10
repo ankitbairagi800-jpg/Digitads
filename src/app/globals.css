@@ -452,6 +452,24 @@ input,select,textarea{font-family:var(--font-primary)}
 .contact-page-form .form-group input::placeholder,.contact-page-form .form-group textarea::placeholder{color:rgba(255,255,255,0.55)}
 .contact-page-form .form-group select option{background:var(--dark-bg)}
 
+/* ===== GOOGLE REVIEW BUTTON ===== */
+.google-review-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  color: #3c4043;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: 1px solid #dadce0;
+  transition: all 0.2s;
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+}
+.google-review-btn:hover {
+  box-shadow: 0 1px 3px 0 rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15);
+}
+
 /* ===== ADMIN PANEL ===== */
 .admin-wrapper{min-height:100vh;background:var(--light-gray);font-family:var(--font-primary)}
 .admin-nav{position:fixed;top:0;left:0;width:100%;background:var(--dark-bg);padding:14px 0;z-index:100;border-bottom:1px solid rgba(255,255,255,0.06)}
