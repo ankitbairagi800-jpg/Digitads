@@ -94,8 +94,8 @@ input,select,textarea{font-family:var(--font-primary)}
 .trust-badges{display:flex;gap:24px;flex-wrap:wrap}
 .badge{display:flex;align-items:center;gap:9px;color:rgba(255,255,255,0.65);font-size:13.5px;font-weight:500}
 .badge i{color:var(--primary-color);font-size:16px}
-.animate-fade-up{opacity:0;transform:translateY(32px);animation:fadeUp .85s ease forwards}
-.delay-1{animation-delay:.2s}.delay-2{animation-delay:.4s}.delay-3{animation-delay:.6s}
+.animate-fade-up{opacity:0;transform:translateY(24px);animation:fadeUp .6s cubic-bezier(0.16, 1, 0.3, 1) forwards}
+.delay-1{animation-delay:.05s}.delay-2{animation-delay:.15s}.delay-3{animation-delay:.25s}
 @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
 
 /* ===== STATS BAR ===== */
@@ -702,12 +702,18 @@ html, body {
   }
 
   .trust-badges {
-    gap: 14px;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
   }
 
   .badge {
     font-size: 13px;
+    align-items: flex-start;
+  }
+
+  .badge i {
+    margin-top: 3px;
   }
 
   /* ─────────────────────────────────────────────
