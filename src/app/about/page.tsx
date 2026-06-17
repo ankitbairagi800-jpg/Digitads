@@ -111,7 +111,7 @@ export default function About() {
           <div className="founder-card">
             <img
               className="founder-photo"
-              src="https://media.licdn.com/dms/image/v2/D4D03AQGNCRnQrvAcBw/profile-displayphoto-scale_400_400/B4DZwfbzpvI8Ag-/0/1770053913187?e=1780531200&v=beta&t=saDFpSTBf8KYFiiZbSo8P1qKQ3ykmnzlYKlnrCNdtzU"
+              src="https://github.com/ankitbairagi800-jpg.png"
               alt="Ankit Bairagi — Growth Partner at Digitalads"
               loading="lazy"
             />

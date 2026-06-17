@@ -389,6 +389,13 @@
   font-size: 32px;
 }
 
+.author-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .author-card h3 {
   font-size: 17px;
   font-weight: 800;
@@ -642,7 +649,7 @@
     position: static;
   }
   .blog-detail-sidebar {
-    order: -1;
+    order: 1;
   }
   .related-posts-grid {
     grid-template-columns: repeat(2, 1fr);

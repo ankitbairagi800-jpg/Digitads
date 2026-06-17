@@ -245,7 +245,7 @@ export default function BlogDetailClient({ slug, initialBlog, initialAllBlogs }:
               {/* Author Card */}
               <div className="author-card">
                 <div className="author-img">
-                  <i className="fa-solid fa-user-tie"></i>
+                  <img src="https://github.com/ankitbairagi800-jpg.png" alt="Ankit Bairagi — Founder, Digitalads" />
                 </div>
                 <h3>Ankit Bairagi</h3>
                 <span className="author-title">Founder, Digitalads</span>

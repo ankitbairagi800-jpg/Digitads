@@ -138,7 +138,7 @@ export default function BelowTheFold() {
               </Link>
             </article>
             <article className="service-card">
-              <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?q=80&w=600&auto=format&fit=crop" alt="WhatsApp CRM Automation for Lead Generation Indore" className="service-img" loading="lazy" width="600" height="400" decoding="async" />
+              <img src="https://images.unsplash.com/photo-1614680376593-902f74cf0d41?q=80&w=600&auto=format&fit=crop" alt="WhatsApp CRM Automation for Lead Generation Indore" className="service-img" loading="lazy" width="600" height="400" decoding="async" />
               <h3 className="service-title">WhatsApp &amp; CRM Automation</h3>
               <p className="service-description">
                 Never lose a lead again. 24/7 automated follow-ups via WhatsApp,
