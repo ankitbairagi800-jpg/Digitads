@@ -1,7 +1,6 @@
 # robots.txt — thedigitalads.in
-# Last updated: May 2026
-# All AI crawlers are explicitly ALLOWED
-# Goal: Allow AI citation, indexing, grounding & training
+# Last updated: June 2026
+# All AI crawlers and chatbots are explicitly ALLOWED
 
 # -----------------------------------------------
 # As a condition of accessing this website, you agree to abide by the following
@@ -22,19 +21,15 @@
 #           augmented generation, grounding, or other real-time taking of content for
 #           generative AI search answers).
 # ai-train: training or fine-tuning AI models.
-#
-# ANY RESTRICTIONS EXPRESSED VIA CONTENT SIGNALS ARE EXPRESS RESERVATIONS OF
-# RIGHTS UNDER ARTICLE 4 OF THE EUROPEAN UNION DIRECTIVE 2019/790 ON COPYRIGHT
-# AND RELATED RIGHTS IN THE DIGITAL SINGLE MARKET.
 # -----------------------------------------------
 
-
-
+# =============================================
+# GENERAL CRAWLERS
+# =============================================
 User-agent: *
 Content-Signal: search=yes,ai-input=yes,ai-train=yes
 Allow: /
 Disallow: /admin/
-
 
 # =============================================
 # ANTHROPIC / CLAUDE (claude.ai)
@@ -48,9 +43,8 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
-
 # =============================================
-# OPENAI / CHATGPT
+# OPENAI / CHATGPT (chatgpt.com)
 # =============================================
 User-agent: GPTBot
 Allow: /
@@ -61,7 +55,6 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-
 # =============================================
 # GOOGLE / GEMINI
 # =============================================
@@ -71,15 +64,8 @@ Allow: /
 User-agent: Googlebot
 Allow: /
 
-User-agent: Googlebot-Image
-Allow: /
-
-User-agent: Googlebot-Video
-Allow: /
-
 User-agent: Google-CloudVertexBot
 Allow: /
-
 
 # =============================================
 # MICROSOFT / COPILOT / BING
@@ -87,15 +73,8 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-User-agent: BingPreview
-Allow: /
-
-User-agent: msnbot
-Allow: /
-
 User-agent: Copilot
 Allow: /
-
 
 # =============================================
 # PERPLEXITY AI
@@ -106,7 +85,6 @@ Allow: /
 User-agent: Perplexity-User
 Allow: /
 
-
 # =============================================
 # DEEPSEEK
 # =============================================
@@ -116,7 +94,6 @@ Allow: /
 User-agent: DeepSeekBot
 Allow: /
 
-
 # =============================================
 # XAI / GROK
 # =============================================
@@ -125,7 +102,6 @@ Allow: /
 
 User-agent: xAI
 Allow: /
-
 
 # =============================================
 # META AI (LLaMA)
@@ -139,9 +115,8 @@ Allow: /
 User-agent: Meta-ExternalFetcher
 Allow: /
 
-
 # =============================================
-# APPLE / SIRI
+# APPLE / SIRI (Apple Intelligence)
 # =============================================
 User-agent: Applebot
 Allow: /
@@ -149,16 +124,8 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-
 # =============================================
-# AMAZON / ALEXA
-# =============================================
-User-agent: Amazonbot
-Allow: /
-
-
-# =============================================
-# COHERE
+# COHERE AI
 # =============================================
 User-agent: cohere-ai
 Allow: /
@@ -166,69 +133,13 @@ Allow: /
 User-agent: CohereBot
 Allow: /
 
-
 # =============================================
-# YOU.COM
-# =============================================
-User-agent: YouBot
-Allow: /
-
-
-# =============================================
-# BYTEDANCE / BYTESPIDER
-# =============================================
-User-agent: Bytespider
-Allow: /
-
-
-# =============================================
-# COMMON CRAWL (AI training datasets)
+# COMMON CRAWL
 # =============================================
 User-agent: CCBot
 Allow: /
 
-
 # =============================================
-# CLOUDFLARE AI
-# =============================================
-User-agent: CloudflareBrowserRenderingCrawler
-Allow: /
-
-
-# =============================================
-# DIFFBOT (AI structured data)
-# =============================================
-User-agent: Diffbot
-Allow: /
-
-
-# =============================================
-# ARCHIVE / RESEARCH BOTS
-# =============================================
-User-agent: ia_archiver
-Allow: /
-
-User-agent: archive.org_bot
-Allow: /
-
-
-# =============================================
-# GENERAL AI RESEARCH CRAWLERS
-# =============================================
-User-agent: DataForSeoBot
-Allow: /
-
-User-agent: SemrushBot
-Allow: /
-
-User-agent: AhrefsBot
-Allow: /
-
-User-agent: DotBot
-Allow: /
-
-
-# =============================================
-# SITEMAP
+# SITEMAP LINK
 # =============================================
 Sitemap: https://thedigitalads.in/sitemap.xml
