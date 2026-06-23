@@ -75,5 +75,33 @@ export const caseStudiesData: CaseStudy[] = [
     tags: ["Performance Marketing", "Pan-India Ads", "Lead Gen"],
     problem: "A well-established coaching institute in Indore wanted to expand its student base nationally by offering online courses. The core problem was that they were competing against heavily funded ed-tech giants. They tried working with generic performance marketing agencies in India, but their campaigns yielded high Cost Per Click (CPC) and junk leads from irrelevant regions, quickly draining their ad budget with zero ROI.",
     solution: "Digitalads deployed a highly specific, intent-based Google Search Ads strategy. Instead of targeting broad keywords like 'online coaching', we targeted long-tail problem-specific queries that students in Tier-2 and Tier-3 cities were actively searching for. We implemented strict geo-fencing to exclude low-converting zones and paired the ads with highly localized landing pages. Additionally, we set up an automated WhatsApp nurturing sequence to engage leads instantly. The result was a 400% increase in pan-India admissions at a 50% lower Customer Acquisition Cost (CAC) compared to their previous agency efforts."
+  },
+  {
+    id: "mppsc-coaching-lead-generation-indore",
+    title: "MPPSC & Civil Services Coaching — Indore",
+    subtitle: "Google Search Ads + Meta Leads + WhatsApp Funnel",
+    icon: "fas fa-graduation-cap",
+    tags: ["Google Ads", "Meta Ads", "Coaching Marketing", "Lead Gen"],
+    problem: "An established MPPSC coaching institute in Bhawarkuan, Indore was experiencing a steady decline in student walk-ins as newer, digitally-savvy institutes dominated local search and social media. Their reliance on traditional banners and printed pamphlets was no longer yielding results, and their sales team lacked a system to capture, track, and follow up with online inquiries.",
+    solution: "We built a conversion-focused landing page offering a high-value 'Free MPPSC Syllabus & Prep Guide PDF' download to capture student intent. We launched targeted Meta Ads and Google Search Ads targeting civil services aspirants in Indore and nearby towns. Using n8n, we automated the delivery of the study material via WhatsApp within seconds of form submission. The WhatsApp bot then engaged the students and offered them a seat in a free live demo class. This automated pipeline filled their new batch in 45 days, increasing demo-to-admission conversion by 65%."
+  },
+  {
+    id: "ivf-fertility-clinic-marketing-indore",
+    title: "IVF & Fertility Clinic — Indore",
+    subtitle: "Trust-First Meta Ads + Private WhatsApp Consultation",
+    icon: "fas fa-baby",
+    tags: ["Meta Ads", "Healthcare Marketing", "Clinic Lead Gen", "Trust Building"],
+    problem: "A premium IVF and fertility clinic in Indore struggled to acquire patients online. IVF is a high-ticket, highly personal healthcare service, and traditional direct-response lead generation ads failed because they did not establish trust. Their previous agency generated low-quality leads from people inquiring about general gynecological costs, leading to high CPL and zero successful clinical treatments.",
+    solution: "We shifted the focus to 'Trust-First Educational Marketing.' We produced a series of high-quality video ads featuring the clinic's lead IVF specialist explaining fertility myths and treatment procedures. We set up campaigns on Meta Ads that prompted users to initiate a private WhatsApp chat instead of filling out a form. Using n8n automation, the chat immediately provided helpful information and option to request a free confidential call. This lowered the barrier to entry, resulting in a 3.5x ROI on treatments and a consistent flow of high-intent couple walk-ins."
+  },
+  {
+    id: "real-estate-property-brokerage-leads-indore",
+    title: "Premium Property Brokerage — Super Corridor",
+    subtitle: "HNW Targeting + Video Walkthroughs + Lead Pre-Qualification",
+    icon: "fas fa-key",
+    tags: ["Real Estate", "Meta Ads", "Lead Qualification", "CRM Automation"],
+    problem: "A premier property consulting firm in Indore wanted to sell premium residential plots and commercial spaces near Super Corridor. Their generic Facebook lead form campaigns were flooded with low-budget inquiries, irrelevant contacts, and people looking for rental properties, leaving their sales team overwhelmed with unqualified leads and zero bookings.",
+    solution: "We deployed a lead pre-qualification system. First, we ran Meta Ads featuring high-quality video walkthroughs of the plots and commercial spaces, specifically targeting high-income brackets, business owners, and corporate professionals. Second, we directed traffic to a multi-step qualification landing page where users had to specify their budget, investment timeline, and phone number before receiving the brochures. Integrated via Make.com with HubSpot and WhatsApp, this flow filtered out unqualified users and sent verified leads to the sales team, driving 24 high-value site visits and 4 property bookings in 60 days."
   }
 ];
+
