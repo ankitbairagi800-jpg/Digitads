@@ -754,7 +754,7 @@ We don't just want to be your agency; we want to be your dedicated growth partne
     tags: ["Digital Marketing Company", "Indore", "Performance Marketing"],
     slug: "digital-marketing-company-in-indore-guide",
     icon: "fa-solid fa-handshake",
-    image: "/blog-digitads-future.png",
+    image: "/blog-indore-agency.png",
     imageAlt: "Best digital marketing company in Indore providing performance marketing and SEO services",
     isFeatured: true
   },
@@ -804,7 +804,7 @@ Don't let your competitors steal your local traffic. [Contact us](/contact) for 
     tags: ["Google Business", "SEO", "Local SEO"],
     slug: "google-business-search-engine-optimization-2026",
     icon: "fa-solid fa-map-pin",
-    image: "/blog-gmb-seo-ranking.png",
+    image: "/blog-gmb-playbook.png",
     imageAlt: "Google Business Search Engine Optimization map ranking strategies for local businesses",
     isFeatured: false
   },
@@ -925,7 +925,7 @@ Students rarely enroll on their first visit. They need to see results and testim
     tags: ["Education", "Student Acquisition", "Indore"],
     slug: "student-acquisition-strategies-education-marketing-indore",
     icon: "fa-solid fa-graduation-cap",
-    image: "/blog-coaching-marketing.png",
+    image: "/blog-education-marketing.png",
     imageAlt: "Education marketing agency Indore student acquisition strategies and coaching center lead generation funnel",
     isFeatured: false
   },
@@ -987,7 +987,7 @@ Not all leads buy on day one. n8n allows us to build multi-day nurturing flows.
     tags: ["n8n", "Automation", "CRM"],
     slug: "n8n-automation-agency-indore-lead-management",
     icon: "fa-brands fa-whatsapp",
-    image: "/blog-whatsapp-api.png",
+    image: "/blog-n8n-automation.png",
     imageAlt: "n8n automation agency Indore workflow lead management WhatsApp CRM integration",
     isFeatured: false
   },
@@ -1049,7 +1049,7 @@ Organic reach on Instagram is slow. To get immediate patient inquiries in Vijay 
     tags: ["Instagram Marketing", "AI Video", "Clinics"],
     slug: "instagram-marketing-reels-aesthetic-clinics-indore",
     icon: "fa-solid fa-camera",
-    image: "/blog-landing-page-cro.png",
+    image: "/blog-instagram-clinic.png",
     imageAlt: "Instagram Reels and AI video marketing strategy for aesthetic clinics in Indore",
     isFeatured: false
   },
@@ -1110,7 +1110,7 @@ With YouTube **TrueView ads**, you only pay if the viewer watches at least 30 se
     tags: ["YouTube Ads", "Education", "Video Marketing"],
     slug: "youtube-ads-coaching-institutes-enrollment-funnel",
     icon: "fa-brands fa-google",
-    image: "/blog-meta-vs-google.png",
+    image: "/blog-youtube-coaching.png",
     imageAlt: "YouTube Ads and video enrollment funnel strategy for coaching institutes in Indore",
     isFeatured: false
   }
