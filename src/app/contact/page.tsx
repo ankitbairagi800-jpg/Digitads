@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { saveLead } from "@/lib/db";
+import LazyIframe from "@/components/LazyIframe";
 import "./contact.css";
 
 export default function Contact() {
@@ -277,17 +278,14 @@ export default function Contact() {
               </div>
 
               <div className="map-embed" aria-label="Office location on Google Maps">
-                <iframe
+                <LazyIframe
                   src="https://maps.google.com/maps?q=Digitalads+Digital+Marketing+Agency+Indore+Madhya+Pradesh&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%"
-                  height="260"
+                  height={260}
                   style={{ border: 0, display: "block" }}
-                  allowFullScreen={false}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
                   title="Digitalads — Digital Marketing Agency Indore Location on Google Maps"
-                  aria-label="Google Maps showing Digitalads office location in Indore, Madhya Pradesh"
-                ></iframe>
+                  ariaLabel="Google Maps showing Digitalads office location in Indore, Madhya Pradesh"
+                />
                 <a
                   href="https://share.google/4mgJdYDzlAdOkyjuS"
                   target="_blank"

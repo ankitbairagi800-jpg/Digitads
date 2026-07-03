@@ -20,7 +20,7 @@ export default function BelowTheFold() {
           </div>
           <div className="services-grid">
             <article className="service-card">
-              <img src="https://images.unsplash.com/photo-1611262588024-d12430b98920?q=80&w=600&auto=format&fit=crop" alt="Best Meta Ads Services for Clinics in Indore by Digitalads" className="service-img" loading="lazy" width="600" height="400" decoding="async" />
+              <img src="https://images.unsplash.com/photo-1611262588024-d12430b98920?q=70&w=500&auto=format&fit=crop&fm=webp" alt="Best Meta Ads Services for Clinics in Indore by Digitalads" className="service-img" loading="lazy" width="500" height="333" decoding="async" />
               <h3 className="service-title">Meta Ads (Facebook &amp; Instagram)</h3>
               <p className="service-description">
                 Hyper-targeted ad campaigns on Facebook and Instagram designed to
@@ -49,7 +49,7 @@ export default function BelowTheFold() {
               </Link>
             </article>
             <article className="service-card">
-              <img src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?q=80&w=600&auto=format&fit=crop" alt="Top Google Ads Agency for Coaching Centers in Indore - Digitalads" className="service-img" loading="lazy" width="600" height="400" decoding="async" />
+              <img src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?q=70&w=500&auto=format&fit=crop&fm=webp" alt="Top Google Ads Agency for Coaching Centers in Indore - Digitalads" className="service-img" loading="lazy" width="500" height="333" decoding="async" />
               <h3 className="service-title">Google Ads (Search &amp; YouTube)</h3>
               <p className="service-description">
                 Capture people actively searching for your services with
@@ -79,7 +79,7 @@ export default function BelowTheFold() {
             </article>
             <article className="service-card featured">
               <span className="featured-badge">Most Popular</span>
-              <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=600&auto=format&fit=crop" alt="GMB Optimization & Local SEO Services Indore" className="service-img" loading="lazy" width="600" height="400" decoding="async" />
+              <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=70&w=500&auto=format&fit=crop&fm=webp" alt="GMB Optimization & Local SEO Services Indore" className="service-img" loading="lazy" width="500" height="333" decoding="async" />
               <h3 className="service-title">GMB Optimization &amp; Local SEO</h3>
               <p className="service-description">
                 Rank your clinic or coaching center at the top of Google Maps and
@@ -109,7 +109,7 @@ export default function BelowTheFold() {
               </Link>
             </article>
             <article className="service-card">
-              <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=600&auto=format&fit=crop" alt="AI Video Ads Creation for Instagram Reels & YouTube Shorts Indore" className="service-img" loading="lazy" width="600" height="400" decoding="async" />
+              <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=70&w=500&auto=format&fit=crop&fm=webp" alt="AI Video Ads Creation for Instagram Reels & YouTube Shorts Indore" className="service-img" loading="lazy" width="500" height="333" decoding="async" />
               <h3 className="service-title">AI Video Ads (Reels &amp; Shorts)</h3>
               <p className="service-description">
                 Scroll-stopping AI-generated video ads for Instagram Reels and
@@ -138,7 +138,7 @@ export default function BelowTheFold() {
               </Link>
             </article>
             <article className="service-card">
-              <img src="https://images.unsplash.com/photo-1614680376593-902f74cf0d41?q=80&w=600&auto=format&fit=crop" alt="WhatsApp CRM Automation for Lead Generation Indore" className="service-img" loading="lazy" width="600" height="400" decoding="async" />
+              <img src="https://images.unsplash.com/photo-1614680376593-902f74cf0d41?q=70&w=500&auto=format&fit=crop&fm=webp" alt="WhatsApp CRM Automation for Lead Generation Indore" className="service-img" loading="lazy" width="500" height="333" decoding="async" />
               <h3 className="service-title">WhatsApp &amp; CRM Automation</h3>
               <p className="service-description">
                 Never lose a lead again. 24/7 automated follow-ups via WhatsApp,
@@ -166,7 +166,7 @@ export default function BelowTheFold() {
               </Link>
             </article>
             <article className="service-card">
-              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop" alt="High Converting Landing Page Design Services Indore" className="service-img" loading="lazy" width="600" height="400" decoding="async" />
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=70&w=500&auto=format&fit=crop&fm=webp" alt="High Converting Landing Page Design Services Indore" className="service-img" loading="lazy" width="500" height="333" decoding="async" />
               <h3 className="service-title">Landing Pages &amp; Website Design</h3>
               <p className="service-description">
                 High-converting, lightning-fast websites and landing pages that
@@ -219,7 +219,7 @@ export default function BelowTheFold() {
           </div>
           <div className="why-grid">
             <div className="why-card">
-              <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=600&auto=format&fit=crop" alt="AI-First Digital Marketing Strategies in Indore" className="why-img" loading="lazy" width="600" height="400" decoding="async" />
+              <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=70&w=500&auto=format&fit=crop&fm=webp" alt="AI-First Digital Marketing Strategies in Indore" className="why-img" loading="lazy" width="500" height="333" decoding="async" />
               <h3>AI-First Approach</h3>
               <p>
                 We leverage ChatGPT, ElevenLabs, CapCut AI, and n8n automations
@@ -228,7 +228,7 @@ export default function BelowTheFold() {
               </p>
             </div>
             <div className="why-card">
-              <img src="https://images.unsplash.com/photo-1519999482648-25049ddd37b1?q=80&w=600&auto=format&fit=crop" alt="Deep Local Market Knowledge of Indore Businesses" className="why-img" loading="lazy" width="600" height="400" decoding="async" />
+              <img src="https://images.unsplash.com/photo-1519999482648-25049ddd37b1?q=70&w=500&auto=format&fit=crop&fm=webp" alt="Deep Local Market Knowledge of Indore Businesses" className="why-img" loading="lazy" width="500" height="333" decoding="async" />
               <h3>Deep Local Market Knowledge</h3>
               <p>
                 We understand Indore's neighborhoods, search behavior, and local
@@ -237,7 +237,7 @@ export default function BelowTheFold() {
               </p>
             </div>
             <div className="why-card">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop" alt="Results-Only Digital Marketing Agency in Madhya Pradesh" className="why-img" loading="lazy" width="600" height="400" decoding="async" />
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=70&w=500&auto=format&fit=crop&fm=webp" alt="Results-Only Digital Marketing Agency in Madhya Pradesh" className="why-img" loading="lazy" width="500" height="333" decoding="async" />
               <h3>Results-Only Focus</h3>
               <p>
                 We track every rupee spent. No vanity metrics — only real leads,
@@ -246,7 +246,7 @@ export default function BelowTheFold() {
               </p>
             </div>
             <div className="why-card">
-              <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=600&auto=format&fit=crop" alt="Specialist Digital Marketing for Healthcare & Clinics Indore" className="why-img" loading="lazy" width="600" height="400" decoding="async" />
+              <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=70&w=500&auto=format&fit=crop&fm=webp" alt="Specialist Digital Marketing for Healthcare & Clinics Indore" className="why-img" loading="lazy" width="500" height="333" decoding="async" />
               <h3>Clinic &amp; Coaching Specialists</h3>
               <p>
                 We don't serve everyone. Our deep specialization in healthcare
@@ -255,7 +255,7 @@ export default function BelowTheFold() {
               </p>
             </div>
             <div className="why-card">
-              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop" alt="Fast Onboarding & Execution Digital Ads Services" className="why-img" loading="lazy" width="600" height="400" decoding="async" />
+              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=70&w=500&auto=format&fit=crop&fm=webp" alt="Fast Onboarding & Execution Digital Ads Services" className="why-img" loading="lazy" width="500" height="333" decoding="async" />
               <h3>Fast Onboarding &amp; Execution</h3>
               <p>
                 Campaigns go live within 48 hours of onboarding. No long waiting
@@ -264,7 +264,7 @@ export default function BelowTheFold() {
               </p>
             </div>
             <div className="why-card">
-              <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=600&auto=format&fit=crop" alt="Transparent Monthly Reporting Digital Marketing" className="why-img" loading="lazy" width="600" height="400" decoding="async" />
+              <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?q=70&w=500&auto=format&fit=crop&fm=webp" alt="Transparent Monthly Reporting Digital Marketing" className="why-img" loading="lazy" width="500" height="333" decoding="async" />
               <h3>Transparent Monthly Reporting</h3>
               <p>
                 Detailed reports every month. You always know exactly how your

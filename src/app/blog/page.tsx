@@ -76,7 +76,14 @@ export default function BlogPage() {
               <div className="featured-img">
                 <div className="featured-label">Featured</div>
                 {featuredPost.image ? (
-                  <img src={featuredPost.image} alt={featuredPost.imageAlt || featuredPost.title} className="featured-real-img" loading="eager" />
+                  <img
+                    src={featuredPost.image}
+                    alt={featuredPost.imageAlt || featuredPost.title}
+                    className="featured-real-img"
+                    loading="eager"
+                    width="800"
+                    height="450"
+                  />
                 ) : (
                   <i className={`${featuredPost.icon || "fa-solid fa-chart-line"} featured-img-icon`}></i>
                 )}

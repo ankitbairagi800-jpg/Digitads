@@ -114,6 +114,8 @@ export default function About() {
               src="https://github.com/ankitbairagi800-jpg.png"
               alt="Ankit Bairagi — Growth Partner at Digitalads"
               loading="lazy"
+              width="300"
+              height="300"
             />
             <div className="founder-body">
               <h3 className="founder-name">Ankit Bairagi</h3>

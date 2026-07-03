@@ -81,10 +81,10 @@ export default function RootLayout({
       <head>
         {/* Google tag (gtag.js) */}
         <Script
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           src="https://www.googletagmanager.com/gtag/js?id=G-2Y705WQRVQ"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -99,10 +99,21 @@ export default function RootLayout({
           src="https://analytics.ahrefs.com/analytics.js" 
           data-key="cxtMpm0j1w+fSQOBMfMnaQ" 
         />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        />
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
+        <Script id="load-font-awesome" strategy="lazyOnload">
+          {`
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
+            document.head.appendChild(link);
+          `}
+        </Script>
+        <noscript>
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          />
+        </noscript>
         <link rel="alternate" type="text/plain" title="LLMs Text Version" href="/llms.txt" />
         <link rel="alternate" type="application/rss+xml" title="Digitalads Blog RSS Feed" href="/feed.xml" />
       </head>
