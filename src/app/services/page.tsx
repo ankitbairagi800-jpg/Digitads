@@ -62,6 +62,13 @@ export default function ServicesPage() {
                       "@type": "Service",
                       "name": "AI Video Ads"
                     }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Social Media Management (SMM)"
+                    }
                   }
                 ]
               }
@@ -365,6 +372,40 @@ export default function ServicesPage() {
             
             <div className="service-img-wrap" aria-hidden="true">
               <Image src="/images/services/services-branding.png" alt="Logo Design and Brand Identity Agency Indore" width={600} height={400} className="service-real-img" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SOCIAL MEDIA MANAGEMENT */}
+      <section className="service-detail" id="social-media-management" aria-label="Social Media Management service">
+        <div className="container">
+          <div className="service-detail-inner reverse">
+            <div className="service-detail-content">
+              <div className="pricing-tag">
+                <i className="fas fa-tag" aria-hidden="true"></i> Starting from ₹10,000/month
+              </div>
+              <span className="pricing-note">* Custom packages available based on posting frequency and Reels.</span>
+              <h2>Social Media Management (SMM) &amp; Content Creation</h2>
+              <p>Keep your social media active, look highly professional, and attract local followers organically. We manage your Instagram, Facebook, and LinkedIn profiles with high-impact designs, captions, and Reels editing.</p>
+              
+              <ul className="service-detail-list">
+                <li><i className="fas fa-check" aria-hidden="true"></i> Monthly Content Calendar &amp; Post Scheduling</li>
+                <li><i className="fas fa-check" aria-hidden="true"></i> Instagram Reels &amp; short-form video editing</li>
+                <li><i className="fas fa-check" aria-hidden="true"></i> Premium graphic designs (12-15 posts/month)</li>
+                <li><i className="fas fa-check" aria-hidden="true"></i> Keyword-optimized caption writing &amp; hashtags</li>
+                <li><i className="fas fa-check" aria-hidden="true"></i> Community engagement (comment &amp; DM setup)</li>
+                <li><i className="fas fa-check" aria-hidden="true"></i> Monthly performance reports &amp; insights</li>
+                <li><i className="fas fa-check" aria-hidden="true"></i> Bio optimization &amp; Link-in-Bio setup</li>
+              </ul>
+              
+              <Link href="/contact" className="btn btn-primary">
+                <i className="fas fa-calendar-check" aria-hidden="true"></i> Get SMM Consultation
+              </Link>
+            </div>
+            
+            <div className="service-img-wrap" aria-hidden="true">
+              <Image src="/images/services/services-smm.png" alt="Social Media Management and Content Creation Agency Indore" width={600} height={400} className="service-real-img" loading="lazy" />
             </div>
           </div>
         </div>
