@@ -57,6 +57,133 @@ export interface Lead {
 // Pre-seeded Blogs
 const defaultBlogs: BlogPost[] = [
   {
+    id: "how-to-build-automated-whatsapp-crm-using-n8n",
+    title: "How to Build a Custom Automated WhatsApp CRM using n8n (Free Guide)",
+    excerpt: "Learn how to build a fully automated WhatsApp CRM pipeline using n8n. Connect Facebook Lead Ads directly to WhatsApp for instant 60-second follow-ups.",
+    content: `# How to Build a Custom Automated WhatsApp CRM using n8n
+
+In 2026, the speed of lead follow-up determines who gets the sale. According to industry data, **responding to a B2B or clinical lead within 5 minutes increases conversion rates by over 300%**. Unfortunately, most local businesses in Indore take hours to reply to new inquiries, resulting in lost sales to faster competitors.
+
+In this guide, we will show you exactly how to build a fully automated, 24/7 WhatsApp CRM using **n8n** (an open-source workflow automation platform).
+
+---
+
+## Why Use n8n for WhatsApp Automation?
+
+While platforms like Make.com are great, n8n offers significant advantages for developers and growing agencies in Indore:
+1. **Self-Hostable**: You can run it on your own server (e.g., VPS) with zero monthly execution fees.
+2. **Advanced Logic**: Native JavaScript code support within nodes.
+3. **No Lock-in**: Full ownership of your workflows.
+
+| Feature | n8n.io (Self-hosted) | Make.com | Traditional CRMs |
+| :--- | :--- | :--- | :--- |
+| **Setup Cost** | Free (Open-Source) | Free Tier / Paid | High Monthly Fees |
+| **Execution Limit**| Unlimited (VPS bound) | Limited by operations| Fixed limits |
+| **Data Privacy** | 100% Secure (Own server) | Third-party cloud | Hosted cloud |
+
+---
+
+## Step-by-Step Workflow Setup
+
+Here is the exact automation architecture we deploy for local healthcare clinics and coaching centers in Indore:
+
+### Step 1: Trigger Node (Facebook Lead Ads or Webhook)
+The workflow starts when a new user submits a lead form on Facebook/Instagram or fills a contact form on your website.
+* Connect a **Webhook Node** or a dedicated **Facebook Lead Ads Trigger** node.
+
+### Step 2: Google Sheets / CRM Sync
+Save the lead data instantly in a central location before processing.
+* Add a **Google Sheets Node** to append the row containing \`Name\`, \`Phone\`, and \`Service Required\`.
+
+### Step 3: Format Phone Number
+WhatsApp Business API requires numbers in strict E.164 format (e.g. \`+918103202086\` for India).
+* Use an **n8n Set Node** or a simple JavaScript line to clean up spaces and prepend \`91\` if missing:
+\`\`\`javascript
+const cleanPhone = item.phone.replace(/\\D/g, "");
+return cleanPhone.startsWith("91") ? cleanPhone : "91" + cleanPhone;
+\`\`\`
+
+### Step 4: WhatsApp Message Dispatcher
+Now, connect your WhatsApp Business API provider (such as Cloud API, Wati, or Twilio).
+* Use the **HTTP Request Node** to send a POST request with the template payload:
+  * **Header**: Authorization Bearer Token.
+  * **Body**: JSON matching the template variables (e.g., \`Dear {{Name}}, thank you for booking a skin consultation...\`).
+
+### Step 5: Conditional Follow-Up (Wait Node)
+If the user doesn't respond or book an appointment within 24 hours, send a gentle automated reminder.
+* Add an **n8n Wait Node** set to \`24 hours\`.
+* Follow up with a second message containing a calendar scheduler link (like Cal.com).
+
+---
+
+## Conclusion
+Setting up an automated WhatsApp CRM with n8n ensures that **no lead is left behind**. If you want to scale your patient walk-ins in Indore without hiring more sales staff, this is the single best investment you can make.`,
+    category: "Automation",
+    readTime: "10 min read",
+    date: "Jul 22, 2026",
+    tags: ["n8n", "WhatsApp Automation", "CRM", "Indore"],
+    slug: "how-to-build-automated-whatsapp-crm-using-n8n",
+    icon: "fa-solid fa-code",
+    image: "/blog-whatsapp-automation.jpg",
+    imageAlt: "n8n WhatsApp CRM automation workflow builder diagram - Digitalads Indore",
+    isFeatured: true
+  },
+  {
+    id: "how-to-make-ai-video-ads-for-facebook",
+    title: "How to Create High-Converting AI Video Ads for Facebook & Instagram (2026)",
+    excerpt: "Discover the exact AI toolchain—Midjourney, ElevenLabs, and CapCut—we use at Digitalads Indore to build high-converting Meta video ads that cut CPL by 40%.",
+    content: `# How to Create High-Converting AI Video Ads for Facebook & Instagram (2026)
+
+Paid advertising on Meta (Facebook & Instagram) has shifted. The days of hyper-granular interest targeting are gone; today, Meta's Advantage+ algorithm does the heavy lifting. **The creative is now your targeting.**
+
+To capture attention in Indore's crowded feeds, you need video ads that hook users in under 3 seconds. In this article, we reveal the exact **AI-driven video ad toolchain** we use at Digitalads to cut cost-per-lead by 40%.
+
+---
+
+## The AI Ad Creative Toolchain
+
+Instead of hiring expensive production agencies, cameras, and actors, you can build professional video ads using three core AI tools:
+
+1. **Midjourney / DALL-E 3 (Visual Assets)**: For generating realistic, high-quality images of modern clinic setups, educational hubs, or professional lifestyles.
+2. **ElevenLabs (Voiceovers)**: The industry standard for hyper-realistic AI text-to-speech. You can clone your own voice or choose from hundreds of studio-quality voices.
+3. **CapCut AI / HeyGen (Video Assembly & Avatars)**: For stitching visual assets, adding transitions, auto-generating kinetic captions, and sync-matching voiceovers.
+
+---
+
+## Step-by-Step AI Video Ad Creation
+
+### Step 1: Scripting with Hook-Body-CTA Framework
+Write a 30-second script optimized for local search intent.
+* **Hook (0-3s)**: Address the local pain point. E.g., \`"Indore me best hair clinic dhund rahe hain?"\`
+* **Body (3-25s)**: Focus on the solution. Explain the treatment, show clinic interior photos, and add patient review stats.
+* **CTA (25-30s)**: Clear direction. \`"WhatsApp link par click karein aur free consultation book karein."\`
+
+### Step 2: Voiceover Generation via ElevenLabs
+* Paste your script into ElevenLabs.
+* Choose a voice with high clarity and a friendly, local-friendly accent (Hindi/English mix works best for Indore audiences).
+* Set stability to 65% and clarity to 85% for natural pauses and speech patterns.
+
+### Step 3: Editing and Assembly in CapCut AI
+* Import your voiceover file and visual assets.
+* Use CapCut’s **Auto Captions** feature. Choose bold, high-contrast text presets (e.g. yellow on black) with zoom animations.
+* Match transitions to the beat of the background music.
+
+---
+
+## Why AI Video Ads Outperform Static Creatives
+* **Higher Engagement**: Video ads generate 2x more clicks than static banners.
+* **Algorithm Favored**: Meta’s delivery system prioritizes Reels and Video formats.
+* **Fast Testing**: You can create 5 different video variants in under an hour to test which hook performs best.`,
+    category: "Ads",
+    readTime: "8 min read",
+    date: "Jul 20, 2026",
+    tags: ["AI Video Ads", "Meta Ads", "ElevenLabs", "Indore"],
+    slug: "how-to-make-ai-video-ads-for-facebook",
+    icon: "fa-solid fa-film",
+    image: "/blog-ai-video-ads.jpg",
+    imageAlt: "AI video ad creative editing timeline showing avatar assets and ad dashboard overlays - Digitalads Indore"
+  },
+  {
     id: "ai-future-marketing",
     title: "The Future of Marketing: How AI is Changing the Game in 2025",
     excerpt: "Artificial intelligence isn't just a buzzword—it's actively reshaping how businesses acquire and retain customers. In this deep dive, we explore practical AI applications you can implement today.",

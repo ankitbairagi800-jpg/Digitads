@@ -12,6 +12,28 @@ export interface CaseStudy {
 
 export const caseStudiesData: CaseStudy[] = [
   {
+    id: "whatsapp-automation-lead-follow-up-indore",
+    title: "WhatsApp & CRM Automation Case Study",
+    subtitle: "How WhatsApp CRM Automation Reduced Lead Drop-off by 60%",
+    icon: "fab fa-whatsapp",
+    tags: ["WhatsApp Automation", "n8n", "Lead Follow-up", "Indore"],
+    problem: "A leading pediatric clinic in Vijay Nagar, Indore was receiving over 30 online inquiries daily through Facebook ads but suffered from a 70% lead drop-off rate because staff took up to 4 hours to follow up. By the time they called, parents had already contacted or booked another pediatrician.",
+    solution: "We integrated n8n automation to connect Meta Lead Ads directly to a WhatsApp Business API and Google Sheets CRM. The second a lead was submitted, an automated, conversational WhatsApp message was triggered within 45 seconds, providing clinic timings, services, and a calendar scheduler link. If the parent didn't book, the system followed up automatically at 24 and 48 hours. This reduced response time to under 1 minute and slashed lead drop-off by 60%, generating 180+ bookings in the first month.",
+    image: "/blog-whatsapp-automation.jpg",
+    imageAlt: "WhatsApp CRM Automation lead generation follow-up case study by Digitalads Indore"
+  },
+  {
+    id: "facebook-ads-case-study-dental-clinic-indore",
+    title: "Multi-Specialty Dental Clinic Meta Ads",
+    subtitle: "350% ROI on Meta Ads for Dental Implants in Indore",
+    icon: "fas fa-tooth",
+    tags: ["Meta Ads", "Dental Clinic", "Lead Gen", "Indore"],
+    problem: "A high-end dental clinic in Palasia, Indore wanted to promote premium dental implant services. Their general Facebook ad campaigns yielded high cost-per-lead (₹400+) and poor quality calls, as most leads asked about basic cleanings rather than high-value implant treatments.",
+    solution: "We deployed a highly-targeted Meta Ads campaign built around patient trust and video testimonials. Instead of standard lead forms, we created a dedicated pre-qualification landing page that filtered users by dental issue, treatment timeline, and budget. Leads were instantly synced to an automated WhatsApp drip that sent patient success videos. This funnel generated 62 pre-qualified dental implant inquiries in 45 days at an average lead cost of ₹180, leading to 14 high-ticket implant placements and a verified 350% ROI.",
+    image: "/case-study-dental-clinic.jpg",
+    imageAlt: "Dental clinic Meta Ads performance marketing case study by Digitalads Indore"
+  },
+  {
     id: "skin-hair-clinic-meta-whatsapp",
     title: "Skin & Hair Clinic — Indore",
     subtitle: "Meta Ads + WhatsApp Automation",
@@ -19,7 +41,7 @@ export const caseStudiesData: CaseStudy[] = [
     tags: ["Meta Ads", "WhatsApp Automation", "Healthcare"],
     problem: "A prominent skin and hair clinic in Vijay Nagar, Indore was spending ₹15,000/month on Facebook Ads but acquiring only 8–10 leads with exceptionally poor follow-up. Most inquiries went cold because the front desk couldn't respond fast enough during busy hours.",
     solution: "We rebuilt the Meta Ads campaign from scratch, deploying new localized audiences, video testimonial creatives, and clear offer-based hooks. Simultaneously, we implemented a custom WhatsApp automation flow using n8n. The system responded to every lead within 60 seconds, answering basic queries and automatically booking consultation slots into the doctor's calendar. This resulted in a massive surge in show-up rates and drastically reduced the Cost Per Lead (CPL).",
-    image: "/blog-whatsapp-automation.png",
+    image: "/case-study-skin-clinic.jpg",
     imageAlt: "Digitalads Indore Meta Ads and WhatsApp Automation Case Study for Skin and Hair Clinic"
   },
   {
