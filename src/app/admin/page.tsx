@@ -82,13 +82,6 @@ export default function AdminDashboard() {
     }
   }, []);
 
-  // Fetch data on authentication
-  useEffect(() => {
-    if (isAuthenticated) {
-      loadAllData();
-    }
-  }, [isAuthenticated]);
-
   const loadAllData = async () => {
     try {
       const blogs = await getBlogs();
@@ -101,6 +94,13 @@ export default function AdminDashboard() {
       console.error("Failed to load dashboard data", err);
     }
   };
+
+  // Fetch data on authentication
+  useEffect(() => {
+    if (isAuthenticated) {
+      loadAllData();
+    }
+  }, [isAuthenticated]);
 
   const handleLoginSubmit = (e: React.FormEvent) => {
     e.preventDefault();
