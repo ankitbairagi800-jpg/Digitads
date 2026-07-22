@@ -1441,6 +1441,26 @@ const defaultServices: ServiceItem[] = [
     visualDescription: "Professional brand identity that builds trust and makes you the obvious choice in your market",
     reverseLayout: false,
     order: 7
+  },
+  {
+    id: "social-media-management",
+    title: "Social Media Management (SMM)",
+    price: "Starting from ₹10,000/month",
+    description: "Instagram, Facebook, and LinkedIn content management designed to build local trust and turn profile visitors into paying walk-ins. We handle graphic design, caption writing, Reels, and scheduling.",
+    features: [
+      "Monthly Content Calendar & Post Scheduling",
+      "Instagram Reels & short-form video editing",
+      "Premium graphic designs (12-15 posts/month)",
+      "Keyword-optimized caption writing & hashtags",
+      "Community engagement (comment & DM setup)",
+      "Monthly performance reports & insights",
+      "Bio optimization & Link-in-Bio setup"
+    ],
+    icon: "fas fa-share-nodes",
+    visualTitle: "Social Media Management Indore",
+    visualDescription: "Keep your profiles active, look highly professional, and attract local followers organically",
+    reverseLayout: false,
+    order: 8
   }
 ];
 
@@ -1584,10 +1604,10 @@ export const getServices = async (): Promise<ServiceItem[]> => {
       querySnapshot.forEach((docSnap) => {
         servicesList.push(docSnap.data() as ServiceItem);
       });
-      if (servicesList.length === 0) {
-        for (const svc of defaultServices) {
-          await setDoc(doc(db, "services", svc.id), svc);
-          servicesList.push(svc);
+      for (const defaultSvc of defaultServices) {
+        if (!servicesList.find(s => s.id === defaultSvc.id)) {
+          await setDoc(doc(db, "services", defaultSvc.id), defaultSvc);
+          servicesList.push(defaultSvc);
         }
       }
       return servicesList.sort((a, b) => a.order - b.order);
@@ -1596,6 +1616,19 @@ export const getServices = async (): Promise<ServiceItem[]> => {
     }
   }
   const localServices = getLocalData("services", defaultServices);
+  let updatedLocal = false;
+  
+  for (const defaultSvc of defaultServices) {
+    if (!localServices.find((s: any) => s.id === defaultSvc.id)) {
+      localServices.push(defaultSvc);
+      updatedLocal = true;
+    }
+  }
+  
+  if (updatedLocal) {
+    saveLocalData("services", localServices);
+  }
+  
   return (localServices.length > 0 ? localServices : defaultServices).sort((a: any, b: any) => a.order - b.order);
 };
 
