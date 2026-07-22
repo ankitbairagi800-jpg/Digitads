@@ -27,7 +27,7 @@
 # GENERAL CRAWLERS
 # =============================================
 User-agent: *
-Content-Signal: search=yes,ai-input=yes,ai-train=yes
+# Content-Signal: search=yes,ai-input=yes,ai-train=yes
 Allow: /
 Disallow: /admin/
 
