@@ -57,6 +57,64 @@ export interface Lead {
 // Pre-seeded Blogs
 const defaultBlogs: BlogPost[] = [
   {
+    id: "how-to-manage-local-business-social-media",
+    title: "How to Manage Social Media for a Local Business (Indore Focus)",
+    excerpt: "Learn how to design, schedule, and execute a social media management strategy for a local business in Indore that actually drives walk-ins.",
+    content: `# How to Manage Social Media for a Local Business (Indore Focus)
+
+For local brick-and-mortar businesses in Indore—whether you're a high-end restaurant in Vijay Nagar, a boutique clinic in Palasia, or a retail outlet on MG Road—social media is your modern storefront. 
+
+Many business owners think social media management (SMM) is just about posting beautiful pictures. However, generic posts rarely drive actual walk-ins or leads. In this guide, we layout the exact **Social Media Management framework** that turns online likes into offline revenue.
+
+---
+
+## 1. Optimize Your Profile for Local Conversions
+
+Before posting, you must ensure that users landing on your Instagram or Facebook profile know exactly what you do and how to reach you:
+* **The Bio**: Keep it simple and benefit-driven. Mention your location clearly. E.g., *"Indore's leading aesthetic skin clinic. 📍 Palasia, Indore."*
+* **The CTA Link**: Link directly to a booking page or a WhatsApp chat link. Do not just link to your homepage.
+* **Story Highlights**: Create dedicated highlights for:
+  1. *Patient/Customer Testimonials*
+  2. *Services & Pricing*
+  3. *Inside the Studio/Clinic (Virtual Tour)*
+  4. *Location/How to Reach Us*
+
+---
+
+## 2. Content Pillars for Local SMM
+
+To build trust, your weekly content calendar should cover three core pillars:
+
+| Content Pillar | Description | Example Post Idea |
+| :--- | :--- | :--- |
+| **Social Proof** | Real client reviews and transformations. | *"Before & After acne treatment results of Indore client."* |
+| **Educational** | Value-packed posts answering customer doubts. | *"Why traditional facials fail (and what to do instead)."* |
+| **Inside the Brand** | Behind-the-scenes, doctor/owner intros. | *"Meet Dr. Ankit Bairagi: Our lead dermatologist."* |
+
+---
+
+## 3. High-Velocity Reels & Short-Form Video
+
+Static posts are dying. Meta's algorithms prioritize Reels. 
+* Aim to post **3 to 4 Reels per week**.
+* Keep them under 30 seconds.
+* Use trending audios with low-tempo local appeal.
+* Use CapCut AI or similar editors to insert clean auto-captions and fast-paced transitions.
+
+---
+
+## Conclusion
+A structured, conversion-focused social media strategy builds **local authority**. Once people in Indore see your content repeatedly on their feeds showing real transformations, you become the obvious and only choice when they need your service.`,
+    category: "Design",
+    readTime: "7 min read",
+    date: "Jul 18, 2026",
+    tags: ["SMM", "Social Media", "Local Business", "Indore"],
+    slug: "how-to-manage-local-business-social-media",
+    icon: "fa-solid fa-share-nodes",
+    image: "/blog-social-media.jpg",
+    imageAlt: "Social media management planner calendar showing post schedules - Digitalads Indore"
+  },
+  {
     id: "how-to-build-automated-whatsapp-crm-using-n8n",
     title: "How to Build a Custom Automated WhatsApp CRM using n8n (Free Guide)",
     excerpt: "Learn how to build a fully automated WhatsApp CRM pipeline using n8n. Connect Facebook Lead Ads directly to WhatsApp for instant 60-second follow-ups.",

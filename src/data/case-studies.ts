@@ -12,6 +12,17 @@ export interface CaseStudy {
 
 export const caseStudiesData: CaseStudy[] = [
   {
+    id: "google-search-ads-coaching-center-indore",
+    title: "Google Search Ads Case Study: IIT-JEE Coaching Indore",
+    subtitle: "How We Generated 240+ High-Intent Admissions using Google Search Ads",
+    icon: "fas fa-graduation-cap",
+    tags: ["Google Ads", "Coaching Marketing", "Lead Gen", "Indore"],
+    problem: "An established IIT-JEE and NEET coaching institute in Bhawarkuan, Indore was spending over ₹50,000/month on generic billboard ads and print flyers, but saw student inquiry numbers drop by 40% year-over-year as competitors dominated online search.",
+    solution: "We launched an intent-focused Google Search Ads campaign. Instead of broad keywords, we targeted high-intent local queries such as 'best NEET coaching in Bhawarkua' and 'JEE classes near me'. We paired the ads with a speed-optimized landing page featuring top faculty bios, student testimonials, and a 'Free Scholarship Test Booking' CTA. Leads were instantly synced to an automated SMS/WhatsApp drip. This generated 240+ qualified student inquiries at a 60% lower Customer Acquisition Cost (CAC) than print ads.",
+    image: "/case-study-coaching-ads.jpg",
+    imageAlt: "Google Search ads dashboard for IIT-JEE coaching institute lead generation - Digitalads Indore"
+  },
+  {
     id: "whatsapp-automation-lead-follow-up-indore",
     title: "WhatsApp & CRM Automation Case Study",
     subtitle: "How WhatsApp CRM Automation Reduced Lead Drop-off by 60%",
