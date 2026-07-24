@@ -12,6 +12,28 @@ export interface CaseStudy {
 
 export const caseStudiesData: CaseStudy[] = [
   {
+    id: "local-seo-palasia-boutique-store",
+    title: "Boutique Store Palasia — Indore",
+    subtitle: "Local SEO & GMB Optimization",
+    icon: "fas fa-shopping-bag",
+    tags: ["Local SEO", "GMB Optimization", "Boutique Marketing", "Indore"],
+    problem: "A high-end clothing boutique in Palasia, Indore was struggling to attract walk-in customers. Despite having beautiful garments, their Google Business Profile was unoptimized (only 12 reviews, missing photos), ranking them on Page 3 of Google Maps, and losing local shoppers to competitors in Vijay Nagar.",
+    solution: "We executed a local SEO sprint. First, we fully optimized their GMB profile with 40+ high-resolution product photos, keyword-rich descriptions, and localized attributes. Second, we launched an automated review campaign via WhatsApp that generated 120+ 5-star customer reviews in 30 days. Third, we built high-authority local citations in Indore business directories. This pushed their GMB profile into the top 3 spots in Google Map Pack for keywords like 'best designer boutique in Palasia', resulting in a 150% increase in weekly walk-ins and phone calls.",
+    image: "/case-study-boutique.jpg",
+    imageAlt: "Boutique store local SEO and Google Maps ranking case study by Digitalads Indore"
+  },
+  {
+    id: "b2b-lead-generation-it-services-indore",
+    title: "Software IT Services — Indore",
+    subtitle: "B2B Lead Generation & LinkedIn Funnel",
+    icon: "fas fa-briefcase",
+    tags: ["B2B Lead Gen", "LinkedIn Ads", "Meta Ads", "IT Marketing"],
+    problem: "An IT outsourcing and software services company based in Indore wanted to acquire international clients for custom software development. They tried generic outbound emailing with very low open rates and no conversions, spending weeks of sales team hours with zero ROI.",
+    solution: "We designed a multi-channel B2B lead generation funnel. We created a high-converting landing page offering a case study on 'How We Reduced Software Dev Costs by 40% for a US client'. We ran targeted LinkedIn Ads and Meta B2B Ads targeting CTOs, founders, and product managers in the US and UK. Leads were instantly routed to a smart CRM with automated email nurturing. This system captured 45+ highly qualified enterprise inquiries in 60 days, leading to 5 contract signatures worth ₹12 Lakhs+ in recurring revenue.",
+    image: "/case-study-b2b.jpg",
+    imageAlt: "Software IT company B2B lead generation case study by Digitalads Indore"
+  },
+  {
     id: "google-search-ads-coaching-center-indore",
     title: "Google Search Ads Case Study: IIT-JEE Coaching Indore",
     subtitle: "How We Generated 240+ High-Intent Admissions using Google Search Ads",

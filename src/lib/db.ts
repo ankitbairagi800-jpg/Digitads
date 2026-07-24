@@ -57,6 +57,108 @@ export interface Lead {
 // Pre-seeded Blogs
 const defaultBlogs: BlogPost[] = [
   {
+    id: "seo-agency-indore-audit-checklist",
+    title: "SEO Agency Indore Checklist: How to Audit Your Website in 2026",
+    excerpt: "Is your website not ranking on Google? Read our step-by-step technical SEO audit guide designed specifically for local Indore businesses.",
+    content: `# SEO Agency Indore: How to Audit Your Website in 2026
+
+Is your website not ranking on Google? Are you running a local clinic, coaching center, or business in Indore and wondering why your competitors in Vijay Nagar or Palasia are getting all the organic traffic?
+
+Before spending lakhs of rupees on monthly SEO retainers, you need to perform a **Technical SEO Audit**. An audit finds the exact roadblocks preventing Googlebot from indexing and ranking your pages.
+
+In this step-by-step checklist, we reveal the exact audit framework we use at **Digitalads** (Indore's leading SEO agency) to help local businesses rank on Page 1.
+
+---
+
+## 1. Google Search Console (GSC) Audit
+Google Search Console is the most important SEO tool. It shows you exactly how Google sees your site.
+* **Property Verification**: Ensure you have verified a **Domain Property** in GSC (via DNS TXT record) rather than just a URL prefix property. A domain property captures all HTTP/HTTPS and www/non-www traffic versions.
+* **Crawl & Indexation Errors**: Check the **Indexing** section in GSC. Look for pages flagged as *"Crawl redirect error"*, *"Blocked by robots.txt"*, or *"Excluded by noindex tag"*.
+* **Sitemap Submission**: Verify that your sitemap \`/sitemap.xml\` is successfully submitted. A sitemap tells Google about all your dynamic blog posts and case studies.
+
+---
+
+## 2. Robots.txt Standard Compliance
+A faulty \`robots.txt\` can completely de-index your website. 
+* **The Warning**: Many Indore sites hosted on Cloudflare see a warning: *"Rule ignored by Googlebot"*. This is usually caused by Cloudflare's edge proxy injecting non-standard \`Content-Signal\` directives.
+* **The Fix**: Comment out or remove custom directives like \`Content-Signal:\` under \`User-agent: *\`. Only use standardized Robots REP directives (\`User-agent\`, \`Allow\`, \`Disallow\`, \`Sitemap\`).
+
+| Robots.txt Directive | Standard Status | Action |
+| :--- | :--- | :--- |
+| \`User-agent: *\` | Standard (Valid) | Required |
+| \`Allow: /\` | Standard (Valid) | Required |
+| \`Disallow: /admin\` | Standard (Valid) | Required |
+| \`Content-Signal: ...\` | Non-standard (Ignored)| **Comment out with #** |
+
+---
+
+## 3. Local SEO & GMB Optimization
+For local businesses in Indore, Map Pack ranking is more important than national SEO.
+* **Indore Keyword Silos**: Ensure your target landing pages contain localized keywords like *"dermatology clinic Saket Indore"* or *"civil services coaching Bhawarkua"*.
+* **Schema Markup**: Add \`LocalBusiness\` JSON-LD schema markup to your home page, specifying your address, geo-coordinates, telephone, and reviews.
+
+---
+
+## Conclusion
+A technical SEO audit is the foundation of organic ranking. Fix your indexation errors in GSC, keep your robots.txt clean, and optimize your local search signals. If you want a professional team to handle your technical SEO audit in Indore, [contact Digitalads today](/contact) for a free audit!`,
+    category: "SEO",
+    readTime: "9 min read",
+    date: "Jul 24, 2026",
+    tags: ["SEO Agency", "SEO Services", "Indore", "Audit"],
+    slug: "seo-agency-indore-audit-checklist",
+    icon: "fa-solid fa-list-check",
+    image: "/blog-seo-audit.jpg",
+    imageAlt: "SEO agency Indore checklist technical audit dashboard - Digitalads",
+    isFeatured: true
+  },
+  {
+    id: "performance-marketing-agency-indore-guide",
+    title: "Performance Marketing Guide: Meta vs Google Ads for Indore Brands",
+    excerpt: "Discover the differences between Facebook and Google ads, cost-per-lead (CPL) averages in Indore, and how to build a high-ROI performance funnel.",
+    content: `# Performance Marketing Guide: Meta vs Google Ads for Indore Brands
+
+If you run a business in Indore, you face a major question: **Should you invest in Meta Ads (Facebook & Instagram) or Google Ads?**
+
+In this guide, we break down the core differences, the cost per lead (CPL) averages in Indore, and how to structure a high-ROI performance marketing funnel.
+
+---
+
+## Meta Ads: Intercepting Attention
+Meta Ads work by targeting users based on their demographics, interests, and online behavior. They do not have immediate search intent, so your creatives must be scroll-stopping.
+* **Best Verticals**: Aesthetic clinics, fitness centers, D2C brands, and student coaching.
+* **Average CPL in Indore**: ₹100 - ₹250 (depending on lead forms vs landing page pre-qualification).
+* **Indore Hub Targeting**: You can target specific high-income neighborhoods like Vijay Nagar, Palasia, or Bypass Road by pin code.
+
+---
+
+## Google Ads: Capturing Active Search Intent
+Google Ads target people actively typing search terms on Google or watching educational content on YouTube.
+* **Best Verticals**: Emergency health services, multi-specialty hospitals, niche coaching (IIT-JEE, MPPSC), and B2B software services.
+* **Average CPL in Indore**: ₹150 - ₹400 (higher CPL but extremely high conversion rate).
+* **Keywords to Target**: High-intent long-tail keywords (e.g. *"best pediatric dentist in Vijay Nagar"*).
+
+---
+
+## How to Build a Hybrid Performance Funnel
+At Digitalads, we recommend a two-step hybrid approach for maximum ROI:
+
+1. **Google Search Ads (Intent Capture)**: Target users actively searching for your service. This ensures immediate sales/appointments.
+2. **Meta Retargeting (Brand Nurturing)**: Show video testimonials and case studies on Instagram to users who visited your landing page but didn't convert yet.
+
+---
+
+## Conclusion
+Stop wasting money on blind brand awareness. If you want to scale your business in Madhya Pradesh, choose the platform that matches your customer's intent journey. Contact Digitalads, the premier performance marketing agency in Indore, to set up your ad accounts today!`,
+    category: "Ads",
+    readTime: "8 min read",
+    date: "Jul 24, 2026",
+    tags: ["Performance Marketing", "Meta Ads", "Google Ads", "Indore"],
+    slug: "performance-marketing-agency-indore-guide",
+    icon: "fa-solid fa-gauge-high",
+    image: "/blog-performance.jpg",
+    imageAlt: "Meta and Google Ads performance marketing dashboards showing ROI - Digitalads Indore"
+  },
+  {
     id: "how-to-manage-local-business-social-media",
     title: "How to Manage Social Media for a Local Business (Indore Focus)",
     excerpt: "Learn how to design, schedule, and execute a social media management strategy for a local business in Indore that actually drives walk-ins.",
