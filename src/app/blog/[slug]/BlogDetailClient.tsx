@@ -260,7 +260,7 @@ export default function BlogDetailClient({ slug, initialBlog, initialAllBlogs }:
                   <a href="https://www.linkedin.com/in/ankitbairagi" target="_blank" rel="noopener noreferrer" className="author-social-link" aria-label="LinkedIn">
                     <i className="fa-brands fa-linkedin-in"></i>
                   </a>
-                  <a href="https://wa.me/918103202086" target="_blank" rel="noopener noreferrer" className="author-social-link" aria-label="WhatsApp">
+                  <a href="https://wa.me/918103202086?text=Hi%20Digitalads,%20I%20read%20your%20blog%20and%20want%20to%20connect." target="_blank" rel="noopener noreferrer" className="author-social-link" aria-label="WhatsApp">
                     <i className="fa-brands fa-whatsapp"></i>
                   </a>
                 </div>

@@ -50,7 +50,7 @@ export default function Footer() {
                 <i className="fa-brands fa-youtube" aria-hidden="true"></i>
               </a>
               <a
-                href="https://wa.me/918103202086"
+                href="https://wa.me/918103202086?text=Hi%20Digitalads,%20I%20want%20to%20discuss%20marketing%20services%20for%20my%20business."
                 target="_blank"
                 rel="noopener"
                 className="social-link"
@@ -122,7 +122,7 @@ export default function Footer() {
               <li>
                 <i className="fa-brands fa-whatsapp" aria-hidden="true"></i>{" "}
                 <a
-                  href="https://wa.me/918103202086"
+                  href="https://wa.me/918103202086?text=Hi%20Digitalads,%20I%20want%20to%20discuss%20marketing%20services%20for%20my%20business."
                   target="_blank"
                   rel="noopener"
                 >

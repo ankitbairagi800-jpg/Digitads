@@ -148,7 +148,7 @@ export default function Contact() {
                 <div className="contact-quick-text">WhatsApp (Instant)</div>
                 <div className="contact-quick-value">
                   <a
-                    href="https://wa.me/918103202086"
+                    href="https://wa.me/918103202086?text=Hi%20Digitalads,%20I%20want%20to%20connect%20with%20your%20team%20about%20marketing%20services."
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -230,7 +230,7 @@ export default function Contact() {
                 <div className="contact-info-card" role="listitem">
                   <i className="fa-brands fa-whatsapp" aria-hidden="true"></i>
                   <h4>WhatsApp</h4>
-                  <a href="https://wa.me/918103202086" target="_blank" rel="noopener noreferrer">+91 81032 02086</a>
+                  <a href="https://wa.me/918103202086?text=Hi%20Digitalads,%20I%20want%20to%20connect%20with%20your%20team%20about%20marketing%20services." target="_blank" rel="noopener noreferrer">+91 81032 02086</a>
                   <p>Fastest response channel</p>
                 </div>
                 <div className="contact-info-card" role="listitem">
@@ -262,7 +262,7 @@ export default function Contact() {
               <div className="contact-social">
                 <h4>Connect on Social Media</h4>
                 <div className="contact-social-links">
-                  <a href="https://wa.me/918103202086" target="_blank" rel="noopener noreferrer" className="contact-social-link wa" aria-label="WhatsApp Digitalads">
+                  <a href="https://wa.me/918103202086?text=Hi%20Digitalads,%20I%20want%20to%20connect%20with%20your%20team%20about%20marketing%20services." target="_blank" rel="noopener noreferrer" className="contact-social-link wa" aria-label="WhatsApp Digitalads">
                     <i className="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp
                   </a>
                   <a href="https://www.instagram.com/thedigitalads_marketing/" target="_blank" rel="noopener noreferrer" className="contact-social-link ig" aria-label="Instagram Digitalads">

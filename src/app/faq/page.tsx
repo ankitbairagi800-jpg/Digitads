@@ -216,7 +216,7 @@ const faqData: FAQGroup[] = [
         question: "How do I get started with Digitalads?",
         answer: (
           <>
-            Getting started is simple: <strong>Step 1</strong> — <Link href="/contact">Contact us</Link> via form, phone, or WhatsApp. <strong>Step 2</strong> — We schedule a free 30-minute strategy call to understand your business and goals. <strong>Step 3</strong> — We audit your existing digital presence (ads, SEO, GMB) at no charge. <strong>Step 4</strong> — We present a custom strategy and proposal. <strong>Step 5</strong> — Upon approval, we onboard you and launch your campaigns within 5–7 working days. Call <a href="tel:+918103202086">+91 81032 02086</a> or <a href="https://wa.me/918103202086" target="_blank" rel="noopener noreferrer">WhatsApp us now</a>.
+            Getting started is simple: <strong>Step 1</strong> — <Link href="/contact">Contact us</Link> via form, phone, or WhatsApp. <strong>Step 2</strong> — We schedule a free 30-minute strategy call to understand your business and goals. <strong>Step 3</strong> — We audit your existing digital presence (ads, SEO, GMB) at no charge. <strong>Step 4</strong> — We present a custom strategy and proposal. <strong>Step 5</strong> — Upon approval, we onboard you and launch your campaigns within 5–7 working days. Call <a href="tel:+918103202086">+91 81032 02086</a> or <a href="https://wa.me/918103202086?text=Hi%20Digitalads,%20I%20have%20some%20questions%20about%20your%20services." target="_blank" rel="noopener noreferrer">WhatsApp us now</a>.
           </>
         )
       },

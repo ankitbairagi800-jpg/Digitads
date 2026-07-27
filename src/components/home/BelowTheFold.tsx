@@ -679,7 +679,7 @@ export default function BelowTheFold() {
                   <div className="contact-text">
                     <h3>WhatsApp</h3>
                     <a
-                      href="https://wa.me/918103202086"
+                      href="https://wa.me/918103202086?text=Hi%20Digitalads,%20I%20want%20a%20free%20marketing%20consultation."
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -737,7 +737,7 @@ export default function BelowTheFold() {
                   <i className="fa-brands fa-youtube" aria-hidden="true"></i>
                 </a>
                 <a
-                  href="https://wa.me/918103202086"
+                  href="https://wa.me/918103202086?text=Hi%20Digitalads,%20I%20want%20a%20free%20marketing%20consultation."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-link"
