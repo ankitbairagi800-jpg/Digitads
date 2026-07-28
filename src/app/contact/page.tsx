@@ -265,7 +265,7 @@ export default function Contact() {
                   <a href="https://wa.me/918103202086?text=Hi%20Digitalads,%20I%20want%20to%20connect%20with%20your%20team%20about%20marketing%20services." target="_blank" rel="noopener noreferrer" className="contact-social-link wa" aria-label="WhatsApp Digitalads">
                     <i className="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp
                   </a>
-                  <a href="https://www.instagram.com/thedigitalads_marketing/" target="_blank" rel="noopener noreferrer" className="contact-social-link ig" aria-label="Instagram Digitalads">
+                  <a href="https://www.instagram.com/thedigitalads.in?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="contact-social-link ig" aria-label="Instagram Digitalads">
                     <i className="fa-brands fa-instagram" aria-hidden="true"></i> Instagram
                   </a>
                   <a href="https://youtube.com/@digitalads.marketing" target="_blank" rel="noopener noreferrer" className="contact-social-link yt" aria-label="YouTube Digitalads">

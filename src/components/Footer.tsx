@@ -23,7 +23,7 @@ export default function Footer() {
               aria-label="Follow us"
             >
               <a
-                href="https://www.instagram.com/thedigitalads_marketing/"
+                href="https://www.instagram.com/thedigitalads.in?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 target="_blank"
                 rel="noopener"
                 className="social-link"
@@ -151,11 +151,11 @@ export default function Footer() {
               <li>
                 <i className="fa-brands fa-instagram" aria-hidden="true"></i>{" "}
                 <a
-                  href="https://www.instagram.com/thedigitalads_marketing/"
+                  href="https://www.instagram.com/thedigitalads.in?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                   target="_blank"
                   rel="noopener"
                 >
-                  @thedigitalads_marketing
+                  @thedigitalads.in
                 </a>
               </li>
             </ul>

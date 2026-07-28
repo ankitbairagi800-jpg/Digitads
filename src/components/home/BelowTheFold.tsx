@@ -1,9 +1,17 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Script from "next/script";
 import Image from "next/image";
 import HomeContactForm from "./HomeContactForm";
 
 export default function BelowTheFold() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
   return (
     <>
       <section className="services" id="services" aria-label="Our services">
@@ -530,12 +538,19 @@ export default function BelowTheFold() {
             </p>
           </div>
           <div className="faq-grid">
-            <div className="faq-item">
+            <div className={`faq-item ${openFaq === 0 ? "open" : ""}`}>
               <div
                 className="faq-question"
                 role="button"
                 tabIndex={0}
-                aria-expanded="false"
+                aria-expanded={openFaq === 0}
+                onClick={() => toggleFaq(0)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    toggleFaq(0);
+                  }
+                }}
               >
                 Which is the best digital marketing agency in Indore?
                 <i className="fas fa-chevron-down" aria-hidden="true"></i>
@@ -548,12 +563,19 @@ export default function BelowTheFold() {
                 especially for healthcare clinics and coaching centers.
               </div>
             </div>
-            <div className="faq-item">
+            <div className={`faq-item ${openFaq === 1 ? "open" : ""}`}>
               <div
                 className="faq-question"
                 role="button"
                 tabIndex={0}
-                aria-expanded="false"
+                aria-expanded={openFaq === 1}
+                onClick={() => toggleFaq(1)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    toggleFaq(1);
+                  }
+                }}
               >
                 How long does it take to see results from digital marketing?
                 <i className="fas fa-chevron-down" aria-hidden="true"></i>
@@ -566,12 +588,19 @@ export default function BelowTheFold() {
                 day one.
               </div>
             </div>
-            <div className="faq-item">
+            <div className={`faq-item ${openFaq === 2 ? "open" : ""}`}>
               <div
                 className="faq-question"
                 role="button"
                 tabIndex={0}
-                aria-expanded="false"
+                aria-expanded={openFaq === 2}
+                onClick={() => toggleFaq(2)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    toggleFaq(2);
+                  }
+                }}
               >
                 How much does digital marketing cost in Indore?
                 <i className="fas fa-chevron-down" aria-hidden="true"></i>
@@ -583,12 +612,19 @@ export default function BelowTheFold() {
                 hidden fees, no long lock-in contracts initially.
               </div>
             </div>
-            <div className="faq-item">
+            <div className={`faq-item ${openFaq === 3 ? "open" : ""}`}>
               <div
                 className="faq-question"
                 role="button"
                 tabIndex={0}
-                aria-expanded="false"
+                aria-expanded={openFaq === 3}
+                onClick={() => toggleFaq(3)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    toggleFaq(3);
+                  }
+                }}
               >
                 Do you work with healthcare clinics and doctors?
                 <i className="fas fa-chevron-down" aria-hidden="true"></i>
@@ -600,12 +636,19 @@ export default function BelowTheFold() {
                 We understand the trust-building required in medical marketing.
               </div>
             </div>
-            <div className="faq-item">
+            <div className={`faq-item ${openFaq === 4 ? "open" : ""}`}>
               <div
                 className="faq-question"
                 role="button"
                 tabIndex={0}
-                aria-expanded="false"
+                aria-expanded={openFaq === 4}
+                onClick={() => toggleFaq(4)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    toggleFaq(4);
+                  }
+                }}
               >
                 What is GMB optimization and why does my Indore business need it?
                 <i className="fas fa-chevron-down" aria-hidden="true"></i>
@@ -710,7 +753,7 @@ export default function BelowTheFold() {
               </div>
               <div className="social-links" aria-label="Social media links">
                 <a
-                  href="https://www.instagram.com/thedigitalads_marketing/"
+                  href="https://www.instagram.com/thedigitalads.in?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-link"
