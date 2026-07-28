@@ -677,17 +677,18 @@ html, body {
   /* ─────────────────────────────────────────────
      HERO SECTION — full width fix
   ───────────────────────────────────────────── */
-  .hero {
-    padding-top: 70px;
-    min-height: 100svh;
-    min-height: 100vh;
-  }
-
-  .hero-content {
-    padding: 50px 0 40px;
-    width: 100%;
-    max-width: 100%;
-  }
+   .hero {
+     padding-top: 75px;
+     min-height: auto;
+     display: flex;
+     align-items: flex-start;
+   }
+ 
+   .hero-content {
+     padding: 15px 0 40px;
+     width: 100%;
+     max-width: 100%;
+   }
 
   .hero-title {
     font-size: clamp(32px, 8vw, 48px);
@@ -879,7 +880,7 @@ html, body {
   /* ─────────────────────────────────────────────
      PAGE HERO (inner pages)
   ───────────────────────────────────────────── */
-  .page-hero { padding: 120px 0 56px; }
+  .page-hero { padding: 80px 0 40px; }
   .page-hero h1 { letter-spacing: -1px; }
 
   /* ─────────────────────────────────────────────
@@ -925,7 +926,7 @@ html, body {
   /* ─────────────────────────────────────────────
      BLOG POST
   ───────────────────────────────────────────── */
-  .post-hero { padding: 120px 0 50px; }
+  .post-hero { padding: 80px 0 40px; }
   .post-title { letter-spacing: -1px; }
   .post-layout { grid-template-columns: 1fr; gap: 40px; }
   .post-sidebar { position: static; }
@@ -954,7 +955,7 @@ html, body {
   .contact-quick-inner { flex-direction: column; align-items: flex-start; gap: 20px; padding: 0 4px; }
   .why-contact-grid { grid-template-columns: 1fr; gap: 16px; }
   .form-row-2 { grid-template-columns: 1fr !important; }
-  .contact-hero { padding: 120px 0 50px !important; }
+  .contact-hero { padding: 80px 0 40px !important; }
   .contact-page-grid { grid-template-columns: 1fr !important; }
   .gmb-hours-inner { flex-direction: column; text-align: center; gap: 14px; }
   .gmb-hours-days { justify-content: center; }
