@@ -55,7 +55,7 @@ export interface Lead {
 }
 
 // Pre-seeded Blogs
-const defaultBlogs: BlogPost[] = [
+export const defaultBlogs: BlogPost[] = [
   {
     id: "best-digital-marketing-agency-in-indore-case-studies",
     title: "Why Digitalads is the Best Digital Marketing Agency in Indore",

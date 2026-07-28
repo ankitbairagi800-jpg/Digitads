@@ -3,13 +3,15 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { getBlogs, BlogPost } from "@/lib/db";
+import { getBlogs, BlogPost, defaultBlogs } from "@/lib/db";
 import "./blog.css";
 
 const categories = ["All", "SEO", "Ads", "Automation", "Design"];
 
 export default function BlogPage() {
-  const [blogs, setBlogs] = useState<BlogPost[]>([]);
+  const [blogs, setBlogs] = useState<BlogPost[]>(() => 
+    [...defaultBlogs].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  );
   const [activeCategory, setActiveCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
 
