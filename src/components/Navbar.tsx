@@ -120,6 +120,16 @@ export default function Navbar() {
             </li>
             <li role="none">
               <Link
+                href="/news"
+                className={`nav-link ${pathname.startsWith("/news") ? "active" : ""}`}
+                role="menuitem"
+                onClick={closeMenu}
+              >
+                News <span className="blog-nav-badge" style={{ background: "linear-gradient(135deg, #3b82f6, #1d4ed8)" }}>WEEKLY</span>
+              </Link>
+            </li>
+            <li role="none">
+              <Link
                 href="/faq"
                 className={`nav-link ${pathname === "/faq" ? "active" : ""}`}
                 role="menuitem"

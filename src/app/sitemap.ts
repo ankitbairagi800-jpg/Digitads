@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { getBlogs } from '@/lib/db';
+import { getNews } from '@/lib/newsDb';
 import { caseStudiesData } from '@/data/case-studies';
 
 export const dynamic = 'force-static';
@@ -15,7 +16,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/case-studies',
     '/blog',
     '/faq',
-    '/contact'
+    '/contact',
+    '/news'
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
@@ -45,5 +47,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...dynamicBlogRoutes, ...dynamicCaseStudyRoutes];
+  // Dynamic News Routes
+  let dynamicNewsRoutes: any[] = [];
+  try {
+    const news = await getNews();
+    dynamicNewsRoutes = news.map((post) => ({
+      url: `${baseUrl}/news/${post.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as any,
+      priority: 0.7,
+    }));
+  } catch (err) {
+    console.error("Failed to fetch news for sitemap:", err);
+  }
+
+  return [...staticRoutes, ...dynamicBlogRoutes, ...dynamicCaseStudyRoutes, ...dynamicNewsRoutes];
 }

@@ -16,6 +16,13 @@ export default function BlogPage() {
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const queryVal = params.get("q");
+      if (queryVal) {
+        setSearchQuery(queryVal);
+      }
+    }
     async function loadBlogs() {
       try {
         const list = await getBlogs();
