@@ -1,8 +1,28 @@
 # robots.txt for https://thedigitalads.in
-# All search engines and AI crawlers are explicitly allowed to index the site
+# Explicitly allowing search engines and AI crawlers
 
 User-agent: *
 Allow: /
 Disallow: /admin/
+
+# AI Search & Crawling Bots
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: anthropic-ai
+User-agent: Google-Extended
+User-agent: Google-CloudVertexBot
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: DeepSeek
+User-agent: DeepSeekBot
+User-agent: Grok
+User-agent: xAI
+User-agent: meta-externalagent
+User-agent: Applebot
+User-agent: Applebot-Extended
+Allow: /
 
 Sitemap: https://thedigitalads.in/sitemap.xml
